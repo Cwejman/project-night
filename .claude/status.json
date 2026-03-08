@@ -1,0 +1,56 @@
+{
+  "session": {
+    "startTime": "2026-03-08T06:01:45.945Z",
+    "compactions": 0,
+    "lastCompact": null,
+    "model": {
+      "id": "claude-sonnet-4-6",
+      "display_name": "Sonnet 4.6"
+    }
+  },
+  "context": {
+    "risk": "low",
+    "note": "",
+    "lastCtxPct": 60,
+    "window": {
+      "total_input_tokens": 3229,
+      "total_output_tokens": 39140,
+      "context_window_size": 200000,
+      "current_usage": {
+        "input_tokens": 1,
+        "output_tokens": 1546,
+        "cache_creation_input_tokens": 1956,
+        "cache_read_input_tokens": 77518
+      },
+      "used_percentage": 40,
+      "remaining_percentage": 60
+    }
+  },
+  "lossless": {
+    "lastVerify": "2026-03-08T12:09:00.430Z",
+    "status": "pass",
+    "errors": 0
+  },
+  "knowledge": {
+    "entryCount": 49,
+    "lastEntry": null,
+    "lastIndexRegen": null,
+    "bootstrapTokens": 4691,
+    "bootstrapPct": 2.35,
+    "l1Tokens": 4691,
+    "l1Pct": 2.35,
+    "l2Tokens": 23513,
+    "l2Pct": 11.76
+  },
+  "agents": {
+    "active": [],
+    "lastWrite": null,
+    "blockedWrites": 0
+  },
+  "loss": {
+    "pending": 0,
+    "written": 33,
+    "percentage": 0
+  },
+  "toolTimings": []
+}
