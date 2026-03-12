@@ -8,16 +8,24 @@ Run `node .claude/generate-index.js` after any entry change.
 | agent-cognitive-layers | Agent Cognitive Layers — Specialisation Through Selective Knowledge Loading | knowledge-system | architecture, agents, cognition, namespaces, design | 2026-03-08 |
 | agent-lifecycle-routines | Agent Lifecycle Routines — Hooking Into the Main Agent's Processing | knowledge-system | architecture, lifecycle, routines, hooks, purification, lossless, design | 2026-03-08 |
 | chat-output-antipattern | Chat Output Antipattern — Write First, Then Acknowledge | knowledge-system | design, lossless, antipattern, agent-behavior, rules | 2026-03-08 |
+| code-knowledge-relationship | Code-Knowledge Relationship — References Not Copies | knowledge-system | architecture, code, knowledge, tool-calls, design | 2026-03-12 |
 | concurrency-and-transactions | Concurrency, Transactions, and the Single-Writer Property | knowledge-system | architecture, concurrency, transactions, permissions, design | 2026-03-08 |
 | context-metrics-discrepancy | Context Metrics — Remaining vs Headroom to Auto-Compact | knowledge-system | context, tui, statusline, metrics, design | 2026-03-08 |
+| core-culture-and-vision | Core Culture — The Approach and Why It Exists | knowledge-system | vision, culture, identity, design, philosophy | 2026-03-12 |
+| data-control-and-portability | Data Control, Time, and Knowledge Portability | knowledge-system | architecture, data-control, portability, federation, future, design | 2026-03-08 |
 | deep-layer-data-types | Deep Layer Data Types — Tags as the Type System | knowledge-system | architecture, embedding, data-types, messages, prompts, type-system | 2026-03-08 |
+| deep-layers-parallel-agents | Deep Layers for Parallel Agent Runs | knowledge-system | architecture, parallel-agents, layers, future, design | 2026-03-08 |
 | deliberate-phase-buildup | Deliberate Phase Buildup Before Vector DB Switch | knowledge-system | strategy, phases, design, planning | 2026-03-08 |
 | dynamic-index | Dynamic Index — index.md as Generated Artifact | knowledge-system | architecture, index, tool-call, design | 2026-03-08 |
 | embedding-optimisation | Embedding Optimisation — The Other Purification Direction | knowledge-system | embedding, optimisation, purification, context, design | 2026-03-08 |
+| evolution-synthesis-2026-03-12 | Evolution Synthesis — System Architecture as of 2026-03-12 | knowledge-system | synthesis, architecture, evolution, design, system-state | 2026-03-12 |
+| intelligent-garbage-collection | Intelligent Garbage Collection — Future Scaling Capability | knowledge-system | architecture, future, storage, lossless, design | 2026-03-08 |
 | lossless-design-intent | Lossless Design Intent | knowledge-system | design, vision, lossless, durability | 2026-03-08 |
 | markdown-phase | Markdown Phase — Structure and Rules | knowledge-system | markdown, structure, rules, phase-1 | 2026-03-08 |
+| mcp-as-integration-boundary | MCP as Integration Boundary — Not Sole Gateway | knowledge-system | architecture, mcp, design, hybrid-access, model-agnostic | 2026-03-12 |
 | mcp-self-hosting | MCP Self-Hosting — The Server Is Its Own Knowledge | knowledge-system | mcp, architecture, self-hosting, introspectability, design | 2026-03-08 |
 | multi-layer-embedding | Multi-Layer Embedding Architecture | knowledge-system | architecture, embedding, layers, design | 2026-03-08 |
+| multi-project-architecture | Multi-Project Architecture — Silos, Core, and Boundaries | knowledge-system | architecture, projects, silos, compliance, privacy, mcp, design | 2026-03-12 |
 | parallel-agent-journeys | Parallel Agent Deep Journeys — Power Pattern | knowledge-system | agents, parallel, architecture, embedding, cognition | 2026-03-08 |
 | parse-agent-0 | Knowledge Parse — Agent 0 (primary) | knowledge-system | parse, synthesis, experiment | 2026-03-08 |
 | parse-agent-1 | Knowledge Parse — Agent 1 | knowledge-system | parse, synthesis, experiment | 2026-03-08 |
@@ -26,6 +34,7 @@ Run `node .claude/generate-index.js` after any entry change.
 | parse-synthesis | Parse Experiment — Cross-Agent Synthesis | knowledge-system | parse, synthesis, experiment, meta | 2026-03-08 |
 | purification-semantic | Purification — Archival vs Semantic Completeness | knowledge-system | purification, lossless, semantic, verification, design | 2026-03-08 |
 | reverse-prompting | Reverse Prompting as Purification Capability | knowledge-system | purification, reverse-prompting, verification, lossless, design | 2026-03-08 |
+| roadmap-phase2-plan | Phase 2 Roadmap — Priorities and Plan (2026-03-08) | knowledge-system | roadmap, planning, mcp, sub-agents, priority | 2026-03-08 |
 | roadmap | Roadmap — Phases | knowledge-system | roadmap, phases, planning | 2026-03-08 |
 | session-bootstrap | Session Bootstrapping — Knowledge Injection via Hooks | knowledge-system | bootstrap, hooks, session, claude-code | 2026-03-08 |
 | session-irrelevance | Session Irrelevance — Key Design Value | knowledge-system | design, memory, session, context | 2026-03-08 |
@@ -33,7 +42,9 @@ Run `node .claude/generate-index.js` after any entry change.
 | session-prompt-identification | Session Prompt Identification — UUID vs Date vs Hybrid | knowledge-system | design, session-log, conventions, purification, tool-call | 2026-03-08 |
 | session-prompts-2026-03-08-3b054304 | Session Prompts — 2026-03-08 (Founding Session) | knowledge-system | message, prompt, session-log | 2026-03-08 |
 | session-prompts-2026-03-08-b1fdee64 | Session Prompts — 2026-03-08 (Second Session) | knowledge-system | message, prompt, session-log | 2026-03-08 |
+| session-prompts-2026-03-12-3837ed0b | Session Prompts — 2026-03-12 (Architecture Session) | knowledge-system | message, prompt, session-log | 2026-03-12 |
 | session-synthesis-2026-03-08 | Session Synthesis — Full System State (2026-03-08) | knowledge-system | synthesis, session-log, lossless, system-state | 2026-03-08 |
+| system-as-agent-identity | System-as-Agent Identity — The Knowledge System IS the Agent | knowledge-system | architecture, identity, vision, design, model-agnostic | 2026-03-12 |
 | tech-stack | Tech Stack Decisions | knowledge-system | tech, architecture, decisions | 2026-03-08 |
 | tool-call-bootstrap | Tool Call — bootstrap.js | knowledge-system | tool-call, script, bootstrap, session | 2026-03-08 |
 | tool-call-generate-index | Tool Call — generate-index.js | knowledge-system | tool-call, script, index | 2026-03-08 |
@@ -52,5 +63,6 @@ Run `node .claude/generate-index.js` after any entry change.
 | tui-status-panel | TUI Status Panel — Live Agent and System Feedback | knowledge-system | tui, architecture, mcp, lossless, context, design | 2026-03-08 |
 | tui-tool-timings | TUI Tool Call Timings — PostToolUse Hook | knowledge-system | tui, tool-calls, timings, hooks, performance | 2026-03-08 |
 | type-self-description | Types Are Self-Describing — No Dedicated Type Files Needed | knowledge-system | architecture, type-system, embedding, design | 2026-03-08 |
+| verbatim-prompt-storage | Verbatim Prompt Storage — No Deviation From Source | knowledge-system | rules, lossless, prompts, session-log, agent-behavior | 2026-03-12 |
 | verification-routine | Verification Routine — Lossless Security Check | knowledge-system | security, verification, lossless, tool-call, routine | 2026-03-08 |
 | vision | Knowledge System Vision | knowledge-system | vision, goals, design | 2026-03-08 |
