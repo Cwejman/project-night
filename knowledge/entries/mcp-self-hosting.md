@@ -4,12 +4,12 @@ title: MCP Self-Hosting — The Server Is Its Own Knowledge
 tags: [mcp, architecture, self-hosting, introspectability, design]
 namespace: knowledge-system
 created: 2026-03-08
-updated: 2026-03-08
+updated: 2026-03-13
 ---
 
 ## Layer 1 — Summary
 
-The MCP server's own implementation is stored as knowledge entries within the system it serves. Every tool (store, search, update, delete) is a tool-call entry with a Layer 1 description and a Layer 2 implementation. The MCP is queryable through itself — fully introspectable with no loss. No code lives outside the system.
+The MCP server's own implementation is stored as knowledge entries within the system it serves. Every tool (store, search, update, delete) is a tool-call entry with a Layer 1 description and a Layer 2 implementation. The MCP is queryable through itself — fully introspectable with no loss. No code lives outside the system. Note: this design principle applies when the MCP server is built — it is not the immediate priority. The principle stands; the timeline has shifted (see `roadmap-phase2-plan` for current priorities).
 
 ## Layer 2 — Full Detail
 

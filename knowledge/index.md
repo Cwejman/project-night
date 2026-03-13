@@ -23,11 +23,12 @@ Run `node .claude/generate-index.js` after any entry change.
 | lossless-design-intent | Lossless Design Intent | knowledge-system | design, vision, lossless, durability | 2026-03-08 |
 | markdown-phase | Markdown Phase — Structure and Rules | knowledge-system | markdown, structure, rules, phase-1 | 2026-03-08 |
 | mcp-as-integration-boundary | MCP as Integration Boundary — Not Sole Gateway | knowledge-system | architecture, mcp, design, hybrid-access, model-agnostic | 2026-03-12 |
-| mcp-self-hosting | MCP Self-Hosting — The Server Is Its Own Knowledge | knowledge-system | mcp, architecture, self-hosting, introspectability, design | 2026-03-08 |
+| mcp-self-hosting | MCP Self-Hosting — The Server Is Its Own Knowledge | knowledge-system | mcp, architecture, self-hosting, introspectability, design | 2026-03-13 |
 | meaning-exploration-2026-03-12 | Meaning Exploration — What This System IS (2026-03-12) | knowledge-system | culture, meaning, philosophy, identity, communication, exploration | 2026-03-12 |
 | multi-layer-embedding | Multi-Layer Embedding Architecture | knowledge-system | architecture, embedding, layers, design | 2026-03-08 |
 | multi-project-architecture | Multi-Project Architecture — Silos, Core, and Boundaries | knowledge-system | architecture, projects, silos, compliance, privacy, mcp, design | 2026-03-12 |
 | naming-exploration-2026-03-12 | Naming Exploration — Five-Agent Parallel Search (2026-03-12) | knowledge-system | naming, culture, identity, exploration, agents, ecosystem | 2026-03-12 |
+| operational-discoveries-2026-03-12 | Operational Discoveries — Muscles, Hooks, and the Portability Gap (2026-03-12) | knowledge-system | architecture, muscles, hooks, operations, portability, exploration | 2026-03-13 |
 | parallel-agent-journeys | Parallel Agent Deep Journeys — Power Pattern | knowledge-system | agents, parallel, architecture, embedding, cognition | 2026-03-08 |
 | parse-agent-0 | Knowledge Parse — Agent 0 (primary) | knowledge-system | parse, synthesis, experiment | 2026-03-08 |
 | parse-agent-1 | Knowledge Parse — Agent 1 | knowledge-system | parse, synthesis, experiment | 2026-03-08 |
@@ -36,8 +37,8 @@ Run `node .claude/generate-index.js` after any entry change.
 | parse-synthesis | Parse Experiment — Cross-Agent Synthesis | knowledge-system | parse, synthesis, experiment, meta | 2026-03-08 |
 | purification-semantic | Purification — Archival vs Semantic Completeness | knowledge-system | purification, lossless, semantic, verification, design | 2026-03-08 |
 | reverse-prompting | Reverse Prompting as Purification Capability | knowledge-system | purification, reverse-prompting, verification, lossless, design | 2026-03-08 |
-| roadmap-phase2-plan | Phase 2 Roadmap — Priorities and Plan (2026-03-08) | knowledge-system | roadmap, planning, mcp, sub-agents, priority | 2026-03-08 |
-| roadmap | Roadmap — Phases | knowledge-system | roadmap, phases, planning | 2026-03-08 |
+| roadmap-phase2-plan | Evolution Plan — Priorities and Open Questions | knowledge-system | roadmap, planning, mcp, sub-agents, priority, muscles, portability | 2026-03-13 |
+| roadmap | Roadmap — Phases | knowledge-system | roadmap, phases, planning | 2026-03-13 |
 | session-bootstrap | Session Bootstrapping — Knowledge Injection via Hooks | knowledge-system | bootstrap, hooks, session, claude-code | 2026-03-08 |
 | session-irrelevance | Session Irrelevance — Key Design Value | knowledge-system | design, memory, session, context | 2026-03-08 |
 | session-metadata-layer | Session Metadata Layer — Per-Session Introspection Store | knowledge-system | design, session-log, introspection, future, architecture | 2026-03-08 |
@@ -45,6 +46,7 @@ Run `node .claude/generate-index.js` after any entry change.
 | session-prompts-2026-03-08-3b054304 | Session Prompts — 2026-03-08 (Founding Session) | knowledge-system | message, prompt, session-log | 2026-03-08 |
 | session-prompts-2026-03-08-b1fdee64 | Session Prompts — 2026-03-08 (Second Session) | knowledge-system | message, prompt, session-log | 2026-03-08 |
 | session-prompts-2026-03-12-3837ed0b | Session Prompts — 2026-03-12 (Architecture Session) | knowledge-system | message, prompt, session-log | 2026-03-12 |
+| session-prompts-2026-03-13-5b35f2ea | Session Prompts — 2026-03-13 (Roadmap Maturation Session) | knowledge-system | message, prompt, session-log | 2026-03-13 |
 | session-synthesis-2026-03-08 | Session Synthesis — Full System State (2026-03-08) | knowledge-system | synthesis, session-log, lossless, system-state | 2026-03-08 |
 | system-as-agent-identity | System-as-Agent Identity — The Knowledge System IS the Agent | knowledge-system | architecture, identity, vision, design, model-agnostic | 2026-03-12 |
 | tech-stack | Tech Stack Decisions | knowledge-system | tech, architecture, decisions | 2026-03-08 |
@@ -65,6 +67,6 @@ Run `node .claude/generate-index.js` after any entry change.
 | tui-status-panel | TUI Status Panel — Live Agent and System Feedback | knowledge-system | tui, architecture, mcp, lossless, context, design | 2026-03-08 |
 | tui-tool-timings | TUI Tool Call Timings — PostToolUse Hook | knowledge-system | tui, tool-calls, timings, hooks, performance | 2026-03-08 |
 | type-self-description | Types Are Self-Describing — No Dedicated Type Files Needed | knowledge-system | architecture, type-system, embedding, design | 2026-03-08 |
-| verbatim-prompt-storage | Verbatim Prompt Storage — No Deviation From Source | knowledge-system | rules, lossless, prompts, session-log, agent-behavior | 2026-03-12 |
+| verbatim-prompt-storage | Verbatim Prompt Storage — No Deviation From Source | knowledge-system | rules, lossless, prompts, session-log, agent-behavior | 2026-03-13 |
 | verification-routine | Verification Routine — Lossless Security Check | knowledge-system | security, verification, lossless, tool-call, routine | 2026-03-08 |
-| vision | Knowledge System Vision | knowledge-system | vision, goals, design | 2026-03-08 |
+| vision | Knowledge System Vision | knowledge-system | vision, goals, design | 2026-03-13 |

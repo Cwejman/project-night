@@ -36,7 +36,7 @@ The relationship between code and knowledge:
 - They are two views of one capability — not parallel tracks to sync
 - Entries should reference code, not duplicate it (L2 points to implementation file)
 
-Evolution path: Node.js scripts → MCP server with embedded validation routines. The MCP server becomes the system's musculature — not just a query interface but an integrity guardian.
+Evolution path: standalone Node.js scripts → hooks-invoked .js muscles with deterministic enforcement. Muscles are invoked by hooks, not served through MCP. Cross-project knowledge access is a separate concern — MCP is one option, filesystem teleportation (read-only symlinks) is another; the mechanism is not settled.
 
 #### 3. Projects (silos)
 

@@ -1,15 +1,15 @@
 ---
 id: roadmap-phase2-plan
-title: Phase 2 Roadmap — Priorities and Plan (2026-03-08)
-tags: [roadmap, planning, mcp, sub-agents, priority]
+title: Evolution Plan — Priorities and Open Questions
+tags: [roadmap, planning, mcp, sub-agents, priority, muscles, portability]
 namespace: knowledge-system
 created: 2026-03-08
-updated: 2026-03-08
+updated: 2026-03-13
 ---
 
 ## Layer 1
 
-Two prioritized streams: (1) MCP integration — converting Node.js scripts into a proper MCP server with routine hooks for system integrity; (2) sub-agent workflows — reverse prompting for semantic validation, parallel deep dives for knowledge synthesis. Filesystem stays as storage for now. Vector DB structure (beyond the current L1/L2 simplification) is an open design question to solve when that layer is actually built. Human steers; system supports.
+Evolution priorities, distinguishing what's concretised from what's explored. Immediate: muscles strengthen — .js + hooks (current mechanism, pragmatic, not necessarily permanent given model-agnostic values). The operational portability gap must be addressed — culture travels globally but write/verify/measure is pinned to core. Cross-project knowledge access mechanism is open (MCP, filesystem teleportation, both). Sub-agent workflows (reverse prompting, parallel deep dives) remain valid and progress independently. Vector DB and semantic retrieval are a direction with understood requirements, not a fixed plan. Stream 1 from the original 2026-03-08 plan (convert all scripts to MCP tools) is under revision — the needs it addressed are valid but the specific approach has been questioned. Human steers; system supports.
 
 ## Layer 2
 
@@ -19,16 +19,24 @@ Still Phase 1 (filesystem). The deliberate buildup continues. The L1/L2 two-laye
 
 ---
 
-### Stream 1 — MCP Integration
+### Stream 1 — MCP Integration (under revision as of 2026-03-12)
 
-**Goal:** convert the seven Node.js scripts into a TypeScript MCP server, exposed as native tools within Claude Code sessions. Self-hosting principle applies: each tool is written as a knowledge entry first; the server is assembled from entries.
+> **Status:** The specific approach below (convert all scripts to MCP tools) was questioned during the 2026-03-12 architecture session. The NEEDS it addresses are valid. The HOW is open. See `operational-discoveries-2026-03-12` for the current operational understanding.
 
-**Why this matters for system integrity:**
-- Single write path makes transaction semantics explicit (currently an accidental side effect of the permission boundary)
-- Routine hooks (verify on every store, purification on session close) become first-class, not optional scripts
-- Sub-agents can call tools directly rather than relying on the primary agent as intermediary
+**Original goal (2026-03-08):** convert the seven Node.js scripts into a TypeScript MCP server, exposed as native tools within Claude Code sessions.
 
-**Script-to-tool mapping:**
+**What's still valid — the needs:**
+- Single write path for transaction semantics
+- Integrity guarantees (verify on every store)
+- Sub-agents able to access knowledge without relying on the primary agent as intermediary
+- Cross-project knowledge access (the operational portability gap)
+
+**What's been questioned — the approach:**
+- Whether ALL scripts should become MCP tools, or whether muscles (enforcement) should stay as hooks-invoked .js while MCP serves knowledge access only
+- Whether MCP is the right mechanism for cross-project access, or whether filesystem teleportation (symlinks) is simpler and sufficient
+- Whether binding muscles to any specific platform (Claude hooks now, MCP later) is aligned with model-agnostic values long-term
+
+**Original script-to-tool mapping (2026-03-08, preserved for reference):**
 | Script | MCP tool | Key change |
 |---|---|---|
 | bootstrap.js | search(query, namespace, k) + session init | Pull replaces push; agents query what they need |
@@ -39,13 +47,7 @@ Still Phase 1 (filesystem). The deliberate buildup continues. The L1/L2 two-laye
 | measure-bootstrap.js | token_count(namespace, layer) | On-demand |
 | new-entry.js | store(content, metadata) | Single write path with embedded verify |
 
-**Search strategy (Option D):** MCP search() does keyword + tag filtering, returns top-K candidates into Claude's context, Claude's own reasoning does final selection. No external embedding cost, no extra dependencies. First-class to Claude Code — the semantic intelligence lives in the session.
-
-**Build order within Stream 1:**
-1. Write MCP tool entries (each tool as a knowledge entry, Layer 2 = TypeScript implementation)
-2. Assemble server from entries
-3. Wire into Claude Code via MCP settings
-4. Retire individual Node.js scripts one by one as tools go live
+**Search strategy (Option D — still valid):** MCP search() does keyword + tag filtering, returns top-K candidates into Claude's context, Claude's own reasoning does final selection. No external embedding cost, no extra dependencies. The semantic intelligence lives in the session.
 
 ---
 
@@ -71,9 +73,17 @@ What is NOT in scope until that design is done: Qdrant schema, chunking strategy
 
 ---
 
-### Priority Order
+### Priority Order (revised 2026-03-13)
 
-1. MCP server — Stream 1 infrastructure, unblocks everything
-2. Reverse prompting — Stream 2 Pattern A, immediately useful, validates MCP
-3. Parallel deep dives — Stream 2 Pattern B, high leverage once MCP retrieval is cheap
-4. Vector storage design — open question, answer after usage patterns are clear
+**Concretised — immediate:**
+1. Muscles strengthen — close the gap between documented rules and enforced rules. .js + hooks is the current mechanism.
+2. Address the operational portability gap — the agent needs to be able to write/verify/measure outside core.
+
+**Explored — next, mechanism open:**
+3. Cross-project knowledge access — MCP, filesystem teleportation, or both. Driven by actual multi-project need.
+4. Reverse prompting — Stream 2 Pattern A, independently useful, no infrastructure dependency.
+5. Parallel deep dives — Stream 2 Pattern B, scales with retrieval improvements.
+
+**Direction — form not settled:**
+6. Vector storage and semantic retrieval — answer after usage patterns are clear.
+7. The relationship between muscles and platform — how enforcement becomes platform-agnostic.
