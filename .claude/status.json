@@ -1,46 +1,46 @@
 {
   "session": {
-    "startTime": "2026-03-12T19:32:32.833Z",
-    "compactions": 0,
-    "lastCompact": null,
+    "startTime": "2026-03-15T07:14:07.575Z",
+    "compactions": 1,
+    "lastCompact": "2026-03-13T01:37:59.396Z",
     "model": {
-      "id": "claude-opus-4-6",
-      "display_name": "Opus 4.6"
+      "id": "claude-opus-4-6[1m]",
+      "display_name": "Opus 4.6 (1M context)"
     }
   },
   "context": {
     "risk": "low",
     "note": "",
-    "lastCtxPct": 59,
+    "lastCtxPct": 73,
     "window": {
-      "total_input_tokens": 517,
-      "total_output_tokens": 39616,
-      "context_window_size": 200000,
+      "total_input_tokens": 600579,
+      "total_output_tokens": 259501,
+      "context_window_size": 1000000,
       "current_usage": {
         "input_tokens": 3,
-        "output_tokens": 14,
-        "cache_creation_input_tokens": 155,
-        "cache_read_input_tokens": 81524
+        "output_tokens": 63,
+        "cache_creation_input_tokens": 122,
+        "cache_read_input_tokens": 267546
       },
-      "used_percentage": 41,
-      "remaining_percentage": 59
+      "used_percentage": 27,
+      "remaining_percentage": 73
     }
   },
   "lossless": {
-    "lastVerify": "2026-03-12T20:46:44.945Z",
+    "lastVerify": "2026-03-15T21:49:17.704Z",
     "status": "pass",
     "errors": 0
   },
   "knowledge": {
-    "entryCount": 61,
+    "entryCount": 68,
     "lastEntry": null,
     "lastIndexRegen": null,
-    "bootstrapTokens": 4691,
-    "bootstrapPct": 2.35,
-    "l1Tokens": 4691,
-    "l1Pct": 2.35,
-    "l2Tokens": 23513,
-    "l2Pct": 11.76
+    "bootstrapTokens": 8818,
+    "bootstrapPct": 0.88,
+    "l1Tokens": 8818,
+    "l1Pct": 0.88,
+    "l2Tokens": 63039,
+    "l2Pct": 6.3
   },
   "agents": {
     "active": [],
