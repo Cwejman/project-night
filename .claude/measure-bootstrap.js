@@ -40,6 +40,7 @@ function readCtxWindow() {
     const s = JSON.parse(fs.readFileSync(path.join(__dirname, 'status.json'), 'utf8'));
     const cw = s?.context?.window;
     // context_window may have max_tokens, total_tokens, or we can derive from remaining_percentage + used
+    if (cw?.context_window_size) return cw.context_window_size;
     if (cw?.max_tokens) return cw.max_tokens;
     if (cw?.total_tokens) return cw.total_tokens;
   } catch {}
