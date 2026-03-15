@@ -37,10 +37,18 @@ The filesystem format (frontmatter + markdown, one file per entry) is human-read
 
 This capability is native to the filesystem approach: merging two directories is trivial. The harder question is namespace collision resolution and cross-system semantic linking — design problems for when federation is actually needed.
 
+### FS and git as interface to the open-source world (Phase 3 consideration)
+
+When knowledge moves to a vector DB, the file system and git don't disappear — they shift role. Files (muscles, plugin code, culture entries) remain in git because git is the interface to the open-source world: shareable, inspectable, forkable. Knowledge leaves git; code does not.
+
+This also surfaces a tension in the markdown phase: when a project repo is shared with collaborators, `.night` entries inside it are subject to merge conflicts. The DB transition resolves this — knowledge moves to a server that isn't part of the repository. Markdown phase is most cleanly used single-user or with careful coordination; shared repos reveal the limitation.
+
+The files-in-git / knowledge-in-DB split is also the answer to "what does open source mean for this system?" — the scaffolding (muscles, plugin) is visible and forkable; knowledge is private by default and lives in the operator's own DB.
+
 ### Design values confirmed
 
 - Local-first: yes, permanently
-- Human data control: yes, git is the human's instrument
+- Human data control: yes, git is the human's instrument for files; DB is the instrument for knowledge
 - System git automation: no, out of scope
 - Knowledge portability: inherent to the format — no extra work needed
 - Federation: future capability, enabled by the format today

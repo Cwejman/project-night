@@ -41,3 +41,9 @@ This is why namespace and tag discipline matters. Namespaces are not just labels
 ### The deeper implication
 
 The knowledge system is not just a store — it is a configurable cognitive environment. The same facts, selectively presented, produce different agent behaviours. This is agent specialisation without hard-coding: change the loaded entries, change the agent's effective expertise.
+
+### Toward a dynamic cognitive layer (exploratory)
+
+The above frames cognitive loading as something set at startup. A further thought: the agent's cognitive focus may not be static — it could shift throughout a session as the work moves to different areas or as context compacts. Compaction, in this framing, is a form of cognitive weight-shift: things that were in focus become background. Whether this happens transparently or opaquely is an open question — one could imagine the agent's current cognitive state (what's loaded, what's been down-weighted) being observable, not just context health metrics.
+
+A related thought: some knowledge might carry a weight class that marks it as always-included regardless of focus — culture and core identity being the clearest candidates. Not "bootstrap always loads this" as a technical rule, but the knowledge itself having metadata that says "I am always relevant." Whether this is achievable in markdown or requires the vector system is not yet clear.

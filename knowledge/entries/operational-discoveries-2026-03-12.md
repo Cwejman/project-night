@@ -17,6 +17,10 @@ Late-session discoveries from the 2026-03-12 architecture session (prompts 22-28
 
 **Muscles as .js + hooks:** The existing Node.js scripts (verify, purify, bootstrap, etc.) are invoked by Claude Code hooks on defined events (SessionStart, PreToolUse, PostToolUse, etc.). This works now and is how to move forward. Hooks configured globally in `~/.claude/settings.json` run in every project — muscles already travel without any additional infrastructure.
 
+**Permission friction solved by hooks:** When a muscle is called via Bash (e.g., `node .claude/verify.js`), the user is prompted to approve each tool call. Hooks have no such prompt — they're pre-authorized in settings and execute silently. If all muscles are hook-triggered, the system runs under the hood without per-invocation interruptions. This is a practical reason to prefer hooks over ad hoc Bash invocation, beyond just automation.
+
+**Pre-write validation pattern:** A PreToolUse hook on Write can validate an entry before it's committed. If validation fails, exit code 2 blocks the write entirely. This is mechanical enforcement — deterministic, silent, no agent involvement needed. The pattern generalizes: any convention that should never be violated gets a PreToolUse hook.
+
 **The operational portability gap:** Outside the core project, the agent receives culture (identity, cognitive patterns, design rules) via global bootstrap. But it cannot write entries, run verification, or measure anything — it can only observe. Global integration is only valuable if there's a knowledge system to write to. This is the key problem for multi-project operation.
 
 ### What's explored but not settled
@@ -31,7 +35,7 @@ None was chosen. The question is open.
 
 **Skills:** The user expressed skepticism about Claude Code skills as an architectural element. Key question: do skills add capability beyond what hooks + .js provide, or are they just "the Claude native version of MCP" — a convenience layer? Not rejected but not embraced. The preference is platform-agnostic when possible.
 
-**Context pressure on routines:** Running verify or purify at session end was questioned — context window may already be near capacity at that point. Heavy routines need triggers that don't compete with operational context. No specific solution designed.
+**Routine placement requires agent presence awareness:** Running verify or purify at SessionEnd was initially proposed then self-corrected — both as a context pressure problem AND because verify/purify produce results the agent needs to act on. If the agent can't act on the results (context full, session ending), the routine's output is wasted. Heavy routines with agent-actionable output need triggers at points where the agent can respond. No specific trigger solution designed yet — this is an open design problem.
 
 ### Source
 

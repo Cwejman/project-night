@@ -36,3 +36,7 @@ Run 3 parallel semantic purification agents on the same session transcript. Each
 ### Scaling consideration
 
 As Layer 1 grows, the per-agent bootstrap cost grows. At ~20k tokens (10% of context), parallel agents start to feel it. This is the signal to move to namespace-segmented bootstrapping or Phase 2 MCP on-demand retrieval.
+
+### Exploratory agents vs. persistent divergence (exploratory thought)
+
+Spawning parallel agents with different focus areas to see what they surface — this is the parse experiment pattern, and it's valuable. But there's a distinction worth noting: these are ephemeral explorations, not persistent worldviews. The knowledge system is one aligned body ("one law") even as its depth grows multidimensional. Parallel agents explore from different angles, but their findings feed back into a unified knowledge base. The system doesn't maintain persistent agents with isolated, potentially conflicting perspectives — that would grow conflict rather than coherence.

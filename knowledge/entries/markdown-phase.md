@@ -9,9 +9,11 @@ updated: 2026-03-08
 
 ## Layer 1 — Summary
 
-Phase 1 uses markdown files as the storage layer. One concept per file, standardized frontmatter, two-layer entry format (concise summary + full detail), master index always kept current. Entries are seed data for Phase 2 vector ingestion. All tool call scripts use Node.js.
+The markdown phase is the current storage layer — human-readable, explicitly not the final system. Its rules (one concept per file, two-layer L1/L2 format, master index) apply to the existing `knowledge/entries/` system. However, whether the next phase continues in this format is under active exploration. The bite model (weighted chunks without L1/L2 — see `multi-layer-embedding`) and questions about what the knowledge system's information units actually are have opened up the possibility that the markdown structure changes significantly or is bypassed. These rules describe what IS, not necessarily what's next.
 
 ## Layer 2 — Full Detail
+
+> **Context (2026-03-15):** The rules and format below describe the current working system (`knowledge/entries/`). Whether the next phase uses this same format is under active exploration — see `multi-layer-embedding` (bite model), `deliberate-phase-buildup` (format reconsideration). These rules apply to the existing system; they are not assumed to carry forward.
 
 Phase 1 of the knowledge system uses markdown files as the storage layer.
 

@@ -32,3 +32,13 @@ This is a future capability triggered by actual storage pressure. Phase 1 and Ph
 ### Governing constraint
 
 Any GC implementation must satisfy the lossless design intent. If a piece of knowledge cannot be recovered after GC runs, the GC was wrong.
+
+### Weighting down vs. archiving
+
+A more precise mechanic than archiving: when newer knowledge supersedes older, the older chunk is weighted down — still present, still recoverable on direct query, but no longer default-retrieved. It doesn't pollute current context. This is closer to how vector retrieval works naturally (proximity score determines inclusion) than archival deletion is.
+
+### Is human oversight always required?
+
+The assumption that purification requires human approval may be too conservative. If the system is rightly constructed — reverse prompting verifies that what supersedes an entry genuinely contains the older entry's intent — then weighting down can potentially happen autonomously, not arbitrarily. The validation mechanism (reverse prompting → similarity score) provides the ground for a non-human decision. This is open; it depends on how reliably that check can be trusted at scale. See `reverse-prompting` for the validation mechanic.
+
+Whether this purification runs as part of the agent's regular breath, or requires a separate caretaker agent with its own cycle, is also open — and may not be solvable in the FS-based phase at all due to the absence of transactions.

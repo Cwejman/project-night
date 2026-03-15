@@ -82,11 +82,12 @@ Current state (Phase 1)
 └── No multi-project support
 
 Next evolution
-├── Code muscles strengthen (validation routines, pre-write checks)
-├── MCP server for core (makes identity available to any project)
-├── First silo: any new directory with Claude launched — already a project
-├── Code-knowledge references (entries point to code, not duplicate)
-└── Core and integration remain unified, separation acknowledged as future option
+├── Culture session — build culture/ from scratch (platform-agnostic cognitive patterns)
+├── Claude plugin session — build claude/ clean (muscles, entries, plugin.json, hooks.json)
+├── Cycle hardwiring PoC — prove every cycle writes to .night strictly
+├── Existing knowledge/entries/ becomes lore/ once PoC is proven
+├── Deviation model: opt-out threads = new dir, connected but separate
+└── .md PoC may be scrapped in favour of vector/weighted Stage 3
 
 Further out
 ├── Vector DB behind MCP (storage upgrade, invisible to agents)

@@ -22,5 +22,6 @@ Core properties:
 - Local-first: persists across restarts, no cloud dependency required
 - Semantic: retrieval by meaning, not keyword
 - Accessible via MCP (integration boundary) and/or direct file access — not locked to one interface
+- Cycle-hardwired: every cycle strictly writes to .night — full dialog, tool calls, decisions — embedded at their semantically reasonable place. Nothing knowledge-worthy stays in context only.
 
-The system is not a documentation tool. It is a persistent, queryable memory layer — the agent's constitutive identity, not a tool the agent uses.
+The system is not a documentation tool. It is a persistent, queryable memory layer — the agent's constitutive identity, not a tool the agent uses. The cycle hardwiring is the behavioral commitment that makes identity persistent rather than aspirational.

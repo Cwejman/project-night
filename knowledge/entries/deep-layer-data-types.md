@@ -52,6 +52,10 @@ updated: YYYY-MM-DD
 <verbatim prompt or message text>
 ```
 
+### Tag ownership
+
+A semantic tag — one that carries structural or behavioral meaning (like `prompt`, `tool-call`, `design`) — implies an entry that defines it. The owner entry establishes what that tag means: how entries carrying it are structured, what retrieval role they serve, what weight they carry relative to a query. In markdown, this is a convention; in vector space, the owner entry becomes the semantic anchor for the filter. Tags without owner entries are informal labels; tags with owner entries are a type contract. The self-describing property: to understand what `prompt` means as a type, you retrieve the entry that owns that tag.
+
 ### Why the two-layer model enables this
 
 Large artifacts (raw prompts, full scripts) live in Layer 2 and contribute zero tokens to the top-layer embedding. The type tag filters entries before semantic search runs. This combination — type filtering + Layer 1 semantic match + Layer 2 full retrieval — is the core retrieval pattern for the vector DB phase.

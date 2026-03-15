@@ -9,7 +9,7 @@ updated: 2026-03-08
 
 ## Layer 1 — Summary
 
-We are deliberately accumulating implemented requirements in Phase 1 (markdown + Node scripts) before switching to the vector DB. The goal is to avoid being bottlenecked by the current FS-based system — by the time we migrate, the system's behavior, rules, and tooling are already proven and the vector DB is purely a storage upgrade.
+We are deliberately accumulating requirements understanding before committing to a build format. The original plan was to prove everything in markdown first, then swap to vector DB. That assumption is now under reconsideration: the bite model (weighted chunks, no L1/L2 — see `multi-layer-embedding`) may not be well-approximated by one-concept-per-file markdown. The markdown PoC may still happen, may change shape, or may be bypassed. What remains constant: requirements must be understood through use before the vector system is built.
 
 ## Layer 2 — Full Detail
 
@@ -30,3 +30,11 @@ The vector DB switch is not a pivot — it is a swap of the storage layer with t
 ### Current bottleneck accepted
 
 The FS-based system has known limitations (no semantic search, manual index, no concurrent writes). These are accepted constraints for Phase 1. The system is not being optimized for the bottleneck — it is being operated through it deliberately.
+
+### The PoC may be scrapped
+
+The markdown phase is explicitly a PoC. Culture + claude plugin built in .md proves the approach, not the final system. Once the approach is proven, the .md layer may be replaced entirely by whatever the vector/weighted system becomes. The phase buildup is deliberate knowing this — requirements are proven here so the replacement is a swap, not a redesign. See `poc-cycle-hardwiring` for the full PoC framing.
+
+### The markdown format itself is under reconsideration
+
+The current one-concept-per-file, two-layer format was designed before exploring the bite model (see `multi-layer-embedding`). If the ideal system has no L1/L2 — just weighted chunks in proximity — it's an open question whether markdown approximates this well enough to be useful as a PoC medium, or whether a different structure is needed. The format may change before the culture + claude build begins. Or the PoC may not use markdown at all. This is not settled.
