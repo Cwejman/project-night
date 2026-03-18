@@ -2,13 +2,13 @@
 
 ## The Primitives (Settled)
 
-Five primitives. Everything else composes from these.
+Five primitives. Everything composes from these.
 
 **Chunks.** A unit of meaning. Text content + optional key/value pairs. A chunk must be broken when separate parts belong to different dimensions.
 
 **Dimensions.** A named phenomenon. No rigid schema — just a name and whatever chunks belong to it. Anchored by meta-chunks (chunks on exactly one dimension). Dimensions connect through shared chunks.
 
-**Weights.** Two binary relations between a chunk and a dimension:
+**Membership.** Two binary relations between a chunk and a dimension:
 
 - `instance` — this chunk IS a member of the dimension. Structural: member or not.
 - `relates` — this chunk is ABOUT the dimension. Structural: related or not.
@@ -40,7 +40,7 @@ Instance/relates enables collections, trees, and contracts to emerge without imp
 
 ### The Primitives Compose
 
-The intent was to find the simplest possible elements that can build everything. The five primitives — chunks, dimensions, weights (binary instance/relates), commits, and peers — appear sufficient.
+The intent was to find the simplest possible elements that can build everything. The five primitives — chunks, dimensions, membership (binary instance/relates), commits, and peers — appear sufficient.
 
 **Instance/relates builds tree-like structures.** A "git-integration" dimension collects all git references (each is an `instance`). An "integration-contract" dimension collects all contracts. A contract chunk's body tells an agent how to execute the resolution. Trees emerge from instance/relates without imposing hierarchy.
 
@@ -48,7 +48,7 @@ The intent was to find the simplest possible elements that can build everything.
 
 **Peers decouple systems built on the same primitives.** An integration module is its own peer knowledge system. A culture module is another. A project reads from both but doesn't mutate them. Systems can depend on each other — as long as decoupled and touched with care.
 
-**The browser depends on this structure.** The browser relates to each integration type and has its own UI implementation for it — taking the payload and knowing how to view it. Views and view testing/enforcing are the contracts between the browser and the knowledge system. If the structure changes, the browser breaks — but as long as that is clear, it's manageable.
+**The browser depends on this structure.** The browser has its own UI implementation per integration type — taking the payload and knowing how to view it. Views and view testing/enforcing are the contracts between the browser and the knowledge system. If the structure changes, the browser breaks — as long as that is clear, it's manageable.
 
 **Agents can depend on the structure too.** An integration contract is readable by the agent — it contains the body to execute the tool call. The relationships make enough for the agent to act. This structure IS the contract, for both browser and agent.
 
@@ -139,13 +139,13 @@ Note: the stress test recommended 0.0–1.0 continuous weight for `relates`. Thi
 - Zig + SQLite: proportionate. Proven storage + fast CLI. The innovation is the data model, not the storage engine.
 
 **Architecture:**
-- Event-sourced. Events table is the source of truth. Commits wrap one or more events atomically.
+- Versioned rows. Every mutation produces version rows (chunk_versions, dimension_versions, membership_versions) tagged with the commit that created them. History IS the versioned rows. No separate event log.
+- Current state resolved by walking parent pointers from branch HEAD to root, then taking the most recent version row per entity in that ancestry.
 - Branches are pointers to commits — like git refs. Creating a branch is creating a ref. No data is copied. History is immutable and does not need replication.
-- Active branch's state is materialized in memory from event replay. On branch switch, rebuild from events (fast at expected scale). Cacheable.
-- Diffing is a system capability — compare states at any two commits to show what was added, removed, or changed.
+- Diffing is a system capability — compare resolved states at any two commits to show what was added, removed, or changed.
 - Merging is NOT a system operation. Merge requires agency — an agent or human reads both branches (via diff), understands the content, and writes the result. The system provides visibility, not resolution.
 - Peers: two approaches to test. SQLite's `ATTACH DATABASE` (native, read-only access to another `.db` file) vs Zig-layer abstraction. Open question — worth testing both.
-- Optional: Roaring Bitmaps in memory for fast scope intersection at scale (bitwise AND across dimensions — microseconds). Rebuilt from events on startup.
+- Optional: Roaring Bitmaps in memory for fast scope intersection at scale (bitwise AND across dimensions — microseconds). A materialized current-state cache can be maintained and updated on each commit.
 
 **Key properties:**
 - Single `.db` file IS the knowledge system. Portable, inspectable, backupable.
@@ -222,7 +222,7 @@ The agent builds this JSON in its own context, reasons about it, revises it unti
 
 ~9 commands. One write operation. The rest are reads.
 
-**Low-level primitive commands (`dim create`, `weight set`, etc.) are not needed.** Everything is expressible as a declarative JSON mutation through `apply`.
+**Low-level primitive commands (`dim create`, `membership set`, etc.) are not needed.** Everything is expressible as a declarative JSON mutation through `apply`.
 
 **`--format json` is the default output.** Agents parse JSON. Human-readable via `--format human` or TTY detection. `--at <commit>` on any read command enables time travel.
 

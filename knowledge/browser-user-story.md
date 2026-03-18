@@ -6,7 +6,7 @@
 - A **dimension** is a named phenomenon. No rigid schema — just a name and whatever chunks belong to it.
 - A **meta-chunk** is a chunk on exactly one dimension. Stable anchor for that dimension's meaning.
 - **Dimensions connect through shared chunks.** No chunk-to-chunk relations without a dimension.
-- **Historical relationships** (chunk splits, membership changes, temporal order) live in the atomic event history, not modeled as dimensions.
+- **Historical relationships** (chunk splits, membership changes, temporal order) live in the commit history, not modeled as dimensions.
 - **Generated summaries** are computed for the browser, not stored in the DB. Can be precomputed for static browsing. Not source of truth.
 - **Connection strength** between dimensions at a given scope is computed from shared chunk counts — structural and transparent, not a stored number.
 
@@ -113,7 +113,7 @@ The system doesn't change. The scope does.
 
 ## TUI Approach (Initial Ideas — Details Deferred)
 
-List-based. Each dimension in scope shown with: name, computed connectivity, short summary, primary connected dimensions. Colors denote shared sub-dimensions across list items — visual cross-connection tracking. Strong outliers (connections to outside scope) visually distinct. Many more ideas to explore on TUI — parked for now.
+List-based. Each dimension in scope shown with: name, computed connectivity, short summary, primary connected dimensions. Colors denote shared sub-dimensions across list items — visual cross-connection tracking. Strong outliers (connections to outside scope) visually distinct. Many more ideas to explore — parked for now.
 
 ## Properties
 
@@ -124,5 +124,5 @@ List-based. Each dimension in scope shown with: name, computed connectivity, sho
 - Meta-chunks anchor dimensions.
 - Summaries are ephemeral. Precomputable, never in the DB.
 - Connection strength is computed from structure, not stored.
-- History is in the event stream.
+- History is in the commit chain (versioned rows).
 - Any reader, any interface.
