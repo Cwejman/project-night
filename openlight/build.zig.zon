@@ -1,0 +1,13 @@
+.{
+    .name = .openlight,
+    .version = "0.1.0",
+    .fingerprint = 0x8fcb6dc9755f2ba7,
+    .minimum_zig_version = "0.15.2",
+    .dependencies = .{},
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+        "deps",
+    },
+}

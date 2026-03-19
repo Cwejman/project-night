@@ -1,3 +1,19 @@
 {
-  "hooks": {}
+  "hooks": {},
+  "permissions": {
+    "allow": [
+      "Bash(zig *)",
+      "Bash(cd *)",
+      "Bash(ls *)",
+      "Bash(mkdir *)",
+      "Bash(curl *)",
+      "Bash(tar *)",
+      "Bash(chmod *)",
+      "Bash(./zig-out/*)",
+      "Bash(*/zig-out/bin/ol *)",
+      "Bash(rm -f /tmp/*)",
+      "Edit",
+      "Write"
+    ]
+  }
 }

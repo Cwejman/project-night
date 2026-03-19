@@ -13,7 +13,7 @@ How we build. The agent architecture for implementation.
 
 ### Architect (sequential, before implementation begins)
 - Reads the specification
-- Produces the project skeleton: `build.zig`, directory structure, SQLite amalgamation setup, dependency acquisition (zig-clap)
+- Produces the project skeleton: `build.zig`, directory structure, SQLite amalgamation setup
 - Verifies the skeleton compiles and runs a trivial test
 - One agent, one time, at the start
 
@@ -39,9 +39,9 @@ How we build. The agent architecture for implementation.
 
 Each step is a complete TDD cycle: test → implement → simplify → verify.
 
-1. **Project skeleton.** Zig project, SQLite compiled in, builds and runs. Trivial "hello world" test passes.
+1. **Project skeleton.** ✅ Zig 0.15.2 (Homebrew), SQLite 3.49.1 amalgamation compiled in, builds and runs. Trivial tests pass.
 
-2. **`ol init`.** Creates the database, initializes schema, creates `main` branch with root commit. Test: init creates a valid `.db` file with the correct tables.
+2. **`ol init`.** ✅ Creates `openlight.db`, initializes schema, creates `main` branch with root commit. Output: `{"ok":true}`.
 
 3. **`ol apply` — create chunks.** Parse declarative JSON with new chunks. Insert chunk_versions, dimension_versions, membership_versions. Generate IDs. Create commit. Test: apply JSON with new chunks, verify they exist in the database.
 
@@ -85,11 +85,29 @@ Most steps are sequential — each builds on the previous. However:
 - **Verifier is a separate agent** with permission to add tests but not change implementation.
 - **The main conversation orchestrates.** It decides when to move to the next step, resolves spec questions, and maintains alignment.
 
-## Zig Setup
+## Practical Notes (from implementation)
 
-Before step 1, Zig must be installed. The Architect agent handles:
-- Installing Zig (or verifying it's installed)
-- Downloading SQLite amalgamation (`sqlite3.c` + `sqlite3.h`)
-- Setting up `build.zig` to compile SQLite into the binary
-- Adding zig-clap as a dependency
-- Verifying `zig build` succeeds
+### Zig 0.15.2 API changes
+- Zig installed via Homebrew — on PATH, matches `Bash(zig *)` permission.
+- `std.io.getStdErr()` → `std.fs.File.stderr()`, writer requires buffer arg, `print` is on `std.Io.Writer` (the `.interface` field). For simple output, use `File.writeAll()` directly.
+- `b.addStaticLibrary()` → `b.addLibrary()`. Executables take `.root_module` created via `b.createModule()`. C source files added via `module.addCSourceFile()`.
+- `std.crypto.random.bytes()` takes a `[]u8` buffer, not a comptime length.
+- `EpochSeconds`: `.getEpochDay()` → `.calculateYearDay()` → `.calculateMonthDay()`.
+
+### zig-clap dropped
+zig-clap 0.11.0 has comptime compatibility issues with Zig 0.15.2. Simple arg parsing via `std.process.args()` is sufficient for `ol`'s ~9 commands. Can revisit if needed.
+
+### Project structure
+```
+build.zig          — build script
+build.zig.zon      — package metadata
+deps/sqlite3.c     — SQLite amalgamation
+deps/sqlite3.h
+src/main.zig       — CLI entry point, command dispatch
+src/Db.zig         — SQLite wrapper, schema, state resolution
+```
+
+### Testing approach
+- All verification through `zig build test` (matches permission) and `./zig-out/bin/ol` (matches permission).
+- Database correctness verified in Zig tests via SQLite queries, not external `sqlite3` CLI.
+- Tests use in-memory databases (`:memory:`) for speed and isolation.
