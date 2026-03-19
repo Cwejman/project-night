@@ -8,7 +8,7 @@ Single static binary. Zig + SQLite.
 make install
 ```
 
-Builds a release binary and copies to `/usr/local/bin/ol`.
+Downloads SQLite from sqlite.org on first build, compiles a static release binary, copies to `/usr/local/bin/ol`. Requires `zig`, `curl`, `unzip`.
 
 ## Usage
 
@@ -54,6 +54,7 @@ src/
 ## Development
 
 ```
-zig build test    # run tests
-zig build         # build debug binary to zig-out/bin/ol
+make test         # download deps (if needed) + run tests
+make build        # download deps (if needed) + build release binary
+make clean        # remove deps/, zig-out/, .zig-cache/
 ```
