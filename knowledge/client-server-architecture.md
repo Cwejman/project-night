@@ -60,10 +60,10 @@ Regardless of model, some things are settled:
 - What does sync look like? Is it git-style (explicit push/pull with merge) or real-time (CRDT, operational transform)?
 - Where does the agent live? Does an AI agent talk to the local CLI, to the server directly, or to both?
 
-## What to do now
+## What's been done
 
-The implementation doesn't need to answer these questions yet. But one change is clear and should happen:
+**Active branch moved out of the database.** Implemented. Branch is now client-side state — resolved from `--branch` flag > `OPENLIGHT_BRANCH` env > `.openlight/config.json` > default `main`. The `meta` table was removed. The DB is purely a data store with no client-session state. `ol branch switch` writes to `config.json`.
 
-**Move `active_branch` out of the database.** It becomes client-side state — resolved from `--branch` flag, `OPENLIGHT_BRANCH` env var, local config file, or default `main`. The `meta` table goes away (it only held active_branch). This makes the DB purely a data store with no client-session state, which is correct regardless of which deployment model we choose.
+## What's next
 
-Everything else — protocol, auth, server — is future work that depends on how the system will be used. That understanding should come from the use cases (agentic integration, browser story, views) before being locked into architecture.
+Protocol, auth, server — future work that depends on how the system will be used. That understanding should come from the use cases (agentic integration, browser story, views) before being locked into architecture.

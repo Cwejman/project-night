@@ -439,3 +439,113 @@ Key realizations during the trace-through:
 3. **Chunks are flat at the top, not nested inside dimensions.** A chunk lives at an intersection of multiple dimensions — it doesn't "belong" to any single one. Nesting would impose a false hierarchy. The flat list with full membership (instance and relates on all dimensions) is the honest, non-hierarchical representation.
 
 4. **The browser vs system lens distinction.** The JSON is the system's lens — flat, honest, non-hierarchical. The browser is the human's lens — it may "duplicate" chunks by showing them under multiple dimensions. That's a rendering decision, not a structural one. This is the general-purpose substrate principle: the system is one thing, the interfaces are many.
+
+---
+
+# Session 3 — 2026-03-19 (Implementation + Refactoring)
+
+Full CLI implementation session. Started from a refactoring plan, ended with a complete, installable CLI with all 16 build steps done.
+
+## Exchange 39 — Refactoring plan execution
+
+**Human:** Provided a refactoring plan with 8 steps: extract kv serialization, drop dimension_versions, active branch in DB, recursive CTE for ancestry, unify state resolution, fix N+1 scope connections, dissolve json.zig into domain types, empty scope returns dimensions.
+
+**Agent:** Executed all 8 steps sequentially, testing after each. Key changes: dimension_versions table dropped (dimensions are implicit from memberships), ancestry_cte replaces N-query string interpolation, state resolution unified through materializeCurrentState, json.zig replaced by serial.zig + jsonStringify on domain types.
+
+---
+
+## Exchange 40 — Code knowledge system
+
+**Human:** Asked for a condensed explanation of the code — "it ought to be possible to explain the code using 10-100x less chars than the syntax itself."
+
+**Agent:** Produced an ASCII-diagram knowledge map: the data model (chunks → dimensions via memberships), the write path (parse → transaction → version rows → advance HEAD), the read path (CTE → materialize → temp tables), the scope algorithm (5 queries), and the Zig patterns (prepare → bind → step → collect → toOwnedSlice).
+
+---
+
+## Exchange 41 — File split discussion
+
+**Human:** Explored whether to split the monolithic db.zig. Two philosophies discussed: split by feature (each file answers "what does scope do?") vs split by abstraction level (each file answers "what kind of thing is this?"). Human preferred feature-based: each CLI subcommand is a file, main function composes helpers below it, shared things lifted out.
+
+**Agent:** Spawned four archetypal critics (functional programmer, systems programmer, DDD practitioner, pragmatist) to evaluate the proposed structure. Consensus: extract sqlite.zig first, fix scope duplication and SQL injection, then split files.
+
+---
+
+## Exchange 42 — Internal cleanup
+
+Before splitting files, four cleanups executed:
+1. serializeKv replaced with std.json.Stringify (30 lines → 4)
+2. Scope SQL injection fixed — dimension names now use parameterized scope_filter temp table
+3. Scope duplication eliminated — extracted collectDimCounts, collectConnections, buildScopeDims
+4. sqlite.zig extracted as generic wrapper (Db wraps it with forwarding methods)
+
+---
+
+## Exchange 43 — File split executed
+
+db.zig split into per-command files under src/commands/: apply.zig, scope.zig, dims.zig, log.zig, show.zig, branch.zig. Each file follows the pattern: public run() at top, private helpers below, types at bottom. Shared infrastructure stays in db.zig (schema, state resolution, branch management).
+
+---
+
+## Exchange 44 — main.zig redesign
+
+Multiple iterations on main.zig:
+1. First attempt: tagged union Command + separate parseArgs + execute. Human: "too smart, three repetitions of the same structure."
+2. Second attempt: merged parse + execute, if/else dispatch, each branch 3-4 lines. Human approved.
+3. Branch subcommands given same spacing and comments as root commands — "they're all just leaves."
+
+---
+
+## Exchange 45 — apply.zig composition
+
+**Human:** "There is no composition, just big deep scripts."
+
+**Agent:** Refactored apply.zig: run() became a pipeline (parse → transaction → for each chunk: removeChunk/updateChunk/createChunk → advance HEAD → commit). Membership diff extracted into diffMemberships → diffOneType. JSON helpers extracted (getStringField, getArrayField, jsonArrayContains). 571 lines but each function is one clear operation.
+
+---
+
+## Exchange 46 — scope.zig composition
+
+Scope refactored similarly: run() became a pipeline of named steps (populateScopeFilter → createInScopeTable → countRows → countInstanceRelates → queryConnectedDims → queryConnections → buildResult). Scoped and empty paths share the same helpers, differing only in which SQL queries they use.
+
+---
+
+## Exchange 47 — Active branch is client state
+
+**Human:** Realized active branch stored in the database is wrong — if two clients share a DB, they'd fight over which branch is active. The active branch is client state, not server state.
+
+**Agent:** Created client-server-architecture.md exploring three deployment models (git model, client-server, hybrid). Active branch moved out of DB: resolved from --branch flag > OPENLIGHT_BRANCH env > default "main". Meta table removed.
+
+---
+
+## Exchange 48 — .openlight/ directory
+
+**Human:** "ol init should init a knowledge base at pwd... perhaps we need .openlight/ that has system.db and settings.json."
+
+**Agent:** Implemented: ol init creates .openlight/ with system.db and config.json. Default db path changed to .openlight/system.db. Branch switch writes to config.json. Resolution order: --branch flag > OPENLIGHT_BRANCH env > config.json > "main".
+
+---
+
+## Exchange 49 — Remaining features implemented
+
+All remaining build steps completed in sequence:
+- ol diff: compares resolved state at two commits, lean JSON output
+- --at flag: time travel on read operations
+- Log flags: --limit, --chunk, --dim
+- Scope edges: second-order connections through bridging dimensions
+- --format human|json: auto-detects TTY, human-readable output for terminal
+
+---
+
+## Exchange 50 — Installation and SQLite dependency
+
+**Human:** Disliked vendored SQLite amalgamation (275k lines of C in repo). Discussed options: Zig package manager vs system library vs Makefile download. Rejected zig-sqlite package (untrusted third party). Rejected system library (defeats static binary purpose).
+
+**Settled:** Makefile downloads SQLite amalgamation from sqlite.org at build time. deps/ is gitignored. First `make build` fetches it, subsequent builds use cache. 275k lines removed from repo.
+
+---
+
+## Exchange 51 — TUI exploration
+
+**Human:** Raised questions about TUI: where does it live in the monorepo? Should it use the CLI or the library directly? Is Zig appropriate?
+
+**Discussion:** Each monorepo module should have its own knowledge system (peered). The TUI's knowledge domain (rendering, interaction, layout) is different from the CLI's (data model, SQLite). Keeping them in one module for now — different dimensions, same knowledge base. TUI specification started as knowledge/tui-specification.md. Language/framework decision deferred until specs are settled.

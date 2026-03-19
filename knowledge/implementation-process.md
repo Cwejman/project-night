@@ -41,7 +41,7 @@ Each step is a complete TDD cycle: test → implement → simplify → verify.
 
 1. **Project skeleton.** ✅ Zig 0.15.2 (Homebrew), SQLite 3.49.1 amalgamation compiled in, builds and runs. Trivial tests pass.
 
-2. **`ol init`.** ✅ Creates `openlight.db`, initializes schema, creates `main` branch with root commit. Output: `{"ok":true}`.
+2. **`ol init`.** ✅ Creates `.openlight/` directory with `system.db` (schema + root commit on `main`) and `config.json` (client settings). Output: `{"ok":true}`.
 
 3. **`ol apply` — create chunks.** ✅
 
