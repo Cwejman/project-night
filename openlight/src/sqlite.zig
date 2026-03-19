@@ -12,13 +12,17 @@ pub const Error = error{
     InvalidInput,
 };
 
+// -- Connection lifecycle --
+
 pub fn open(path: [*:0]const u8) Error!Sqlite {
     var db: ?*c.sqlite3 = null;
     const rc = c.sqlite3_open(path, &db);
+
     if (rc != c.SQLITE_OK) {
         if (db) |d| _ = c.sqlite3_close(d);
         return error.SqliteError;
     }
+
     return .{ .db = db };
 }
 
@@ -27,9 +31,12 @@ pub fn close(self: *Sqlite) void {
     self.db = null;
 }
 
+// -- Execution --
+
 pub fn exec(self: *Sqlite, sql: [*:0]const u8) Error!void {
     var err_msg: [*c]u8 = null;
     const rc = c.sqlite3_exec(self.db, sql, null, null, &err_msg);
+
     if (rc != c.SQLITE_OK) {
         if (err_msg) |msg| c.sqlite3_free(msg);
         return error.SqliteError;
@@ -39,12 +46,18 @@ pub fn exec(self: *Sqlite, sql: [*:0]const u8) Error!void {
 pub fn prepare(self: *Sqlite, sql: [*:0]const u8) Error!Statement {
     var stmt: ?*c.sqlite3_stmt = null;
     const rc = c.sqlite3_prepare_v2(self.db, sql, -1, &stmt, null);
+
     if (rc != c.SQLITE_OK) return error.SqliteError;
+
     return .{ .stmt = stmt };
 }
 
+// -- Statement --
+
 pub const Statement = struct {
     stmt: ?*c.sqlite3_stmt,
+
+    // lifecycle
 
     pub fn finalize(self: *Statement) void {
         if (self.stmt) |s| _ = c.sqlite3_finalize(s);
@@ -62,6 +75,8 @@ pub const Statement = struct {
         const rc = c.sqlite3_reset(self.stmt);
         if (rc != c.SQLITE_OK) return error.SqliteError;
     }
+
+    // bind parameters
 
     pub fn bindText(self: *Statement, col: c_int, text: [*:0]const u8) Error!void {
         const rc = c.sqlite3_bind_text(self.stmt, col, text, -1, c.SQLITE_TRANSIENT);
@@ -83,6 +98,8 @@ pub const Statement = struct {
         if (rc != c.SQLITE_OK) return error.SqliteError;
     }
 
+    // read columns
+
     pub fn columnText(self: *Statement, col: c_int) ?[]const u8 {
         const ptr = c.sqlite3_column_text(self.stmt, col);
         if (ptr == null) return null;
@@ -94,6 +111,8 @@ pub const Statement = struct {
         return c.sqlite3_column_int(self.stmt, col);
     }
 };
+
+// -- Info --
 
 pub fn version() []const u8 {
     return std.mem.span(c.sqlite3_libversion());
