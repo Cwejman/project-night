@@ -139,7 +139,7 @@ Note: the stress test recommended 0.0–1.0 continuous weight for `relates`. Thi
 - Zig + SQLite: proportionate. Proven storage + fast CLI. The innovation is the data model, not the storage engine.
 
 **Architecture:**
-- Versioned rows. Every mutation produces version rows (chunk_versions, dimension_versions, membership_versions) tagged with the commit that created them. History IS the versioned rows. No separate event log.
+- Versioned rows. Every mutation produces version rows (chunk_versions, membership_versions) tagged with the commit that created them. History IS the versioned rows. No separate event log. Dimensions are implicit — they exist when memberships reference them.
 - Current state resolved by walking parent pointers from branch HEAD to root, then taking the most recent version row per entity in that ancestry.
 - Branches are pointers to commits — like git refs. Creating a branch is creating a ref. No data is copied. History is immutable and does not need replication.
 - Diffing is a system capability — compare resolved states at any two commits to show what was added, removed, or changed.

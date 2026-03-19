@@ -60,13 +60,6 @@ CREATE TABLE chunk_versions (
     PRIMARY KEY (chunk_id, commit_id)
 );
 
-CREATE TABLE dimension_versions (
-    name TEXT NOT NULL,
-    commit_id TEXT NOT NULL REFERENCES commits(id),
-    removed INTEGER DEFAULT 0,
-    PRIMARY KEY (name, commit_id)
-);
-
 CREATE TABLE membership_versions (
     chunk_id TEXT NOT NULL,
     dimension TEXT NOT NULL,
@@ -136,8 +129,8 @@ Within a single SQLite transaction:
    - Generate unique chunk_id
    - Validate: at least one membership
    - Insert `chunk_versions` row
-   - For each new dimension referenced: insert `dimension_versions` row
    - Insert `membership_versions` rows (active=1)
+   - Dimensions are implicit — they exist when memberships reference them
 
    **Update** (has `id`, no `removed`):
    - Resolve current state of chunk from ancestry
@@ -146,7 +139,6 @@ Within a single SQLite transaction:
      - New: insert `membership_versions` (active=1)
      - Removed: insert `membership_versions` (active=0)
      - Type changed: insert `membership_versions` with new type
-     - Create dimensions implicitly as needed
    - Fields not provided: no version rows inserted
 
    **Remove** (`removed: true`):
@@ -237,24 +229,27 @@ Summary per commit computed from version rows.
 Creates a pointer to the current HEAD commit. Nothing else.
 
 ### `ol branch switch <name>`
-Changes active branch. Resolves state from the new branch's commit ancestry.
+Writes the active branch to `.openlight/config.json`. Active branch is client state — the database stores no session information. Different clients can be on different branches simultaneously.
 
 ### `ol branch list`
 Lists branches with their HEAD commit ids.
 
 ### `ol branch delete <name>`
-Removes the pointer. Commits and version rows remain (lossless).
+Removes the pointer. Commits and version rows remain (lossless). Cannot delete main or the active branch.
 
 ## 6. Initialization
 
-### `ol init [path]`
-Creates `openlight.db`. Initializes schema. Creates `main` branch with empty root commit. Default path: `./openlight.db`.
+### `ol init`
+Creates `.openlight/` directory in the current working directory containing:
+- `system.db` — SQLite database with schema and root commit on `main`
+- `config.json` — client settings (`{"branch": "main"}`)
 
 ## 7. Global Flags
 
 | Flag | Description |
 |------|-------------|
-| `--db <path>` | Database path. Default: `./openlight.db` or `$OPENLIGHT_DB` |
+| `--db <path>` | Database path. Default: `.openlight/system.db` or `$OPENLIGHT_DB` |
+| `--branch <name>` | Active branch. Default: from `.openlight/config.json` or `$OPENLIGHT_BRANCH` or `main` |
 | `--format json\|human` | json if piped, human if TTY |
 | `--at <commit-id>` | Time travel (read operations) |
 

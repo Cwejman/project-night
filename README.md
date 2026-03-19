@@ -40,7 +40,7 @@ This plan's peers are more like parents in this cade but the core primitive of p
 
 ## How
 
-The CLI is `ol`. Built in Zig + SQLite — single static binary. One write operation (`ol apply`): a declarative JSON mutation that is simultaneously the write format, the commit content, and the diff format. Reads are structural by default — dimensions, connectivity, counts — with content opt-in. ~9 commands total. The full specification is in [`knowledge/specification.md`](knowledge/specification.md).
+The CLI is `ol`. Built in Zig + SQLite — single static binary. Install: `cd openlight && make install`. One write operation (`ol apply`): a declarative JSON mutation that is simultaneously the write format, the commit content, and the diff format. Reads are structural by default — dimensions, connectivity, counts — with content opt-in. `ol init` creates `.openlight/` in the current directory. 10 commands, all implemented. See [`openlight/README.md`](openlight/README.md) for usage and [`knowledge/specification.md`](knowledge/specification.md) for the full spec.
 
 **The path forward:** CLI implementation → system's own knowledge ported into itself → Claude plugin (custom, not built-in memory) → TUI browser (non-hierarchical, scope-based) → deeper integration where the context lifecycle is first-class.
 
