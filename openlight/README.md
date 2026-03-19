@@ -36,19 +36,23 @@ ol branch create|switch|list|delete  # branch management
 ## Project structure
 
 ```
+Makefile                   build, test, install, deps
+build.zig                  zig build configuration
+build.zig.zon              package metadata
+deps/                      SQLite amalgamation (downloaded, gitignored)
 src/
-├── main.zig              CLI dispatch + human formatting
-├── db.zig                schema, state resolution, shared machinery
-├── sqlite.zig            generic SQLite wrapper
-├── serial.zig            JSON serialization
+├── main.zig               CLI dispatch + human formatting
+├── db.zig                 schema, state resolution, shared machinery
+├── sqlite.zig             generic SQLite wrapper
+├── serial.zig             JSON serialization
 └── commands/
-    ├── apply.zig          ol apply
-    ├── scope.zig          ol scope
-    ├── dims.zig           ol dims
-    ├── log.zig            ol log
-    ├── show.zig           ol show
-    ├── diff.zig           ol diff
-    └── branch.zig         ol branch
+    ├── apply.zig           ol apply
+    ├── scope.zig           ol scope
+    ├── dims.zig            ol dims
+    ├── log.zig             ol log
+    ├── show.zig            ol show
+    ├── diff.zig            ol diff
+    └── branch.zig          ol branch
 ```
 
 ## Development
