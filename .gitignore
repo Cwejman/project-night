@@ -1,0 +1,22 @@
+# Build artifacts
+browser/olb
+openlight/zig-out/
+openlight/zig-cache/
+
+# IDE
+.idea/
+
+# Client state (active branch is per-user)
+.openlight/config.json
+
+# Generated caches (summaries are regenerable)
+.openlight/cache/
+
+# Zig cache
+.zig-cache/
+
+# Playwright
+.playwright-mcp/
+
+# Emacs
+.#*
