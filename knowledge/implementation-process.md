@@ -8,6 +8,7 @@ How we build. The agent architecture for implementation.
 - **Incremental.** Build the smallest working thing, then extend. Each increment is a commit that works.
 - **Simplify after each step.** Implementation tends to accumulate complexity. After each feature is working, a simplification pass removes what isn't needed.
 - **The spec is the truth.** `specification.md` defines what to build. Implementation questions that the spec doesn't answer should be resolved by updating the spec first, then building.
+- **Conventional Commits.** All commits use the format `type(scope): description`. Types: `feat`, `fix`, `refactor`, `docs`, `test`, `chore`, `build`. Scope matches the area of work (e.g. `browser`, `cli`, `knowledge`). Subject line under 72 characters.
 
 ## Agent Roles
 
