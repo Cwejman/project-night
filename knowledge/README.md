@@ -108,7 +108,9 @@ Agent-generated test protocols are in `in-depth/` as reference, but the path for
 
 ## Implementation
 
-The CLI is complete. 16 build steps, all passing. Zig + SQLite, single static binary, installed as `ol`.
+**CLI** — complete. 16 build steps, all passing. Zig + SQLite, single static binary, installed as `ol`.
+
+**TUI Browser** — working. Go + bubbletea, installed as `olb`. Scope navigation with split panels, AI-generated summaries (haiku, seeded from culture), branch switching, undo/redo. See `tui-specification.md`.
 
 See `specification.md` for the data model, schema, commands, and formats.
 See `implementation-process.md` for how it was built.

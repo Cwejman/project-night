@@ -1,6 +1,6 @@
 # OpenLight
 
-![banner](.img/banner.png)
+![header](.img/header.png)
 
 A knowledge system where structure replaces search, relationships are transparent, and knowledge is identity.
 
@@ -40,10 +40,14 @@ This plan's peers are more like parents in this cade but the core primitive of p
 
 ## How
 
-The CLI is `ol`. Built in Zig + SQLite — single static binary. Install: `cd openlight && make install`. One write operation (`ol apply`): a declarative JSON mutation that is simultaneously the write format, the commit content, and the diff format. Reads are structural by default — dimensions, connectivity, counts — with content opt-in. `ol init` creates `.openlight/` in the current directory. 10 commands, all implemented. See [`openlight/README.md`](openlight/README.md) for usage and [`knowledge/specification.md`](knowledge/specification.md) for the full spec.
+**CLI** — `ol`. Zig + SQLite, single static binary. Install: `cd openlight && make install`. One write operation (`ol apply`): a declarative JSON mutation that is simultaneously the write format, the commit content, and the diff format. Reads are structural by default — dimensions, connectivity, counts — with content opt-in. `ol init` creates `.openlight/` in the current directory. 10 commands, all implemented. See [`openlight/README.md`](openlight/README.md) for usage and [`knowledge/specification.md`](knowledge/specification.md) for the full spec.
 
-**The path forward:** CLI implementation → system's own knowledge ported into itself → Claude plugin (custom, not built-in memory) → TUI browser (non-hierarchical, scope-based) → deeper integration where the context lifecycle is first-class.
+**TUI Browser** — `olb`. Go + bubbletea. Install: `cd browser && make install`. Scope navigation with split panels (dims + chunks), AI-generated summaries seeded from culture (haiku), branch switching, undo/redo history. Dims and chunks update live as you navigate. See [`knowledge/tui-specification.md`](knowledge/tui-specification.md) for the spec.
 
-**What is explored but not yet built:** culture-as-root, navigable context, integration contracts, session bubbles as ephemeral peer knowledge bases. **What is visionary:** first-class context lifecycle, the boundary between model and environment dissolving, natural evolution of the system from within. These inform the design but do not drive the immediate steps.
+**What's next:** Culture articulation in the author's own voice. Organic use with real content. Claude plugin (custom, not built-in memory). Deeper integration where the context lifecycle is first-class.
+
+**What is explored but not yet built:** integration contracts, session bubbles as ephemeral peer knowledge bases. **What is visionary:** first-class context lifecycle, the boundary between model and environment dissolving, natural evolution of the system from within. These inform the design but do not drive the immediate steps.
 
 The exploration lives in [`knowledge/`](knowledge/README.md). Inspired by long late night sessions plunging the depths of AI: [the-strange-of-agi](https://github.com/Cwejman/the-strange-of-agi). The subdirectory `knowledge/legacy/` contains a superseded entry system that prematurely attempted to build relational knowledge in markdown files, with Claude hooks for bootstrapping. Especially with the release of Claude Opus 4.6 and a 1M context window, keeping to a few markdown files without frontmatter has worked better.
+
+![footer](.img/footer.png)

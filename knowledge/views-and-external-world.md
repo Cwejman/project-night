@@ -40,7 +40,7 @@ The knowledge system is the source of truth for meaning and relationships. Exter
 Three pieces:
 
 1. **CLI** — built and complete. `ol` binary, Zig + SQLite. See `specification.md` and `implementation-process.md`.
-2. **Browser** — TUI first, then web. Navigating the dimensional space. See `tui-specification.md`.
+2. **Browser** — TUI built and working. `olb` binary, Go + bubbletea. Scope navigation, split panels, AI summaries via haiku. See `tui-specification.md`.
 3. **Claude plugin** — later. Initially use Claude's existing session capability with deliberate interactions through the CLI.
 
 ## What's Still Open
