@@ -16,7 +16,7 @@ type InsideState struct {
 }
 
 // RenderDimEntry renders a single dimension entry for the dims panel.
-func RenderDimEntry(dim ol.ScopeDim, selected bool, inside InsideState, maxWidth int) string {
+func RenderDimEntry(dim ol.ScopeDim, selected bool, inside InsideState, maxWidth int, dimSummary string) string {
 	var lines []string
 
 	// Name line with cursor indicator
@@ -27,6 +27,27 @@ func RenderDimEntry(dim ol.ScopeDim, selected bool, inside InsideState, maxWidth
 		nameLine = "   " + DimName(dim.Name) + "  " + Light.Render(fmt.Sprintf("%d", dim.Shared))
 	}
 	lines = append(lines, nameLine)
+
+	// Summary — blank line after name; short in Light, long in Dim
+	if dimSummary != "" {
+		lines = append(lines, "")
+		paras := strings.Split(dimSummary, "\n")
+		for pi, para := range paras {
+			if para == "" {
+				continue
+			}
+			if pi > 0 {
+				lines = append(lines, "")
+			}
+			style := Light // first paragraph (short) is brighter
+			if pi > 0 {
+				style = Dim // extended paragraphs are gray
+			}
+			for _, wl := range WrapText(para, maxWidth-5) {
+				lines = append(lines, "     "+style.Render(wl))
+			}
+		}
+	}
 
 	// Instance/relates toggle — only shown when inside
 	if inside.Active {
@@ -171,21 +192,48 @@ type DimsListResult struct {
 	TotalLines int
 }
 
+// ScopeSummaryOpts controls the scope summary block at the top of the dims panel.
+type ScopeSummaryOpts struct {
+	Short    string
+	Long     string
+	ShowLong bool
+	Loading  bool
+}
+
 // RenderDimsList renders the full dimensions panel with entry position tracking.
-func RenderDimsList(dims []ol.ScopeDim, cursor int, inside *InsideState, maxWidth int) DimsListResult {
+func RenderDimsList(dims []ol.ScopeDim, cursor int, inside *InsideState, maxWidth int, dimSummaries map[string]string, scopeSummary ScopeSummaryOpts) DimsListResult {
 	var result DimsListResult
 	var allLines []string
 
+	// Scope summary at top of dims panel
+	if scopeSummary.Loading {
+		allLines = append(allLines, " "+Dim.Render("summarizing..."), "")
+	} else if scopeSummary.Short != "" {
+		for _, wl := range WrapText(scopeSummary.Short, maxWidth-1) {
+			allLines = append(allLines, " "+Light.Render(wl))
+		}
+		if scopeSummary.ShowLong && scopeSummary.Long != "" {
+			allLines = append(allLines, "")
+			for _, wl := range WrapText(scopeSummary.Long, maxWidth-1) {
+				allLines = append(allLines, " "+Dim.Render(wl))
+			}
+		}
+		allLines = append(allLines, "", "")
+	}
+
 	for i, dim := range dims {
 		if i > 0 {
-			// 2 blank lines between entries
 			allLines = append(allLines, "", "")
 		}
 		var is InsideState
 		if inside != nil && i == cursor {
 			is = *inside
 		}
-		entry := RenderDimEntry(dim, i == cursor, is, maxWidth)
+		var ds string
+		if dimSummaries != nil {
+			ds = dimSummaries[dim.Name]
+		}
+		entry := RenderDimEntry(dim, i == cursor, is, maxWidth, ds)
 		entryLines := strings.Split(entry, "\n")
 
 		start := len(allLines)

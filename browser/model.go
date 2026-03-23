@@ -6,6 +6,7 @@ import (
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/openlight/browser/nav"
 	"github.com/openlight/browser/ol"
+	"github.com/openlight/browser/summary"
 	"github.com/openlight/browser/ui"
 )
 
@@ -16,6 +17,7 @@ const (
 	modeDrop
 	modePull
 	modeBranch
+	modeToggle
 )
 
 type panel int
@@ -65,6 +67,12 @@ type model struct {
 	totalLines  int
 	branch      string       // current active branch
 	branches    []ol.Branch  // cached branch list for picker
+	dimSums      *summary.DimSummaries // cached dim summaries (scope-independent)
+	scopeSum     summary.Summary       // current scope summary
+	dimsLoading  bool                  // dim summaries being fetched
+	scopeLoading bool                  // scope summary being fetched
+	summaryCache *summary.Cache
+	longSummary  bool
 }
 
 // scopeMsg carries the result of an async scope fetch.
@@ -77,6 +85,20 @@ type scopeMsg struct {
 type chunksMsg struct {
 	items  []ol.ChunkItem
 	counts ol.ChunkCounts
+	err    error
+}
+
+// dimSumsMsg carries dim summaries (generated once per HEAD).
+type dimSumsMsg struct {
+	result *summary.DimSummaries
+	head   string
+	err    error
+}
+
+// scopeSumMsg carries a scope summary.
+type scopeSumMsg struct {
+	result summary.Summary
+	key    string
 	err    error
 }
 
@@ -93,10 +115,11 @@ type branchSwitchedMsg struct {
 
 // clientReadyMsg is sent once the system is discovered.
 type clientReadyMsg struct {
-	client *ol.Client
-	resp   *ol.ScopeResponse
-	err    error
-	branch string
+	client    *ol.Client
+	resp      *ol.ScopeResponse
+	err       error
+	branch    string
+	systemDir string
 }
 
 func newModel() model {
@@ -114,7 +137,7 @@ func (m model) Init() tea.Cmd {
 		}
 		client := &ol.Client{DBPath: dbPath(systemDir)}
 		resp, err := client.Scope()
-		return clientReadyMsg{client: client, resp: resp, err: err, branch: activeBranch(systemDir)}
+		return clientReadyMsg{client: client, resp: resp, err: err, branch: activeBranch(systemDir), systemDir: systemDir}
 	}
 }
 
@@ -133,13 +156,24 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		}
 		m.client = msg.client
 		m.branch = msg.branch
+		m.summaryCache = summary.NewCache(msg.systemDir)
 		m.scope = msg.resp
 		m.cursor = 0
 		m.scrollOff = 0
 		m.history = nav.NewHistory(msg.resp.Scope)
 		m.adjustScroll()
+		var cmds []tea.Cmd
 		if m.showChunks {
-			return m, m.fetchChunksCmd()
+			cmds = append(cmds, m.fetchChunksCmd())
+		}
+		if cmd := m.fetchDimSumsCmd(); cmd != nil {
+			cmds = append(cmds, cmd)
+		}
+		if cmd := m.fetchScopeSumCmd(); cmd != nil {
+			cmds = append(cmds, cmd)
+		}
+		if len(cmds) > 0 {
+			return m, tea.Batch(cmds...)
 		}
 
 	case scopeMsg:
@@ -153,15 +187,40 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		m.scrollOff = 0
 		m.chunks = nil
 		m.adjustScroll()
-		// If chunks panel is visible, fetch chunks
+		var cmds []tea.Cmd
 		if m.showChunks {
-			return m, m.fetchChunksCmd()
+			cmds = append(cmds, m.fetchChunksCmd())
+		}
+		// Dim summaries reuse cache (keyed by HEAD, not scope)
+		if cmd := m.fetchDimSumsCmd(); cmd != nil {
+			cmds = append(cmds, cmd)
+		}
+		// Scope summary is per-scope
+		if cmd := m.fetchScopeSumCmd(); cmd != nil {
+			cmds = append(cmds, cmd)
+		}
+		if len(cmds) > 0 {
+			return m, tea.Batch(cmds...)
 		}
 
 	case chunksMsg:
 		if msg.err == nil {
 			m.chunks = msg.items
 			m.chunkCounts = msg.counts
+		}
+
+	case dimSumsMsg:
+		m.dimsLoading = false
+		if msg.err == nil {
+			m.dimSums = msg.result
+			m.summaryCache.SetDims(msg.head, msg.result)
+		}
+
+	case scopeSumMsg:
+		m.scopeLoading = false
+		if msg.err == nil {
+			m.scopeSum = msg.result
+			m.summaryCache.SetScope(msg.key, msg.result)
 		}
 
 	case branchListMsg:
@@ -191,6 +250,8 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			return m.updatePull(msg)
 		case modeBranch:
 			return m.updateBranch(msg)
+		case modeToggle:
+			return m.updateToggle(msg)
 		default:
 			return m.updateNormal(msg)
 		}
@@ -272,20 +333,7 @@ func (m model) updateEntryLevel(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
 			return m.fetchScopeNoHistory(scope)
 		}
 	case "t":
-		if m.focus == panelDims {
-			m.showChunks = !m.showChunks
-			if m.showChunks && m.chunks == nil {
-				return m, m.fetchChunksCmd()
-			}
-		} else {
-			m.showDims = !m.showDims
-		}
-		if !m.showDims && m.focus == panelDims {
-			m.focus = panelChunks
-		}
-		if !m.showChunks && m.focus == panelChunks {
-			m.focus = panelDims
-		}
+		m.mode = modeToggle
 	}
 	return m, nil
 }
@@ -454,6 +502,30 @@ func (m model) updatePull(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
 	}
 }
 
+func (m model) updateToggle(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
+	m.mode = modeNormal
+	switch msg.String() {
+	case "d":
+		m.showDims = !m.showDims
+		if !m.showDims && m.focus == panelDims {
+			m.focus = panelChunks
+		}
+		m.adjustScroll()
+	case "c":
+		m.showChunks = !m.showChunks
+		if m.showChunks && m.chunks == nil {
+			return m, m.fetchChunksCmd()
+		}
+		if !m.showChunks && m.focus == panelChunks {
+			m.focus = panelDims
+		}
+	case "s":
+		m.longSummary = !m.longSummary
+		m.adjustScroll()
+	}
+	return m, nil
+}
+
 func (m model) updateBranch(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
 	key := msg.String()
 	if len(key) == 1 && key[0] >= '1' && key[0] <= '9' {
@@ -543,11 +615,60 @@ func (m model) fetchChunksCmd() tea.Cmd {
 
 // adjustScroll recomputes entry positions and adjusts scrollOff
 // so the cursor entry is visible. Must be called after any cursor change.
+// fetchDimSumsCmd fetches dim summaries (once per HEAD, reused across scopes).
+func (m *model) fetchDimSumsCmd() tea.Cmd {
+	if m.client == nil || m.scope == nil || m.summaryCache == nil {
+		return nil
+	}
+	head := m.scope.Head
+	if cached, ok := m.summaryCache.GetDims(head); ok {
+		m.dimSums = cached
+		m.dimsLoading = false
+		return nil
+	}
+	m.dimsLoading = true
+	client := m.client
+	// Get ALL dims from root scope for complete coverage
+	return func() tea.Msg {
+		rootResp, err := client.Scope()
+		if err != nil {
+			return dimSumsMsg{err: err}
+		}
+		var allDims []string
+		for _, d := range rootResp.Dimensions {
+			allDims = append(allDims, d.Name)
+		}
+		result, err := summary.GenerateDims(client, allDims)
+		return dimSumsMsg{result: result, head: head, err: err}
+	}
+}
+
+// fetchScopeSumCmd fetches a scope-level summary (per scope+head).
+func (m *model) fetchScopeSumCmd() tea.Cmd {
+	if m.client == nil || m.scope == nil || m.summaryCache == nil {
+		return nil
+	}
+	key := summary.ScopeKey(m.scope.Scope, m.scope.Head)
+	if cached, ok := m.summaryCache.GetScope(key); ok {
+		m.scopeSum = cached
+		m.scopeLoading = false
+		return nil
+	}
+	m.scopeLoading = true
+	m.scopeSum = summary.Summary{}
+	client := m.client
+	scope := append([]string{}, m.scope.Scope...)
+	return func() tea.Msg {
+		result, err := summary.GenerateScope(client, scope)
+		return scopeSumMsg{result: result, key: key, err: err}
+	}
+}
+
 func (m *model) adjustScroll() {
 	if m.scope == nil || m.width == 0 {
 		return
 	}
-	r := ui.RenderDimsList(m.scope.Dimensions, m.cursor, m.insideState(), m.dimsMaxWidth())
+	r := ui.RenderDimsList(m.scope.Dimensions, m.cursor, m.insideState(), m.dimsMaxWidth(), m.dimSummaries(), m.scopeSummaryOpts())
 	m.entryStart = r.EntryStart
 	m.entryEnd = r.EntryEnd
 	m.totalLines = r.TotalLines
@@ -593,7 +714,7 @@ func (m model) View() string {
 		return "\n " + ui.Dim.Render("loading...") + "\n"
 	}
 
-	// Fixed top bar
+	// Fixed top bar + blank line below
 	top := ui.TopBar(m.scope, m.branch) + "\n\n"
 
 	// Scrollable content
@@ -610,17 +731,20 @@ func (m model) View() string {
 		content = m.viewDimsOnly()
 	}
 
-	// Pad content to fill between top and bottom
-	contentLines := strings.Count(content, "\n") + 1
+	// Build fixed-height output: top + content + bottom = exactly m.height lines
+	// top = 2 lines (topbar + blank), bottom = 2 lines (blank + bottombar)
+	bottom := m.bottomBar()
 	viewH := m.contentHeight()
-	if contentLines < viewH {
-		content += strings.Repeat("\n", viewH-contentLines)
+
+	contentLines := strings.Split(content, "\n")
+	for len(contentLines) < viewH {
+		contentLines = append(contentLines, "")
+	}
+	if len(contentLines) > viewH {
+		contentLines = contentLines[:viewH]
 	}
 
-	// Fixed bottom bar
-	bottom := m.bottomBar()
-
-	return top + content + "\n" + bottom + "\n"
+	return top + strings.Join(contentLines, "\n") + "\n\n" + bottom
 }
 
 // panelWidth returns the width for each panel (equal split).
@@ -635,12 +759,12 @@ func (m model) dimsMaxWidth() int {
 
 // contentHeight returns the available lines between top bar and bottom bar.
 func (m model) contentHeight() int {
-	// top bar (1 line) + 2 blank lines + bottom bar (2 lines)
-	return m.height - 5
+	// top line (1) + top blank (1) + bottom blank (1) + bottom line (1)
+	return m.height - 4
 }
 
 func (m model) viewDimsOnly() string {
-	r := ui.RenderDimsList(m.scope.Dimensions, m.cursor, m.insideState(), m.dimsMaxWidth())
+	r := ui.RenderDimsList(m.scope.Dimensions, m.cursor, m.insideState(), m.dimsMaxWidth(), m.dimSummaries(), m.scopeSummaryOpts())
 	return m.clipToViewport(r.Content)
 }
 
@@ -660,7 +784,7 @@ func (m model) viewChunksOnly() string {
 }
 
 func (m model) viewSplit() string {
-	r := ui.RenderDimsList(m.scope.Dimensions, m.cursor, m.insideState(), m.dimsMaxWidth())
+	r := ui.RenderDimsList(m.scope.Dimensions, m.cursor, m.insideState(), m.dimsMaxWidth(), m.dimSummaries(), m.scopeSummaryOpts())
 	left := m.clipToViewport(r.Content)
 	var right string
 	if m.chunks == nil {
@@ -702,6 +826,32 @@ func (m model) clipToViewport(content string) string {
 	return strings.Join(lines[off:off+viewH], "\n")
 }
 
+func (m model) scopeSummaryOpts() ui.ScopeSummaryOpts {
+	if m.scopeLoading {
+		return ui.ScopeSummaryOpts{Loading: true}
+	}
+	return ui.ScopeSummaryOpts{
+		Short:    m.scopeSum.Short,
+		Long:     m.scopeSum.Long,
+		ShowLong: m.longSummary,
+	}
+}
+
+func (m model) dimSummaries() map[string]string {
+	if m.dimSums == nil {
+		return nil
+	}
+	out := make(map[string]string, len(m.dimSums.Dims))
+	for k, v := range m.dimSums.Dims {
+		if m.longSummary && v.Long != "" {
+			out[k] = v.Short + "\n" + v.Long
+		} else {
+			out[k] = v.Short
+		}
+	}
+	return out
+}
+
 func (m model) insideState() *ui.InsideState {
 	if m.navLevel == levelInsideDim {
 		side := 0
@@ -721,6 +871,8 @@ func (m model) bottomBar() string {
 		return ui.PullBar(m.pullInput)
 	case modeBranch:
 		return ui.BranchBar(m.branches, m.branch)
+	case modeToggle:
+		return ui.ToggleBar()
 	default:
 		return ui.BottomBar()
 	}

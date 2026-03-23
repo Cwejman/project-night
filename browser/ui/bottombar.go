@@ -41,6 +41,15 @@ func PullBar(input string) string {
 		"  " + Dim.Render("enter to add, esc to cancel")
 }
 
+// ToggleBar renders the toggle sub-mode options.
+func ToggleBar() string {
+	return " " + Dim.Render("toggle: ") +
+		BoldWhite.Render("d") + Dim.Render("ims  ") +
+		BoldWhite.Render("c") + Dim.Render("hunks  ") +
+		BoldWhite.Render("s") + Dim.Render("ummary detail  ") +
+		Dim.Render("(any other key cancels)")
+}
+
 // BranchBar renders the branch picker bar.
 func BranchBar(branches []ol.Branch, current string) string {
 	s := " " + Dim.Render("branch: ")

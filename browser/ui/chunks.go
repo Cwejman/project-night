@@ -13,7 +13,7 @@ func RenderChunkEntry(chunk ol.ChunkItem, maxWidth int) string {
 	var lines []string
 
 	// Text content — wrap to width
-	for _, wl := range wrapText(chunk.Text, maxWidth) {
+	for _, wl := range WrapText(chunk.Text, maxWidth) {
 		lines = append(lines, Light.Render(wl))
 	}
 
@@ -82,8 +82,8 @@ func RenderChunksList(chunks []ol.ChunkItem, counts ol.ChunkCounts, maxWidth int
 	return b.String()
 }
 
-// wrapText wraps a string to fit within maxWidth, breaking on spaces.
-func wrapText(text string, maxWidth int) []string {
+// WrapText wraps a string to fit within maxWidth, breaking on spaces.
+func WrapText(text string, maxWidth int) []string {
 	if maxWidth <= 0 || len(text) <= maxWidth {
 		return []string{text}
 	}
