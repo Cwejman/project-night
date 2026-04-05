@@ -83,6 +83,8 @@ See `interface.md` for the exploration.
 - `substrate.md` — the spec: chunk primitive, placement, schema, archetypes
 - `shell.md` — shell exploration: scope channels, typed invocables, integration, agent case
 - `interface.md` — interface layer: scope-based window manager, UI from type contracts
-- `landscape.md` — ecosystem research: what other systems do, what's unique here
+- `research/` — ecosystem research, external methodology analysis
+  - `landscape.md` — what other systems do, what's unique here
+  - `icm-clief-notes.md` — Jake Van Clief's Interpretable Context Methodology
 
 ![footer](.img/footer.png)
