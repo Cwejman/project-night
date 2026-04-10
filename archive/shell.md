@@ -1,26 +1,22 @@
 # Shell Exploration
 
-An OS shell where the substrate is the foundation. Scope replaces the working directory. Programs take typed interfaces. The file system and knowledge system are unified.
+The shell is an engine. Not a bash replacement — a layer on top of the OS that manages scope, type contracts, invocable dispatch, and context assembly. It delegates to the OS for actual command execution. Scope replaces the working directory. Programs take typed interfaces.
 
-The shell is an engine. It is TTY-able — works in a terminal. It is also usable as an API — GUIs and richer interfaces sit on top of the same engine. The interaction model (scope, invoke, navigate) is independent of rendering. See `interface.md` for the visual layer.
+The engine works with two systems: the substrate (a database) and the normal filesystem. It unifies both — you scope and invoke across both worlds. The interaction model (scope, invoke, navigate) is independent of rendering — a TTY, a GUI, or an API can drive the same engine. See `interface.md` for the visual layer.
 
 This is an active exploration. Concepts range from settled to speculative.
 
-## What It Is
-
-A shell with two filesystems: the substrate (presented via FUSE as a relational filesystem) and a normal filesystem for code and binaries. The shell unifies both — you navigate, scope, and invoke across both worlds transparently. A VM enforces containment.
-
 ## Why It Matters
 
-Context is the portal to the raw power of LLMs. Existing agent tools are monolithic — you don't control what fills the context. The shell opens that by controlling scope, knowledge, and invocation declaratively.
+Structurally another take on today's operating system model — delivered pragmatically, without shipping a new OS or VM tech. Scope replaces the working directory. Type contracts replace string arguments. The substrate replaces the filesystem as the structural foundation for knowledge.
 
-Unix's revolution: small programs, one job each, compose through pipes and files. Today's agent tools are the new monoliths. Claude Code bundles session management, context assembly, tool execution, invocation — all in one system. You can't swap parts.
+Unix's revolution: small programs, one job each, compose through pipes and files. Today's programs are monolithic — agent tools, IDEs, DAWs, browsers all bundle everything internally. You can't swap parts, you can't compose across them.
 
-The shell breaks that apart. Session is a module. The LLM CLI is a module. Context assembly is scope. Culture is a module. Swap any piece — change one module. Compose at the shell level, not inside a program. Because the shell is an OS shell, Claude running inside it can invoke shell commands naturally. And the shell can orchestrate Claude. Open-ended in both directions.
+The shell breaks that apart through **scope-based composition**. Modules compose by being in scope together. Type contracts (via the substrate's spec system) let modules declare what they need. The shell resolves it. Swap any piece — change one module.
 
-The difference from traditional Unix: composition isn't just piping bytes — it's **scope-based composition**. Modules compose by being in scope together. Type contracts (via the substrate's spec system) let modules declare what they need. The shell resolves it.
+The agent case is founding — it's what revealed the need. Context is the portal to the raw power of LLMs, and controlling what fills the context window is what the scope model enables. But the shell ought to support various cases. Cases are concrete stories to simulate and compare against.
 
-### Context is Power — Concrete
+### Context Assembly — The Agent Case
 
 Context assembly is fully declarative and composable:
 
@@ -40,11 +36,11 @@ You control all of it. Session history isn't a black box — it's chunks with pl
 - Take a 200-turn session and create a scope of just the architectural decisions
 - Send different scopes of the same knowledge to different models
 
-The underlying CLI (Claude, Codex, etc.) is invoked in `--bare` mode — it sees exactly what the shell assembles, nothing more. The CLI is a completion engine. The shell controls the context.
+The underlying CLI (Claude, Codex, etc.) would be invoked in a bare mode — seeing exactly what the shell assembles, nothing more. The CLI is a completion engine. The shell controls the context. (Aspirational — current CLIs don't expose this level of control.)
 
 ## Two Scope Channels — Emerging
 
-Like PATH and PWD, but for scope. The shell prompt shows both:
+Like PATH and PWD, but for scope. Illustrative syntax (not decided):
 
 ```
 [agents/core agents/claude] (my-org board people) :: tell . "who takes most decisions?"
@@ -72,7 +68,7 @@ An invocable in `[]` reads its own database for internal knowledge (interface, c
 
 ### L1 / L2 — emerging concept
 
-- **L1 — standard shell.** Everything without `::`. `ls`, `cat`, `git`, `vim` — normal operation. FUSE makes substrate chunks look like files.
+- **L1 — standard shell.** Everything without `::`. `ls`, `cat`, `git`, `vim` — normal operation on the real filesystem.
 - **L2 — scoped invocation.** After `::`. Scope-based resolution, type contracts, context assembly. Invocables are still just commands — they participate in pipes with L1.
 
 The L1/L2 boundary depends on how type contracts work, which depends on the substrate's spec system. The concept (two layers of invocation) is clear; the exact mechanics are open.
@@ -98,18 +94,7 @@ Knowledge scope unifies substrate scopes AND real filesystem paths. Scoping to a
 
 Cached summaries (keyed to scope + commit_id + model) support this — the substrate's commit model gives perfect cache invalidation.
 
-## Two Filesystems, One Shell
-
-### The substrate and the real filesystem
-
-The shell works with two systems:
-
-- **The substrate** — knowledge, culture, identity, sessions, agent state. Relational, dimensional. Scope-navigable. Versioned through substrate commits and branches.
-- **The real filesystem** — source code, binaries, media. Hierarchical, tree-structured. Git-tracked. POSIX.
-
-Git and the substrate don't conflict — they serve different things. Git tracks source code. The substrate tracks knowledge structure. Integration chunks bridge them.
-
-### Integration: file references
+## Integration: Substrate and Filesystem
 
 A file reference is a chunk placed on the scopes where it's relevant. Its body contains resolution parameters — at minimum a path, plus anchoring information.
 
@@ -123,9 +108,9 @@ File references don't mirror filesystem hierarchy. The substrate's placement str
 
 ### FUSE — deprioritized
 
-FUSE would present the substrate as a filesystem, bridging to Unix tools that only understand files. Inside the shell, this bridge isn't needed — the shell already speaks substrate natively. Programs use the shell language or an SDK. `ol` works directly on the host without FUSE.
+FUSE would present the substrate as a filesystem, bridging to Unix tools that only understand files. Inside the shell, this bridge isn't needed — the shell already speaks substrate natively. Programs use the shell language or an SDK. `ol` works directly on the host without FUSE. May have value for tools that fundamentally expect file paths. Not needed to start.
 
-FUSE may have value for tools that fundamentally expect file paths (editors, compilers, linters). This will become clearer as the system develops. Not needed to start.
+Design concept preserved: path segments are scopes (the path IS the query), POSIX operations map to substrate operations, same chunk through different paths = same inode. Filesystem scope is hierarchical, substrate scope is set intersection — the shell could unify both in `()`.
 
 ## Invocables and Type Contracts — Emerging
 
@@ -157,7 +142,7 @@ The shell resolves invocations by type, not by explicit naming. `tell "question"
 - Instance of the `adapter` archetype
 - Depends on `claude-code` package with config
 - Assembles context from knowledge scope
-- Invokes `claude -p --bare --system-prompt-file <context>` — bare mode means Claude CLI is just a completion engine, the shell controls all context
+- Invokes the CLI in bare mode (aspirational) — the shell controls all context, the CLI is just a completion engine
 - Stores prompt and response as chunks placed on the session with seq ordering
 
 `agents/codex` would be the same adapter type with different CLI mapping. The archetype is the abstraction; the CLI mapping is the implementation.
@@ -217,59 +202,9 @@ The spawner (on the host) resolves peer names to paths. Inside the VM, peers are
 
 Each directory can declare packages it needs (`packages.edn`) with configuration. An invocable carries its own dependencies — adding `agents/claude` to your invocable scope makes claude-code available with its default config. You can override per-invocation.
 
-## FUSE Layer — Deprioritized
+## Research
 
-If FUSE becomes relevant, the design concept: path segments are scopes, the path IS the query. `/cv/culture/values/` lists chunks placed on `values`. Adding segments narrows by intersection. Same chunk through different paths = same inode. POSIX operations map to substrate operations (readdir → list placements, read → return body, create → place chunk, unlink → remove placement, etc.).
-
-Filesystem scope is hierarchical, substrate scope is set intersection. The shell could unify both in `()`. This remains valid design thinking but is not on the critical path.
-
-## Declarative Model — Research Findings
-
-### Trivially declarative (established fact)
-
-Package lists, config files, users/groups/permissions, env vars, kernel params, locale/timezone, service enablement, firewall rules.
-
-### Irreducibly imperative (established fact)
-
-Database initialization, package dependency resolution, SSH host key generation, migrations. Solved by: declare + idempotent imperative steps.
-
-### Other findings
-
-- Package configuration is part of the declaration.
-- Secrets mount from host at spawn. Host is trust boundary.
-- Image-from-declaration viable: 0.5-1.5s warm starts with cached overlays.
-
-## Research That Led Here
-
-### Why atomic filesystems failed (established fact)
-
-Every attempt failed: NTFS TxF (deprecated — broke existing apps), btrfs transactions (removed — DoS vector), academic systems (Valor, TxFS — never merged). The fundamental tension: POSIX visibility requires immediate visibility to all processes; transactions require isolation. These conflict. Industry converged on: layer transactional systems on top. SQLite succeeds by controlling all access to its data.
-
-**The shell's answer: make the database the filesystem via FUSE.** The boundary dissolves.
-
-### High-frequency agent collaboration — stress test confirmed
-
-The "jazz band" scenario: 5 completion model agents on 200ms cycles, scoping each other's state, coordinating without a central controller. Findings:
-- Filesystem handles concurrent agents trivially at this speed
-- inotify delivers events in 7 microseconds
-- With the substrate: agent state is chunks, lookback is temporal scope with seq ordering, conflict detection is a transaction
-- Agents coordinate organically by reading each other's state, like musicians watching each other
-
-### Piping across boundaries — stress test confirmed
-
-FUSE makes substrate chunks readable by all Unix tools. Pipes are kernel buffers between processes — boundary-agnostic. `cat substrate-chunk | binary | ol apply` works. Each pipe segment is independent. Unix composition crosses the substrate/filesystem boundary without friction. Scope propagates through environment variables.
-
-### Biology mapping — structural, not metaphorical
-
-| Substrate | Biology |
-|---|---|
-| Chunk | Gene |
-| Placement / membership | Epigenetic marks |
-| Scope | Gene expression |
-| Branching | Cell division |
-| No central controller | Cells in a tissue |
-
-Key insight: don't maintain global consistency. Local consistency, global coherence emerges. Each agent maintains its own scope.
+Declarative model findings, atomic filesystem history, stress tests (agent collaboration, piping across boundaries), and the biology mapping are in `research/shell-research.md`.
 
 ## Agent Case — Emerging
 
@@ -293,7 +228,7 @@ The founding case for the shell. An agent session grounded in substrate primitiv
 - Scope modifiers (`:fuzzy` for neighbouring scopes, `. - scope-name` for exclusion, session filtering)
 - Whether invocables are greedy (take all scope) or require explicit `.`
 - Per-invocation config override (invocable carries defaults, you override)
-- Whether the shell can be used without a VM (just shell + FUSE on host, or just `ol`)
+- Whether the engine requires the VM or can run standalone (the VM adds containment; the engine may be usable without it)
 - Multiple scope targets showing merged views
 - Services (daemons) — side-effect/purity implications
 - Shell language design — the language needs to be expressive enough for real invocable logic

@@ -82,9 +82,9 @@ A chunk's spec defines the structural contract for its instances. The system enf
 }
 ```
 
-**`ordered`** — when true, every instance placement on this scope must have a seq value. The system rejects placements without seq.
+**`ordered`** — when true, every instance placement on this scope must have a seq value. Auto-assigned on append if omitted. Explicit seq for specific positioning.
 
-**`accepts`** — instance chunks must themselves be instance of one of the listed types. Names are resolved within the scope — `prompt` means the `prompt` chunk placed on this scope, not a global `prompt`.
+**`accepts`** — instance chunks must themselves be instance of one of the listed types. Names are resolved within the scope — `prompt` means the `prompt` chunk placed on this scope, not a global `prompt`. A chunk must not be an instance of two types that both appear in the same scope's `accepts` list — the system rejects this on write to prevent type ambiguity.
 
 **`required`** — instance chunks must have these keys present in their body.
 
@@ -96,31 +96,38 @@ An archetype is a chunk whose spec defines a type contract. There is no "archety
 
 Archetypes enable typed interfaces. The shell can require "I need an instance of session" — meaning a chunk placed on the `session` archetype, conforming to its spec.
 
+**Type definitions use `relates`.** Type-defining chunks (like `prompt` on `session`) are placed as `relates`, not `instance`. This keeps them out of ordered content (no seq required) while remaining resolvable for `accepts` name resolution. Content chunks use `instance` with dual placement — on the scope (with seq) and on the archetype (for type membership).
+
 ### Example: Session archetype
 
 ```
 chunk: session
   name: "session"
-  spec: { ordered: true, accepts: ["prompt", "answer", "tool-call", "knowledge-update"] }
+  spec: { ordered: true, accepts: ["prompt", "answer", "tool-call", "tool-result", "context"] }
   body: { text: "A sequence of agent interaction events" }
 
-chunk: prompt (placed on session, instance)
+chunk: prompt (placed on session, relates)
   name: "prompt"
   body: { text: "A user message to an agent" }
 
-chunk: answer (placed on session, instance)
+chunk: answer (placed on session, relates)
   name: "answer"
   body: { text: "An agent response" }
 
-chunk: tool-call (placed on session, instance)
+chunk: tool-call (placed on session, relates)
   name: "tool-call"
-  spec: { required: ["tool"] }
+  spec: { required: ["invocable"] }
   body: { text: "An agent invoking a tool" }
 
-chunk: knowledge-update (placed on session, instance)
-  name: "knowledge-update"
-  spec: { required: ["commit"] }
-  body: { text: "A mutation produced by a session" }
+chunk: tool-result (placed on session, relates)
+  name: "tool-result"
+  spec: { required: ["invocable"] }
+  body: { text: "The result of a tool invocation" }
+
+chunk: context (placed on session, relates)
+  name: "context"
+  spec: { ordered: true }
+  body: { text: "The knowledge context for a turn" }
 ```
 
 An actual session instance:
@@ -134,10 +141,13 @@ chunk: (placed on my-session, instance, seq: 1; placed on prompt, instance)
   body: { text: "Why is the scope query returning duplicates?" }
 
 chunk: (placed on my-session, instance, seq: 2; placed on tool-call, instance)
-  body: { text: "grep -n 'active' src/commands/scope.zig", tool: "grep", exit: 0 }
+  body: { text: "grep -n 'active' src/commands/scope.zig", invocable: "filesystem" }
 
-chunk: (placed on my-session, instance, seq: 3; placed on knowledge-update, instance)
-  body: { text: "Fixed scope query to filter by active=1", commit: "c_abc123" }
+chunk: (placed on my-session, instance, seq: 3; placed on tool-result, instance)
+  body: { text: "src/commands/scope.zig:42: if (active) ...", invocable: "filesystem" }
+
+chunk: (placed on my-session, instance, seq: 4; placed on answer, instance)
+  body: { text: "The scope query wasn't filtering by active=1. Fixed." }
 ```
 
 ## History
@@ -198,15 +208,25 @@ A native substrate feature, not external. Entry point into the structure when yo
 
 The FTS index is maintained by the substrate and updated on each commit.
 
-### Cached summaries
+### Derived data — summaries, embeddings, and beyond
 
-A native substrate feature. AI-generated summaries for scopes, stored in the database, keyed to `(scope, commit_id, model)`. The commit model gives perfect invalidation — if HEAD has moved past the cached commit, the summary is stale and must be regenerated.
+Summaries, vector embeddings, and other derived data are not special-cased in the substrate. They are chunks, placed using the same primitives as everything else.
 
-Every reader needs summaries — agents for context, the browser for navigation, the shell for `sum`. This is too universal to be a reader concern. The substrate stores them; the reader requests them; the commit model guarantees correctness.
+A summary is a chunk placed on the scope it summarizes (`relates`) and on a derivation scope like `summaries/opus-4.6`. An embedding is a chunk with the vector in its body, placed on its source chunk and on `embeddings/text-embedding-3-large`. Any derived data follows the same pattern.
 
-### Semantic query (open)
+**Staleness convention.** Derived chunks record what they were derived from in their body:
 
-Vector similarity over chunk body content — find things by meaning, not just keywords. This would be a cache layer alongside FTS: embeddings computed and stored, queryable as an alternative entry point. Requires a model, is non-deterministic. Whether this belongs in the substrate or remains a reader concern is not yet decided. The substrate should not prevent it.
+```json
+{
+  "text": "Summary of the scope...",
+  "source_commit": "c_abc123",
+  "model": "opus-4.6"
+}
+```
+
+`source_commit` is the commit the source scope was at when the derivation was generated. Staleness check: has the source scope been mutated after `source_commit`? If yes, the derived chunk is stale. This is a reader concern — the substrate stores the data, the reader decides when to regenerate.
+
+No `summary_cache` table. No vector table. One primitive handles it all. The derivation scopes (`summaries/...`, `embeddings/...`) are just scopes — queryable, scopeable, navigable like anything else.
 
 ### Temporal scoping
 
@@ -222,9 +242,21 @@ The substrate accepts any content. A chunk's body is a JSON object of any size �
 
 ## Integration
 
-External content is referenced, not stored. A chunk with body fields containing resolution parameters (repo, path, endpoint, etc.) points outside the system. An integration contract chunk (itself an archetype) defines how to resolve references of that type.
+External content is referenced, not stored. A chunk with body fields containing resolution parameters points outside the system. An integration contract chunk (itself an archetype) defines how to resolve references of that type.
 
-The database stores the reference. The agent or shell resolves it. Staleness detection is a reader concern — the database knows when the reference was established (commit), not whether the external world has changed.
+A file reference is a chunk placed on the scopes where it's relevant. Its body contains resolution parameters — at minimum a path, plus anchoring information. File references don't mirror filesystem hierarchy — the placement structure reflects knowledge relationships, not disk layout.
+
+**Git as first integration driver.** If the referenced file is git-tracked, the substrate commit and the git commit together pin the reference in time. An agent or caretaker can later reconcile: what git commits have touched this file since the reference was made? If the file changed, is the surrounding knowledge still aligned? The substrate stores the fact; the intelligence evaluates it.
+
+Multiple integration types exist — files, API endpoints, audio, video. Each has its own archetype defining required fields (path + commit for git, endpoint + method for REST, etc.). Each has its own resolution logic. The pattern is uniform: a chunk whose body contains resolution parameters, whose archetype defines the contract.
+
+Staleness detection is a reader concern — the database knows when the reference was established (commit), not whether the external world has changed.
+
+## Peers
+
+A peer is any directory with a substrate database. Multiple peers compose by mounting — declared dependencies or ad-hoc mounts. The entry point is the containment boundary: the directory you start from is read-write, everything peered in is read-only. Nesting can only reduce access.
+
+Peers are separate databases, not partitions of one. Each peer owns its data. The mounting mechanism is runtime — the peer protocol, conflict resolution, and exact mounting mechanics are open.
 
 ## Schema
 
@@ -268,14 +300,6 @@ CREATE INDEX idx_cv_chunk ON chunk_versions(chunk_id, commit_id);
 -- Full-text search (native)
 CREATE VIRTUAL TABLE chunk_fts USING fts5(name, body, content='chunk_versions', content_rowid='rowid');
 
--- Cached summaries (native)
-CREATE TABLE summary_cache (
-    scope_id  TEXT NOT NULL,
-    commit_id TEXT NOT NULL,
-    model     TEXT NOT NULL,
-    summary   TEXT NOT NULL,
-    PRIMARY KEY (scope_id, commit_id, model)
-);
 ```
 
 ### Current-state tables (performance)
@@ -325,7 +349,7 @@ A substrate. Not a database for a specific application. Not a retrieval layer fo
 
 **No imposed hierarchy.** Placement creates nesting, but nesting is organizational, not protective. Peers enforce boundaries.
 
-**No embeddings in the structure.** Semantic search is a reader concern, implementable as a cache layer. The structure is transparent.
+**Derived data is just data.** Summaries, embeddings, and other derivations are chunks placed on derivation scopes. No special tables, no special treatment. The structure is transparent.
 
 **Lossless.** Nothing is destroyed. Knowledge evolves through addition.
 
