@@ -1,0 +1,3604 @@
+Migration, psykisk
+ohälsa och trauma
+Ett studiehäfte för dig som möter
+asylsökande och flyktingar i ditt arbete
+
+Maria Sundvall
+Sofie Bäärnhielm
+Ann-Sofie Edlund
+Abeba Ghebru
+Anne Johansson Olsson
+
+
+
+                                           XXXXXX   1
+ISBN 978-91-980770-1-8
+Grafisk form: Fidelity Stockholm
+Illustrationer: Jan Edlund
+Tryck: Danagårds Litho, mars 2018
+Reviderad andra upplaga
+
+
+
+2    XXXXXX
+INNEHÅLL
+
+
+  5 Inledning
+
+
+  6 Migration och flyktingskap
+
+
+ 10 Ordförklaringar
+
+
+20 Migration – öppning och kris
+
+
+ 26 Ordförklaringar
+
+
+ 32 Migration och hälsa
+
+
+48 Kultur och hälsa
+
+
+64 Trauma
+
+
+84 Tankar om kulturmötet
+
+
+96 Språk och tolkning
+
+
+106 Nätverk och delaktighet
+
+
+118 Vad är Transkulturellt centrum?
+Inledning
+
+Det här studiehäftet vänder sig till dig som arbetar i vård och
+omsorg och i ditt arbete möter asylsökande och flyktingar.
+Vi vill ge information och kunskap om
+• hur det går till att komma till Sverige
+• hur migrationen påverkar hälsan – såväl psykisk som
+  somatisk hälsa och munhälsa
+• hur trauma kan påverka hälsan
+• hur sätt att beskriva och uttrycka sjukdom och lidande kan
+  variera i olika kulturer
+• och inte minst vill vi stimulera till samtal kring hur mötet i
+  vården påverkas av att vi som möts har olika kulturell
+  bakgrund och olika erfarenheter – och vad vi kan göra för
+  att mötet ska bli så bra som möjligt.
+
+Vi tror att häftet lämpar sig väl för gemensamma diskussioner, till
+exempel för en studiecirkel på en mottagning eller ett boende.
+   I de flesta avsnitten har vi lagt in fallbeskrivningar under rubriken
+Att samtala om – Mötet med… De är inte direkta beskrivningar av
+patienter eller klienter utan snarare kortfattade vinjetter av situatio-
+ner. Vi hoppas att de leder till spännande samtal, där ni kan dela era
+erfarenheter med varandra.
+   I texten har vi lagt in siffror med källanvisningar. Du hittar refe-
+renserna och ytterligare lästips i slutet av varje avsnitt.
+   I denna nya upplaga har vi uppdaterat olika faktauppgifter och
+fördjupat texten kring olika teman, till exempel primärvårdens roll
+och barnperspektivet. I det arbetet har vi fått synpunkter och
+bidrag från arbetskamrater på Transkulturellt Centrum: Carin
+Klefbom, Frida Johansson Metso, Joakim Lindqvist, Karima Assel,
+Zara Bohlin, Haibe Hussein och Lena Bolander.
+
+
+
+
+                                                                       5
+Migration
+och flyktingskap
+»Rätten till hälsa och vård på lika villkor är en grundläggande
+mänsklig rättighet (artikel 25 i FN:s deklaration om de mänskliga
+rättigheterna) och något som ska tillkomma alla människor. Att ge
+vård efter behov är en grundprincip inom den medicinska etiken
+som alla läkare i Sverige förbinder sig att följa. Trots detta är det
+i mångt och mycket en persons juridiska status som avgör vilken
+vård hen får i Sverige idag.«
+Vård för alla – papperslösas rätt till vård (1)
+Flyktingströmmar och ändrade asylregler
+
+65,6 miljoner människor i världen befann sig sommaren 2017
+ofrivilligt fördrivna från sina hem. Drygt 28 000 människor om
+dagen tvingas fly från sina hem.
+   Det finns fler flyktingar i världen än det gjort sedan andra
+världskriget.
+   Cirka 22,5 miljoner av dessa människor var registrerade som
+flyktingar, och mer än hälften av dem var barn.
+   Mer än hälften av alla världens flyktingar kom vid samma tid-
+punkt från tre länder: Sydsudan, Syrien och Afghanistan. De
+största mottagarländerna i världen var Turkiet, Pakistan, Libanon,
+Iran, Uganda och Etiopien, det vill säga grannländer till flyktingarnas
+ursprungsländer (2).
+   Under hösten 2015 kom drygt en miljon flyktingar till EU-län-
+derna, och deras vandring genom Europa kunde följas på tv-skär-
+marna på bästa sändningstid. Sverige var ett av de länder som tog
+emot flest flyktingar. Totalt anlände 163 000 asylsökande till landet,
+varav 35 000 ensamkommande barn.
+   Många människor mobiliserades för att stödja flyktingarna, men
+på hösten 2015 ändrade alltfler regeringar sin politik. Gränserna till
+EU stängdes till, och på våren 2016 slöt EU ett avtal med Turkiet om
+att landet skulle hålla flyktingar utanför EU.
+   I Sverige infördes id-kontroller vid gränserna och i november
+2015 enades en majoritet av partierna om att införa ett antal åtgärder
+för att minska antalet asylsökande. Den så kallade begränsnings­
+lagen som ska gälla från juli 2016 (med retroaktivitet från
+24 november 2015) till juli 2019 innebär inskränkningar av möjlig-
+heten att få uppehållstillstånd, och av möjligheten till familjeåter-
+förening (3).
+
+
+
+
+                                       MIGR ATION OCH FLYK TINGSK AP   7
+Från asylsökande till uppehållstillstånd
+
+När en person söker asyl i Sverige är det Migrationsverket som först
+bedömer ansökan. Beslutet kan sedan överklagas till Migrations-
+domstolen, och i enstaka fall till Migrationsöverdomstolen. Den
+asylsökande har rätt till offentligt biträde, en jurist (4).
+   För att få asyl fordras som grundregel flyktingskäl, det vill säga
+att personen i sitt hemland skulle känna »välgrundad fruktan för
+förföljelse«. Det gäller även en person som är statslös och inte kan
+återvända till det land där hen hittills haft sin vistelseort.
+   Man kan även få uppehållstillstånd utifrån så kallad alternativ
+skyddsstatusförklaring, som handlar om att personen utan att vara
+utsatt för en personlig förföljelse riskerar död eller allvarlig skada
+vid återkomsten till hemlandet. Jämfört med andra EU-länder har
+Sverige tidigare beviljat alternativt skyddsstatus i en högre andel av
+fallen och konventionsflyktingstatus mer sällan. Andelen konven-
+tionsflyktingar har dock ökat. År 2017 fick 15 400 asylsökande status
+som konventionsflyktingar och 13 800 som alternativt skydds­
+behövande (4).
+   Enligt begränsningslagen 2016 kan den som fått flyktingstatus
+få tre års tillfälligt uppehållstillstånd, men den som är alternativt
+skyddsbehövande enbart 13 månader. En alternativt skyddsbehö-
+vande kan bara få permanent uppehållstillstånd när tiden gått ut
+om hen kan försörja sig själv (4).
+
+
+
+
+8   MIGR ATION OCH FLYK TINGSK AP
+Andra skäl att få stanna
+
+Övriga grupper som kan få uppehållstillstånd är
+• Anhöriga till person som redan bor i Sverige. Som anhörig
+  räknas make/maka/registrerad partner eller sambo samt barn
+  under 18 år.
+• Arbetstagare. Den sökande måste bifoga arbetserbjudande i
+  ansökan om uppehållstillstånd och arbetstillstånd. Lönen måste
+  vara minst 13 000 kronor i månaden före skatt. En grupp som har
+  vuxit under senare år är de som får arbetstillstånd i Sverige och
+  som kommer från länder utanför EU/EES och deras anhöriga.
+• Gäststudenter på universitet eller högskola. Studenten ska
+  betala för studieplatsen och visa att hen kan försörja sig under
+  hela studietiden.
+
+Tidigare fanns det i utlänningslagen möjligheten att få stanna på
+grund av »synnerligen ömmande omständigheter«, där hänsyn till
+hälsotillstånd, anpassning till Sverige och situation i hemlandet
+kunde tas.
+   I vården, framförallt i psykiatrin, träffar vi ibland patienter som i
+samband med sin asylansökan eller i samband med överklagande
+hänvisar till sin sjukdom och att de inte kan få vård i hemlandet. De
+har då åberopat »synnerligen ömmande omständigheter«. Läkare
+har ofta ombetts att skriva intyg om den asylsökandes hälsotill-
+stånd. I praktiken har dock uppehållstillstånd beviljats oerhört säl-
+lan på den grunden. Enligt begränsningslagen kommer synnerligen
+ömmande skäl bara att beviljas om utvisning skulle strida mot »ett
+svenskt konventionsåtagande« (3).
+
+
+
+
+                                       MIGR ATION OCH FLYK TINGSK AP   9
+ORDFÖRKLARINGAR
+enligt Migrationsverkets ordlista och lagars definitioner
+
+
+
+
+ Asylsökande
+ En utländsk medborgare (ej från
+ EU) som begärt skydd i Sverige men
+ som inte fått sin ansökan slutligt
+ prövad av Migrationsverket eller
+ migrationsdomstol.
+
+
+
+
+ Flyktingskäl                                        Flykting
+ Enligt utlänningslagen som bygger                   Utlänning som ansökt om asyl och fått
+ på FN:s flyktingkonvention ”väl-                    uppehållstillstånd i Sverige av flyk-
+ grundad fruktan för förföljelse på                  tingskäl (enligt Genève-konventionen/
+ grund av ras, nationalitet, religiös                internationell rätt). Flykt från krig,
+ eller politisk uppfattning eller på                 fattigdom och naturkatastrof ger inte
+ grund av kön, sexuell läggning                      automatisk status som flykting.
+ eller annan tillhörighet till viss
+ samhällsgrupp”.
+
+
+
+
+ Kvotflykting                                        Tredjelandsmedborgare
+ Utländsk medborgare som före resan                  Personer som inte är medborgare
+ till Sverige fått uppehållstillstånd (inom          i något EU/EES-land eller i Schweiz.
+ den kvot/antal regeringen satt upp).                Kan ha uppehållstillstånd inom
+ Det är UNHCR, FN:s flyktingorgan som                EU/EES.
+ bedömer vilka personer som behöver
+ vidarebosättning och presenterar dem
+ för ett möjligt
+             10 mottagarland.
+                   X
+                   MIGR
+                     X X XATION
+                          XX    OCH FLYK TINGSK AP
+Identitet
+Finns ingen rättslig definition, enligt
+praxis är det namn, födelsetid och
+medborgarskap. Styrks av pass eller
+id-handling utfärdat av myndighet i
+hemlandet.
+
+
+
+
+                                              Alternativt skyddsbehövande
+                                              En person som riskerar att straffas
+                                              med döden eller utsättas för
+                                              kroppsstraff, tortyr eller annan
+                                              omänsklig eller förnedrande
+                                              behandling eller som civilperson
+                                              löper stor risk att skadas på grund
+                                              av väpnad konflikt.
+
+
+
+
+Medborgarskap                                 Papperslösa
+Ett rättsligt bindande förhållande            Människor som uppehåller sig i
+mellan stat och individ. Uppstår              ett annat land utan tillstånd. En
+genom automatik vid födelse eller             växande grupp är EU-medborgare
+efter ansökan/anmälan.                        som blivit kvar i Sverige sedan deras
+                                              anställning gått ut eller utan att
+                                              hitta en anställning.
+                                          MIGR ATION OCH FLYK TINGSK
+                                                               XXXXX AP
+                                                                      X   11
+Snabba ändringar i asyllagstiftningen
+
+Sedan regeringen i november 2015 tillkännagav att asyllagstift-
+ningen skulle ändras och antalet asylsökande reduceras, har en rad
+regeländringar genomförts.
+    1 juni 2016 trädde en ny lag i kraft som innebär att vuxna asyl­
+sökande med utvisningsbeslut tvingas lämna boenden och blir av
+med dagbidrag.
+    20 juli 2016 började lagen om tillfälliga begränsningar att få
+uppehållstillstånd i Sverige att gälla. Lagen gäller till och med 19 juli
+2019 om inte riksdagen beslutar något annat. De viktigaste föränd-
+ringarna är att
+• Antalet skäl som ger möjlighet att få uppehållstillstånd har
+   minskat. Att ha flyktingskäl eller vara alternativt skyddsbehövande
+   gäller fortfarande, men kategorin »övriga skyddsbehövande«
+   som fanns tidigare används inte.
+• Paragrafen om »synnerligen ömmande omständigheter« används
+   i allmänhet inte.
+• Tillfälliga uppehållstillstånd är regel.
+• Möjligheterna till familjeåterförening är drastiskt begränsade (3).
+
+
+
+
+12   MIGR ATION OCH FLYK TINGSK AP
+Tillvaron före och efter uppehållstillstånd
+
+Migrationsverket erbjuder anläggningsboende, ABO, till de asyl­
+sökande. Många asylsökande bor i eget boende, EBO. Då har man
+själv ordnat boende till exempel hos en släkting eller en bekant. I
+december 2017 bodde nästan 37 000 i ABO och 33 000 i EBO (4).
+    Den asylsökande kan arbeta under den tid asylutredningen
+pågår. Länsstyrelserna har idag genom »Tidiga insatser för asyl­
+sökande« ansvar för att i samarbete med kommuner, kommunal­
+förbund och civilsamhälle främja kunskaper i svenska, kunskaper
+om det svenska samhället och arbetsmarknaden eller hälsa för
+asyl­sökande och personer med uppehållstillstånd som fortfarande
+bor kvar i Migrationsverkets anläggningar.
+    För den nyanlände som skrev in sig på Arbetsförmedlingen före
+1 januari 2018 gäller lagen om nyanländas etablering från 2010.
+Arbetsförmedlingen genomför etableringssamtal med den
+ny­anlände och utformar tillsammans med denne en etablerings-
+plan. Etableringsersättningen betalas ut av Försäkringskassan.
+    I januari 2018 började nya regler för nyanländas etablering på
+arbetsmarknaden att gälla. Syftet var att programmet mer skulle
+motsvara det som gäller för övriga arbetssökande. Etableringen i
+arbets- och samhällsliv ska underlättas och påskyndas. Program-
+met gäller för åldrarna 20–64 år. Det görs en individuellt anpassad
+handlingsplan och den nyanlände har utbildningsplikt. Program-
+met kan även innehålla studier på heltid bland annat för att få
+grundläggande kunskaper för arbete eller fortsatta studier.
+    Liksom tidigare gäller insatsen under 24 månader som på hel-
+eller deltid kan ges under maximalt 36 månader.
+
+
+
+
+                                     MIGR ATION OCH FLYK TINGSK AP   13
+Asylsökande barn och ungdomar
+
+Som barn räknas personer under 18 år. De flesta asylsökande barn
+kommer tillsammans med sina föräldrar. Enligt utlänningslagen
+ska särskild hänsyn i asylutredningen tas till barnets bästa. Alla
+barn som kan och vill har rätt att tala och bli lyssnade på. Barns
+asylskäl ska prövas särskilt, de behöver ju inte vara desamma som
+föräldrarnas.
+    Ensamkommande barn och ungdomar kommer till Sverige utan
+föräldrar eller annan vårdnadshavare. De får en god man av kom-
+munen och ett offentligt biträde som är med vid asylutredningen.
+    Kommunen ansvarar för boende, oftast i så kallade HVB-hem
+(hem för vård eller boende) eller – för de yngre barnen – i familje-
+hem. Den som fyller 18 år och ännu inte fått besked om sin asyl­­-
+an­sökan får plats i ett av Migrationsverkets boenden för vuxna asyl­
+sökande. En konsekvens av detta har blivit att många asylsökande
+ungdomar fått flytta till andra delar av landet, från skola, kamrater
+och stödjande nätverk för övrigt. Svårigheten i övergången till vuxen-
+liv ökar av att godmanskapet samtidigt upphör vid 18-årsdagen.
+    Den som fyller 18 år och har fått uppehållstillstånd hänvisas på
+många håll till så kallade stödboenden, med lägre personalbeman-
+ning än HVB-hemmen.
+    För asylsökande barn finns ingen skolplikt men de har rätt att gå i
+skola på lika villkor som kommunens övriga barn. Detta gäller från
+förskola till gymnasium. Har en ungdom börjat gymnasiet före 18
+så ska hen ges möjlighet att fullfölja sin utbildning.
+    Papperslösa barn har laglig rätt till skolgång men omfattas ej av
+skolplikt.
+
+
+
+
+14   MIGR ATION OCH FLYK TINGSK AP
+Ensamkommande barn – en utsatt grupp
+
+Antalet ensamkommande barn ökade kraftigt under 2015. Nya
+regler och ny praxis har påverkat deras villkor i Sverige på flera
+olika sätt:
+Barn kan inte utvisas om det inte finns ett ordnat mottagande i hem-
+landet. Men enligt ny praxis får allt fler barn som är 17,5 år och inte
+bedöms ha skyddsskäl utvisningsbeslut och kan då utvisas när de
+fyller 18 år. De som är mellan 16 och 17,5 år gamla och bedöms ha
+skyddsskäl får tillfälliga uppehållstillstånd, och när tillstånden går
+ut prövas de igen, som vuxna. Många av de ensamkommande ung-
+domarna fyllde 17 år under 2017 och många fick även sin ålder upp-
+skriven till 18 år efter en medicinsk åldersbedömning.
+
+När det tidsbegränsade tillståndet går ut kan personen få permanent
+uppehållstillstånd om hen kan försörja sig själv. För personer under
+25 år gäller att de dessutom måste ha fullföljt gymnasiestudier.
+Ensamkommande barn som fått uppehållstillstånd som alternativt
+skyddsbehövande kommer inte att kunna återförenas med sina
+familjer.
+
+Åldersbestämningar har länge varit kontroversiella, eftersom
+många experter menat att de inte är vetenskapliga. Regeringen gav
+i september 2016 Rättsmedicinalverket i uppdrag att börja utföra
+åldersbestämningar med röntgen av knäled och visdomständer.
+I praktiken startade användningen av denna metod mars 2017 och
+är även den vetenskapligt ifrågasatt.
+
+
+
+
+                                       MIGR ATION OCH FLYK TINGSK AP   15
+Hälsoundersökning och rätten till vård
+
+Vuxna asylsökande har rätt till akut vård och vård som inte kan
+vänta. De har också rätt till förlossningsvård, förebyggande barn-
+och mödravård samt vård enligt smittskyddslagen. Alla asylsökande
+får ett så kallat LMA-kort (Lagen om mottagande av asylsökande)
+och när de visar upp kortet betalar de 50 kronor vid besök hos läkare
+på vårdcentral och högst 50 kronor för receptbelagda mediciner.
+    Asylsökande barn och ungdomar upp till 18 år har rätt till samma
+hälso- och sjukvård och tandvård som barn bosatta i Sverige.
+    Alla asylsökande erbjuds ett hälsosamtal och en hälsoundersök-
+ning. Hälsoundersökningarna organiseras olika i olika landsting,
+men ansvaret ligger oftast på primärvården (5).
+    Socialstyrelsen har i en rapport kritiserat begreppet »vård som
+inte kan anstå« som en risk för patientsäkerheten. Myndigheten
+påpekade att det inte bara gäller akut vård, utan också vård och
+behandling där även en måttlig fördröjning kan få allvarliga följder,
+vård som kan motverka ett mer allvarligt sjukdomstillstånd eller
+vård för att undvika mer omfattande vård och behandling. Bara
+behandlande läkare eller annan ansvarig vårdpersonal som har
+kunskap om patientens individuella förutsättningar kan bedöma
+vilka åtgärder som krävs och när (6).
+    Papperslösa och gömda personer har sedan 2013 samma rätt till
+vård som asylsökande. Barn har samma rättigheter som andra barn
+i landet. Landstingen har också rätt att ge vård utöver minimikravet.
+Flera landsting har beslutat att ge asylsökande, gömda och pappers-
+lösa personer samma rätt till vård som andra personer bosatta i
+landstinget.
+
+
+
+
+16   MIGR ATION OCH FLYK TINGSK AP
+  VISSTE DU ATT …
+
+… den så kallade Dublinkonventionen innebär att en asylsökande måste
+söka asyl i det EU-land dit hen först anlänt. Den asylsökande kan skickas
+tillbaka från Sverige till detta land. 1 december 2017 hade totalt 2 907
+ärenden under året avvisats på grund av Dublinförordningen.
+
+
+… EU-medborgare inte behöver söka uppehållstillstånd. De har så kallad
+uppehållsrätt om de till exempel är arbetstagare, egen företagare, studerar
+eller har tillräckliga medel för sin försörjning.
+
+
+… drygt 4 800 kvotflyktingar fick uppehållstillstånd 2017. Enligt den
+migrationspolitiska överenskommelsen i riksdagen 2015 ska Sverige öka
+sitt mottagande av kvotflyktingar till 5 000 personer årligen.
+
+
+… i december 2017 bodde nästan 37 000 asylsökande i anläggnings­
+boenden, 33 000 i eget boende och nästan 10 000 i övriga boenden
+(gäller främst ensamkommande barn i olika boendeformer).
+
+
+… debatten om medicinsk åldersbestämning tog fart hösten 2017, sedan
+det framkommit att experter i olika länder var oense om värdet av de
+metoder som användes. Socialstyrelsen fick 2015 ett uppdrag att kartlägga
+olika metoder för åldersbestämning och 2016 att göra en fördjupad studie
+av dessa metoder. Denna var planerad att redovisas våren 2018. Redan
+2016 fick Rättsmedicinalverket i uppdrag att börja göra medicinska ålders-
+bedömningar utifrån aktuell forskning och beprövad vetenskap. Kritiken
+ledde till att Migrationsverket hösten 2017 pausade undersökningarna av
+asylsökande flickor (7).
+
+
+
+
+                                            MIGR ATION OCH FLYK TINGSK AP   17
+     ATT LÄSA MER
+
+För det här avsnittet har vi använt följande källor:
+1. »Vård för alla – papperslösas rätt till vård«. Citerat från webbplats för
+     International federation of medical students’ association i Sverige,
+     IFMSA-Sweden, https://www.ifmsa.se/scorp/vard-for-alla/
+2. Siffrorna om flyktingströmmar kommer från webbplatsen för UNHCR,
+     FN:s flyktingkommissariat, www.unhcr.org
+3. Svensk författningssamling. Lag om tillfälliga begränsningar av
+     möjligheten att få uppehållstillstånd i Sverige (2016:752).
+     Finns på www.riksdagen.se.
+4. Beskrivningar av regler och statistik i det här avsnittet hämtas från
+     Migrationsverkets webbplats, www.migrationsverket.se
+5. Socialstyrelsen. (2016). Hälso- och sjukvård och tandvård till asylsökande
+     och nyanlända. Delrapport 2016. Stockholm: Socialstyrelsen.
+6. Socialstyrelsen. (2014). Vård för papperslösa: vård som inte kan anstå,
+     dokumentation och identifiering vid vård till personer som vistas i
+     landet utan tillstånd. Stockholm: Socialstyrelsen.
+7. »Förtydligande vad gäller Socialstyrelsens arbete med medicinska
+     åldersbedömningar«, se www.socialstyrelsen.se
+
+
+Fler lästips:
+Socialstyrelsens föreskrifter och allmänna råd om hälsoundersökning av
+     asylsökande m. fl: SOSFS 2011:11
+Socialstyrelsens webbsida för vägledning kring vård av asylsökande:
+     http://www.socialstyrelsen.se/vardochomsorgforasylsokandemedflera
+Flyktinggruppernas riksråd. Goda råd för dig som söker asyl i Sverige.
+     Version 5.02. Januari 2018. Även på engelska, spanska, ryska, arabiska
+     och farsi. Finns att ladda ned på www.farr.se
+
+
+
+
+18    MIGR ATION OCH FLYK TINGSK AP
+Webbplatser med aktuell information:
+Migrationsverket, www.migrationsverket.se
+UNHCR, www.unhcr.org
+Regeringen, www.regeringen.se
+Transkulturellt centrum,
+www.transkulturelltcentrum.se
+
+
+Frivilligorganisationer:
+Flyktinggruppernas Riksråd, FARR, www.farr.se
+Refugees welcome, https://refugees-welcome.se/
+Crossroads – råd och stöd för EU-medborgare,
+https://www.stadsmissionen.se/crossroads-rad-och-
+stod-eu-medborgare
+Läkare i världen, http://lakareivarlden.se/
+Rätt till vård-initiativet, www.vardforpapperslosa.se
+
+
+
+
+                                          MIGR ATION OCH FLYK TINGSK AP   19
+Migration
+– öppning och kris
+»Tänk dig själv då att man går någonstans helt för sig själv, helt
+utlämnad, väldigt hjälplös på något sätt och man tänker hela tiden,
+dag som natt när man ska lägga sig ’vad kommer att ske, hur ser min
+framtid ut’. Man grubblar hela tiden, det är någonting som hela
+tiden är där i huvudet på en och gnager inom en. Och så tänker man
+den tanken ’tänk om, tänk om man får ett avslag och behöver åter­-
+vända till Irak’. Alltså för oss betyder det, ett återvändande, det är
+att likställa med att man dödas. Det är döden.«
+Citat från en intervju med en ensamkommande pojke i rapport från
+Barnombudsmannen, 2017 (1)
+Migrationens faser
+
+Migration betyder byte av hemort eller hemland. Man talar om
+migrationens olika faser:
+• premigration, tiden i hemlandet innan flytten/flykten.
+• migrationsfasen, själva tiden då man tar sig från hemlandet
+  till det nya landet.
+• postmigration, tiden i det nya landet efter flytten/flykten.
+
+Vi inser nog alla att förhållandena i premigration – till exempel krig
+och förföljelse – är viktiga för den migrant vi möter i Sverige.
+   Att vi under en rad år kunnat följa bilder från flyktingarnas väg har
+också gjort oss mer medvetna om migrationsfasens vedermödor.
+Även då den inte är så traumatiserande är det tid då man befinner
+sig »mitt emellan« – som ofta är lång, ibland flera år och som präg-
+lar migranten vi möter.
+   Däremot förbiser vi ofta att sociala och ekonomiska villkor i
+det nya landet utgör belastningar och bidrar till så kallad migra-
+tionsstress.
+   Bilden härnedan illustrerar en rad utmaningar som kan möta
+den som är ny i Sverige, antingen hen kommit som flykting eller som
+arbetskraftsinvandrare.
+
+
+
+                                            Annan kultur
+
+                                                                     Det sociala
+        Nytt språk
+                                                                     nätverket
+
+                                             Ny i Sverige
+
+
+   Annorlunda hälso-                                                 Landskap,
+     och sjukvård                                                   klimat, miljö
+                                           Nya ekonomiska
+                                            förhållanden
+
+
+ Källa: Haibe Hussein, hälsokommunikatör
+ vid Transkulturellt Centrum
+
+
+
+                                                      MIGR ATION – ÖPPNING OCH KRIS   21
+Ackulturation
+
+Begreppet ackulturation handlar om den förändring som sker när
+två kulturer möts och påverkar varandra. I praktiken används det
+ofta för att beskriva vilka positioner olika invandrargrupper hamnar
+i det nya landet: I vilken grad behåller man banden till den egna
+ursprungskulturen? Och i vilken grad tar man till sig värdlandets
+kultur? De fyra olika positioner som identifierats kallas integration,
+assimilering, segregation eller separation samt marginalisering. De
+illustreras av bilden på denna sida. Forskning tyder på att integration
+är den position som leder till bäst hälsa, medan marginalisering är
+förknippat med sämre hälsa (2). Det finns en risk att modellen alltför
+mycket ger sken av att invandraren frivilligt väljer. I ackulturations-
+processen påverkar också det mottagande samhällets ideologi, inte
+minst diskriminering som förhindrar integration (3).
+
+
+                      Bevaras den egna kulturen?
+
+                                  Ja                    Nej
+
+Tar man till
+sig det nya
+samhällets
+                Ja          Integration             Assimilering
+kultur?
+
+
+
+
+                           Segregation
+               Nej                                 Marginalisering
+                            Separation
+
+
+                      Efter Berry & Kim, 1988(2)
+
+
+
+
+22   MIGR ATION – ÖPPNING OCH KRIS
+Migration – en livskris
+
+– Jag ville lovsjunga exilen och skriva att allt är möjligt. Att man, om
+man är öppen för det, kan börja om på nytt, sade den grekiskfödde
+författaren Theodor Kallifatides i en tidningsintervju (4). Utan tve-
+kan finns det många människor som främst sett migrationen som en
+öppning och känt lättnad och framtidshopp när de stigit i land på
+främmande mark.
+   Men migrationen kan också ses som en livskris, en livssituation
+som inte kan hanteras med hjälp av tidigare erfarenheter och som
+leder till någon form av psykiskt lidande (5).
+   Hur migrationskrisen artar sig beror förstås på bakgrunden. Vad
+har man upplevt och varit utsatt för? Blev beslutet att migrera bråd-
+störtat? Fick man fly ensam eller följde viktiga personer med? Visste
+man något om mottagarlandet? Oavsett bakgrund beskrivs dock
+migrationen som en extremt stressande livshändelse, såväl känslo-
+mässigt som fysiskt.
+
+Bland de känslor som kan väckas är
+• sorg över förluster av landet, nätverket, språket, ja själva
+  identiteten;
+• ilska över orättvisan som drabbat en och över diskriminering
+  i det nya landet;
+• rädsla som väcks av tankarna på den fara man varit utsatt för;
+• skuld mot dem man lämnat kvar;
+• hjälplöshet och vanmakt, över att inte längre ha kontroll över
+  sitt liv;
+• besvikelse och bitterhet över motgångar i det nya landet.
+
+
+
+
+                                      MIGR ATION – ÖPPNING OCH KRIS   23
+En stress för familjen
+
+Familjen och det övriga privata nätverket är ett viktigt stöd för oss
+alla i krisperioder i livet. Samtidigt är migrationen en stress för
+familjens förmåga att fungera. Även här spelar bakgrunden till migra-
+tionen stor roll. Det är inte säkert att familjen levt ett »normalt«
+familjeliv på många år. Någon av eller bägge föräldrarna kan ha
+suttit i fängelse. Föräldrar som torterats kan ha svårt att fungera i
+sin föräldraroll. Familjemedlemmarna kan ha skilts åt under åratal
+i samband med flykten.
+    En påfrestning i Sverige som brukar beskrivas är att föräldrar
+och barn befinner sig i otakt. Vid ankomsten är föräldrarna lättade
+medan barnen sörjer förlusten av den bekanta bakgrunden. Efter
+ett år har barnen lärt sig svenska och är på väg in i det svenska sam-
+hället, medan föräldrarna upplever migrationsrelaterad stress. De
+kan känna besvikelse över mötet med det svenska samhället. Vuxna
+människor som blir beroende av myndigheter kan regrediera och
+känna sig hjälplösa. Barnen får visa sina föräldrar till rätta i det
+nya landet.
+    Flyktingföräldrar känner ofta skuld gentemot sina barn, för att
+de inte lyckats skydda dem. Barnen å sin sida kan slitas mellan en
+lojalitet med föräldrarna, som varit utsatta för så mycket, och å andra
+sidan sin egen vilja att ta vara på det nya landets möjligheter (6).
+    Migranter idag har ofta täta kontakter med släktingar och
+bekanta i andra länder, det transnationella nätverket. Sådana
+relationer kan ge ökad trygghet och ökad självkänsla och ibland
+kompensera för bristerna i vardagslivet i Sverige (7).
+
+
+
+
+24   MIGR ATION – ÖPPNING OCH KRIS
+Kristina – ett fall av nostalgisk fixering?
+
+»Hon försökte ständigt på nytt förkväva denna längtan, denna
+trånad och saknad efter det som hon aldrig skulle få igen. Hon ville
+övervinna sin klenhet i sinnet och visa sig lika stark som Karl-
+Oskar. Hon hade sitt hem här för alltid, hon var tvungen att göra
+sig hemmastadd, att införliva sig med det främmande landet.
+Men här rådde inte hennes vilja. Någonting i hennes själv vägrade
+att lyda.«
+
+Så skildrar Vilhelm Moberg i sitt utvandrarepos svårigheterna för
+torparhustrun Kristina från Duvemåla att anpassa sig till det nya
+landet Amerika, dit hon utvandrat med maken Karl Oskar (8).
+    Det hjälper inte att Karl Oskar planterar en astrakanapel och
+döper det nya hemmet till Duvemåla, som det gamla – hemkänslan
+vill ändå inte infinna sig. I drömmen varje natt återflyttar Kristina
+till hemlandet.
+    Och när hon försöker plantera rabattblommorna från hemlandet
+och det visar sig att hon med sina bristfälliga engelskkunskaper
+istället köpt gräsfröer blir det ännu ett tecken på att hon inget har
+där att göra.
+
+
+
+
+                                     MIGR ATION – ÖPPNING OCH KRIS   25
+ORDFÖRKLARINGAR
+enligt Migrationsverkets ordlista och lagars definitioner
+           Asylprocessen – några begrepp
+
+            Permanent uppehållstillstånd PUT
+ Permanent uppehållstillstånd PUT                     Tillfälligt uppehållstillstånd TUT
+            En utländsk medborgare som beviljats PUT har tillstånd att bo och
+ En utländsk medborgare som bevil-                    Tidsbegränsat uppehållstillstånd. Har
+            arbeta i Sverige på obegränsad tid (så länge man är bosatt i Sverige).
+ jats PUT har tillstånd att bo och                    tidigare använts vid internationella
+            Blir folkbokförd och får svenskt personnummer.
+ arbeta i Sverige på obegränsad tid                   konflikter som bedömts som över­
+ (så länge man är bosatt i Sverige).                  gående. I begränsningslagen från
+            Tillfälligt
+ Blir folkbokförd       uppehållstillstånd
+                    och får svenskt        TUT        2016 huvudregeln vid beviljad asyl.
+            Tidsbegränsat uppehållstillstånd. Har tidigare använts vid interna-
+ personnummer.
+           tionella konflikter som bedömts som övergående. I begränsningsla-
+           gen från 2016 huvudregeln vid beviljad asyl.
+
+           Permanent uppehållsrätt
+           Gäller medborgare i EU/EES-land samt familjemedlemmar som
+           vistats lagligt i Sverige under 5 år. Går att ansöka om intyg på den
+           permanenta uppehållsrätten.                 Permanent uppehållsrätt
+                                                 Gäller medborgare i EU/EES-land
+           Ankomstkommun – ensamkommandesamt       barnfamiljemedlemmar som vistats
+                                                 lagligt
+           Den kommun där barnet först tar kontakt med eni Sverige
+                                                             svenskunder 5 år. Går att
+                                                                    myndig-
+                                                 ansöka om intyg på den permanenta
+           het. Kommunen ansvarar då i första hand för boende.
+                                                 uppehållsrätten.
+
+           Anvisningskommun – ensamkommande barn
+           Den kommun Migrationsverket anvisar för att ta hand om barnet,
+           den anvisade kommunen tar det långsiktiga ansvaret.
+
+           Avvisning
+         Beslut om att en person ska lämna Sverige. Kan beslutas av polis.
+         Beslutet ska fattas inom tre månader. Avvisningsbeslutet får nor-
+ Ankomstkommun
+         malt inte verkställas
+ – ensamkommande    barn       förrän det vunnit laga kraft.
+ Den kommun där barnet först tar
+ kontakt med en svensk myndighet.
+ Kommunen ansvarar då i första
+ hand för boende.
+
+
+           26   XXXXXX
+Anvisningskommun
+– ensamkommande barn
+Den kommun Migrationsverket
+anvisar för att ta hand om barnet,
+den anvisade kommunen tar det
+långsiktiga ansvaret.
+
+
+
+
+Avvisning                                  Förvar
+Beslut om att en person ska lämna          En låst lokal där asylsökande och
+Sverige. Kan beslutas av polis. Beslutet   andra utlänningar hålls i väntan på
+ska fattas inom tre månader. Avvis-        avvisning/utvisning. I regel inte
+ningsbeslutet får normalt inte verk        dömd för kriminell handling. Ingen
+ställas förrän det vunnit laga kraft.      rätt att arbeta.
+
+
+
+
+Utvisning                                  Avvisning med omedelbar
+Beslut om avlägsnande som en               verkställighet
+person kan få från och med tre             Om det är uppenbart att en person
+månader (längre tid än tre månader)        saknar rätt till asyl eller uppehålls­
+efter den dag hen ansökt om uppe-          tillstånd kan hen få beslut om avvis-
+hållstillstånd. Domstol kan även           ning som ska genomföras omedelbart.
+döma till utvisning vid brott.             Personen får inte stanna i Sverige i
+                                           väntan på eventuell
+                                                             X X X Xöverklagan
+                                                                     X X 27    (t ex
+                                           utgånget visum).
+     VISSTE DU ATT …
+
+… i en undersökning av nyanlända irakier i Malmö fann man stora skillnader
+i levnadsvillkor jämfört med befolkningen i riket. Betydligt fler saknade
+praktiskt och emotionellt stöd i vardagen och 80 procent hade ett lågt
+socialt deltagande (9).
+
+
+… i en studie uppgav fler personer ur olika grupper av utlandsfödda att de
+hade mindre social kontakt än personer födda i Sverige. Bland de utrikes-
+födda var det färre än bland de svenskfödda som hade kontakt med
+an­höriga varje vecka (10).
+
+
+… skilsmässofrekvensen hos nio olika grupper av personer födda utanför
+Sverige visade sig i en studie vara högre än bland personer födda i Sverige.
+Särskilt ofta skilde sig personer födda i Chile och Iran (11).
+
+
+… i en studie mådde vietnamesiska flyktingungdomar som kommit till
+Norge som barn psykiskt bättre än inhemskt födda ungdomar. Bland vik-
+tiga faktorer som framkom i en uppföljningsstudie var stödet från det
+utvidgade släktnätverket och stödet att behålla det vietnamesiska språket
+och vietnamesiska värderingar – men också det faktum att de kunde till­
+godogöra sig utbildningsmöjligheter i det norska samhället (12).
+
+
+
+
+28    MIGR ATION – ÖPPNING OCH KRIS
+  ATT LÄSA MER
+
+För det här avsnittet har vi använt följande källor:
+1. Barnombudsmannen. (2017). Nyanlända barns hälsa. Delrapport i Barn-
+   ombudsmannens årstema 2017 – Barn på flykt.
+2. Berry, J.W. & Kim, U. (1988). Acculturation and mental health. I J.Dasen,
+   J.W. Berry & N.Sartorius (red.) Health and cross-cultural psychology
+   towards application, s.207-235. London: Sage Publication.
+3. Hung Huia, B.P., Chenb, S.X., Leungb, C.M. & Berry, J. (2015). Facilitating
+   adaptation and intercultural contact: The role of integration and multi-
+   cultural ideology in dominant and non-dominant groups. International
+   Journal of Intercultural Relations, 45:70–84
+4. »Theodor Kallifatides: Jag vill lovsjunga exilen i det nya landet«. Dagens
+   Nyheter 25 augusti 2012.
+5. Nationalencyklopedin, uppslagsordet »kris«.
+6. Angel, B & Hjelm, A. (2004). Att möta flyktingar. (2. uppl.) S. 75 ff. Lund:
+   Studentlitteratur.
+7. Eastmond, M. & Åkesson, L. (2007). Globala familjer. Transnationell
+   migration och släktskap. Möklinta: Gidlunds förlag.
+8. Moberg, V. (1956). Nybyggarna, s. 65 ff. Stockholm: Bonnier.
+9. Daryani, A., Löthberg, K., Feldman, I. & Westerling, R. Olika villkor –
+   olika hälsa. Hälsan bland irakier folkbokförda i Malmö. Socialmedicinsk
+   tidskrift nr 2 2012.
+10. Vogel, J. & Hjerm, M. (2002). Integration till svensk välfärd? Om invand-
+   rarnas välfärd på 90-talet. In Swedish. (Integration into Swedish welfare?
+   Immigrants´ welfare in the 1990s.). Örebro: Statistics Sweden.
+11. Darvishpour, M. (2003). Invandrarkvinnor som bryter mönstret. Hur
+   maktförskjutningen inom iranska familjer i Sverige påverkar relationen.
+   Samhällsvetenskapliga fakulteten. Stockholm: Stockholms Universitet.
+12. Tingvold, L., Middlethon, A.L., Allen, J. & Hauff, E. (2102). Parents and
+   children only? Acculturation and the influence of extended family
+   members among Vietnamese refugees. International Journal of Inter-
+   cultural Relations, 36:260– 270
+
+
+
+
+                                          MIGR ATION – ÖPPNING OCH KRIS      29
+Fler lästips:
+Can, M. (2006). Tätt intill dagarna. Stockholm: Norstedt.
+Hassen Khemiri, J. (2003). Ett öga rött. Stockholm: Norstedt.
+Kallifatides, T. (2001). Ett nytt land utanför mitt fönster.
+     Stockholm: Bonnier.
+Efendić, N. (2016). Jag var precis som du. Stockholm: Natur & Kultur.
+Zardadi, A. (2017). Ängeln och sparven. Texter av en ensam ungdom
+     på flykt. Göteborg: Catoblepas förlag.
+
+
+
+
+30    MIGR ATION – ÖPPNING OCH KRIS
+MIGR ATION – ÖPPNING OCH KRIS   31
+Migration och hälsa
+»Hälsa är ett tillstånd av fullkomligt fysiskt, psykiskt och socialt
+välbefinnande, inte endast frånvaro av sjukdom.«
+WHO, 1948(1)
+
+»Jag trodde att när jag fått mitt uppehållstillstånd skulle jag bli
+OK, men så är det inte. När du får ditt uppehållstillstånd, då börjar
+du oroa dig för att få jobb och någonstans att bo. Allt det här är
+psykiskt utmattande.«
+Citat från intervju med manlig flykting i västra Stockholm
+(2, vår översättning)
+Hälsa – vad vet vi om skillnader?
+
+Vad är hälsa? Det kan tyckas som en enkel fråga. Nog vet vi väl om vi
+är friska eller sjuka? I själva verket finns det många olika definitioner.
+I inledningen till det här avsnittet har vi citerat WHO:s definition,
+som brukar kritiseras för att vara orealistisk. Men styrkan med
+beskrivningen är att vi förstår att hälsa är en subjektiv upplevelse.
+Ytterst är det min egen upplevelse som avgör min hälsa.
+    I det här avsnittet kommer vi att redogöra för statistik från stora
+register som Socialstyrelsen sammanställt. Det blir då med nödvän-
+dighet en statistisk sanning, som inte säger något om upplevelsen
+hos den person vi möter. Däremot kan vi få ett begrepp om vilka
+behov vi kan tänkas möta i vård och omsorg.
+    I stora intervjuundersökningar uppger gruppen utlandsfödda i
+Sverige sämre självskattad hälsa än svenskfödda. Bäst hälsa har
+invandrare från Norden och sämst har utomeuropeiska invandrare.
+Men om man drar bort den delen av ohälsan som beror på socio­
+ekonomiska faktorer, minskar skillnaderna. Det visas i diagrammet
+här på sidan. Det allra mesta – men inte allt – av skillnaderna i hälsa
+förklaras av att invandrarna är fattigare och har sämre sociala
+villkor (3).
+
+
+Hälsa efter födelseland
+Andel (procent) i respektive grupp som uppger dålig eller mycket hälsa, efter födelseland/-region, åren 2000–2015.
+
+Procent
+18                                                                            Den del som justeras bort när man
+16                                                                            tar hänsyn till sociala faktorer
+14
+12                                                                            Den del som återstår efter
+                                                                              justeringen och som avspeglar
+10
+                                                                              födelseregionens betydelse
+ 8
+ 6
+ 4
+ 2
+ 0
+     Sverige      Sverige,      EU-15+       Övriga       Utanför             Ur Socialstyrelsen,
+               båda föräldrar                Europa       Europa              Folkhälsorapport 2009, s. 376
+               utlandsfödda
+
+
+
+
+                                                                         MIGR ATION OCH HÄLSA                 33
+Den friska invandraren?
+
+Det finns skillnader i hälsa som beror på förhållanden i hemlandet.
+Utlandsfödda har oftare vissa infektionssjukdomar, som hepatit B
+och C, tuberkulos och HIV. Skillnader i livsstil påverkar sjukligheten.
+Utlandsfödda män röker oftare än svenskfödda, medan däremot
+alkoholkonsumtionen är lägre hos många grupper. Fetma är vanli-
+gare hos kvinnor födda utanför Norden medan män födda utanför
+Norden har lägre risk för övervikt än svenskfödda män. Flera studier
+visar att övervikt och andra riskfaktorer för hjärt- och kärlsjuk­
+domar är vanligare i flera invandrargrupper (3).
+   Diabetes typ 2 är tre gånger så vanligt bland dem som är födda i
+utomeuropeiska länder jämfört med svenskfödda. En studie visade
+att turkiska invandrare i Sverige hade betydligt högre risk att drab-
+bas av diabetes typ 2 än sina landsmän i Turkiet. De insjuknade i
+snitt tolv år tidigare än svenskfödda personer (4).
+   Psykosociala riskfaktorer som stress anses ha lika stor inverkan
+på risken att få hjärtinfarkt som rökning, högt blodtryck och fetma.
+Ett svagt socialt nätverk med litet känslomässigt stöd ökar också
+risken för hjärt- och kärlsjukdomar (3).
+   Arbetskraftsinvandrare kan troligen anses tillhöra den friskare
+delen av befolkningen i de länder de flyttar från. Detta kallas ibland
+för »the healthy migrant effect«. Men sannolikt varierar detta mel-
+lan olika grupper, beroende på allt från riskfaktorer i hemlandet till
+förhållanden i det nya landet (3).
+   Utrikesfödda har i genomsnitt lägre eller lika låg risk för tidig
+död som inrikes födda. Invandrare från framförallt andra nordiska
+länder avviker med lägre livslängd (5).
+
+
+
+
+34   MIGR ATION OCH HÄLSA
+Skillnader i psykisk ohälsa
+
+En litteraturstudie 2014 visade att utrikesfödda i flera fall hade
+högre risk för insjuknande i psykiska sjukdomar än svenskfödda,
+men det fanns även exempel på lägre risk. Subgrupper hade en ökad
+risk för insjuknande i depression och psykos. Det fanns liten kunskap
+om psykiska störningar som vanligen drabbar barn (som anorexia
+nervosa och ADHD) hos invandrare. Självmordsrisken var högre än
+hos svenskfödda för vissa grupper, men lägre för andra (6).
+    Under de senaste årtiondena har det kommit många studier som
+visar ökad risk för psykos hos personer med invandrarbakgrund.
+I Sverige har studier visat en ökad risk för utlandsfödda och deras
+barn. På samma sätt som med kroppslig sjuklighet minskade dock
+skillnaden om man tog hänsyn till sociala och ekonomiska villkor (7).
+    Idag forskas det kring hur psykosociala faktorer kan påverka den
+psykiska hälsan i så hög grad att personer även kan utveckla allvar-
+lig psykisk sjukdom. Diskriminering anses kunna öka risken för
+psykisk ohälsa, dels indirekt genom att den leder till sämre sociala
+villkor, och dels direkt genom att den skapar en kronisk stress som
+framkallar ohälsa (3).
+    Barnen till invandrare har generellt bättre hälsa än sina föräldrar
+med några undantag. Utlandsföddas barn har högre risk än sina
+föräldrar för psykos, självmord och för narkotikamissbruk.
+    Självmordsrisken skiljer sig betydligt i olika delar av världen och
+den som migrerar tenderar att ta med sig hemlandets risk. Samtidigt
+finns det många studier från ett flertal länder visar att invandrare
+får en ökad risk för självmord och suicidalt beteende, som själv-
+mordsförsök (8).
+
+
+
+
+                                              MIGR ATION OCH HÄLSA   35
+Flyktingar och psykisk ohälsa
+
+Det vanligaste i krigs- och katastrofsituationer är att människor
+reagerar med psykologiska och beteendemässiga reaktioner. Det
+kan röra sig om allt från ledsenhet, sorg, hjälplöshet, grubbel, trött-
+het, oförklarade kroppsliga symtom till aggressivitet och relations-
+svårigheter (9).
+   Flyktingar har också ökad risk att få besvär av psykiska stör-
+ningar som depression och ångest samt reaktioner efter trauma som
+PTSD (posttraumatiskt stressyndrom). En studie visade att risken
+att insjukna i icke-affektiv psykos var 66 procent högre bland flyk-
+tingar i Sverige än bland icke-flyktingar från samma ursprungs­
+länder, och nästan tre gånger högre än för inhemska personer (10).
+   I en studie av nyanlända från Syrien och asylsökande från Syrien,
+Eritrea och Somalia var den psykiska ohälsan hög. En tredjedel av
+de nyanlända från Syrien uppfyllde kriterierna för depression/
+ångest och cirka 30 procent för PTSD. För gruppen nyanlända från
+Syrien var psykisk ohälsa vanligt hos personer med svagt socialt
+stöd, betydande stress i det nya landet samt bland dem som utsatts
+för tortyr (11).
+   Asylsökande har i flera studier visat sig ha ökad risk för självmord
+och självmordsförsök (12, 13). Att ha utsatts för tortyr har visat sig
+ge ökad risk för självmordstankar (14).
+
+
+
+
+36   MIGR ATION OCH HÄLSA
+Barn och ungdomar på flykt
+
+Mer än hälften av de syriska flyktingarna år 2015 var barn. I en rap-
+port betonades barnens och ungdomarnas utsatthet. Många hade
+bevittnat krigshandlingar, sett sina hem förstöras och separerats
+från familjemedlemmar. Många hade utsatts för fysiskt och sexuellt
+våld eller rekryterats av väpnade grupper. Ungefär hälften av bar-
+nen hade fått avbryta skolan. Våld i familjen hade ökat i tillvaron i
+flykt. Flickor blev ofta mer isolerade, eftersom familjerna inte tillät
+dem att röra sig fritt i den otrygga situationen. Antalet unga flickor
+som giftes bort ökade. Tonårspojkar utsattes för diskriminering,
+fysiskt våld och utnyttjades som barnarbetare (9).
+   Enligt rapporten ledde denna ökade stress till en hög nivå av
+psykosociala besvär hos barn och ungdomar, med uttryck som
+rädsla, sömnsvårigheter, ledsenhet, ilskeutbrott, talproblem eller
+mutism och kroppsliga symtom. En del barn fick uttalade utagerande
+beteenden (9). Att ha varit utsatt för våld har visat sig vara en risk-
+faktor för flyktingbarn överhuvudtaget, medan en stabil etablering
+och socialt stöd i mottagarlandet fungerar som ett skydd (15).
+   Sedan 2016 har det kommit en mängd rapporter i Sverige från per-
+soner som arbetar med ensamkommande barn och ungdomar om
+ökad psykisk ohälsa, självmordstankar och även genomförda själv-
+mord. Sammanfattande statistik saknas men när Socialstyrelsen
+genomförde en telefonundersökning med 51 kommuner, kände mer
+än hälften av kommunerna till allvarliga självmordshandlingar och
+självdestruktivt beteende hos de ensamkommande barnen och ung-
+domarna. Det framkom en tydlig koppling till asylprocessen, där
+barnen var rädda för att utvisas, oroliga för att bli uppskrivna i ålder
+och kände oro för anhöriga (16).
+
+
+
+
+                                               MIGR ATION OCH HÄLSA   37
+Kvinnor på flykt
+
+Kvinnor som migrerat tycks utgöra en extra sårbar grupp. En svensk
+studie visade tre gånger förhöjd risk för självmordsförsök för unga
+kvinnor som invandrat från utomeuropeiska länder (17).
+    Flyktingkvinnor utsätts för en mängd stressorer före och efter
+flykten. I en rapport beskrevs ökning av sexuellt våld mot kvinnor i
+Syrien, såväl under stridigheterna i landet som i flykten, ökat våld
+i familjen, isolering och ekonomiska svårigheter. När männen för-
+svunnit eller dödats fick kvinnorna en ny roll som familjeöverhuvud,
+vilket för många blev en ökad börda men för andra också en källa till
+ökad självkänsla. Kvinnor och ungdomar som utsatts för sexuellt
+våld har beskrivit hur de är rädda för och ibland möter avstånds­
+tagande och stigmatisering från familj och omgivning. Samman­
+taget leder detta till ökad risk för psykologiska problem som depres-
+sion och ångest. Överlevare efter sexuella övergrepp beskriver ofta
+blandade känslor av orättvisa, skuld och självfördömande (9).
+    I en svensk studie av nyanlända från Syrien var psykisk ohälsa
+vanligare hos kvinnorna, särskilt hos medelålders kvinnor. 43 pro-
+cent av kvinnorna beskrev symtom på depression/ångest, jämfört
+med 32 procent av männen. Högutbildade kvinnor angav oftare lågt
+välbefinnande än lågutbildade (11). I en rapport från Socialstyrelsen
+2016 beskrevs deprimerade kvinnor med barn som befunnit sig
+länge i asylprocessen liksom kvinnor, män och barn som utsatts för
+sexuella övergrepp som grupper med särskilda vårdbehov (18).
+
+
+
+
+38   MIGR ATION OCH HÄLSA
+Att samtala om
+Mötet med Maryam, 26 år
+
+Erik som är handläggare på socialtjänsten söks upp av Maryam
+som kom till Sverige januari 2011 och har genomgått etablerings­
+planen. Hon har inte kommit ut i arbete, eftersom hon inte har någon
+utbildning från sitt hemland. Nu har hon försörjningsstöd, läser SFI
+(svenska för invandrare) och praktiserar på en förskola. Erik vet att
+handledaren på förskolan tycker att hon fungerar bra där.
+    Vid dagens besök storgråter Maryam och berättar att hon hyrt
+en tvåa i andra hand av en landsman som varit bortrest, men att
+denne nu återvänt och vill att hon flyttar ut. Vart ska hon ta vägen?
+Hon har hört av andra att bostadsbristen är svår i Stockholm. Hon
+har till och med vädjat till landsmannen om att få bo kvar även om
+det är otänkbart för en ensam kvinna att bo inneboende med en
+ensam man enligt traditionen i hemlandet.
+    Maryam säger att hon är desperat och har svårt att sova på nät-
+terna. Hon känner sig trött, orkar inte gå på SFI, hon tycker att hon
+inte lär sig någonting. Hon bara sitter där och tänker på vart hon
+ska ta vägen. Hennes handledare på förskolan har sagt att hon inte
+behöver komma till förskolan då hon har sett att Maryam mår
+dåligt.
+    Maryam säger att det inte var det här hon hade tänkt sig när
+hon flydde från sitt hemland. Hon önskar att hon hade dött tillsam-
+mans med sin familj då rebellerna anföll hennes stad. Erik undrar
+hur Maryam ska klara situationen. Räcker det om han ordnar plats
+tillfälligt på vandrarhem eller behöver hon någon annan hjälp?
+
+
+
+
+                                            MIGR ATION OCH
+                                                         X XHÄLSA
+                                                             XXXX   39
+Munhälsa
+
+Asylsökande och flyktingar bedöms ha större behov av tandvård än
+befolkningen som helhet. Riskfaktorer för ohälsa i allmänhet som
+rökning, sämre ekonomi och lägre utbildningsnivå är riskfaktorer
+för dålig munhälsa. Parodontit (»tandlossning«) sätts även i sam-
+band med kraftig stress (19).
+   En kartläggning visar att nyanlända har något färre kvarvarande
+tänder än befolkningen i stort. Det kan vara ett tecken på tidigare
+tandsjukdom, men också avspegla tidigare behandlingsutbud.
+Å andra sidan har de fler intakta tänder än befolkningen i stort.
+För asylsökande finns ingen samlad statistik, men många behand-
+lare beskriver hög förekomst av karies hos asylsökande barn.
+De ny­anlända söker också tandvård akut oftare, medan de inte i
+samma grad kommer till förebyggande behandling, som regel-
+bundna tandundersökningar (18).
+   Asylsökande och »gömda« barn och ungdomar upp till 18 år har
+rätt till tandvård som svenskfödda barn. Efter 18 år har asylsökande
+rätt till akuttandvård och vård som inte kan anstå. Hela gruppen
+utlandsfödda tillhör de grupper som avstår från tandvård trots att
+de upplever behov. Den vanligaste orsaken är dålig ekonomi (19).
+   I en rapport om äldre invandrares munhälsa beskrev de inter­
+vjuade äldre hinder för att få tandvård i form av svag ekonomi,
+språksvårigheter och bristande tilltro till tandvården. De använde
+traditionella metoder från hemlandet och/eller tandborste för den
+dagliga tandvården. När man undersökte en grupp äldre invandrares
+tandstatus och jämförde med en svensk normalbefolkning fann
+man att fler var tandlösa, hade karies eller tandköttsinflammation
+samtidigt som de utförde munhygien mer sällan och utnyttjade
+tandvården i lägre grad (20).
+
+
+
+
+40   MIGR ATION OCH HÄLSA
+Att samtala om
+Mötet med Roya, 49 år
+
+Roya söker akut en sen kväll på jourcentralen och möter vikarie-
+rande distriktsläkaren Halina. Roya som har persiska som
+modersmål talar mycket knapphändig svenska. Sköterskorna har
+sökt tolkförmedlingen men det går inte att få tag på tolk på per-
+siska, ens via telefon, den här tiden på dygnet.
+   Roya pekar mitt på bröstkorgen och Halina tolkar det som att
+hon har smärtor där. Med kroppspråkets hjälp lyckas hon också få
+fram att Roya känner att hjärtat bultar och att det är svårt att
+andas.
+   Halina hittar inget onormalt i kroppsundersökningen frånsett
+en puls på 95. Hon kollar EKG som är normalt. Roya har ingen
+feber och verkar inte allmänpåverkad.
+   Halina börjar fundera över om Royas besvär kan vara orsakade
+av ångest och oro. Men hon undrar hur hon ska kunna få reda på
+mer om det och om vad som kan ha utlöst besvären. Och finns det
+något hon kan göra i kväll för att lugna Roya?
+
+
+
+
+                                          MIGR ATION OCH HÄLSA   41
+Jämlik vård?
+
+»Målet för hälso- och sjukvården är en god hälsa och en vård på lika
+villkor för hela befolkningen… Den som har det största behovet av
+hälso- och sjukvård skall ges företräde till vården.«
+   Så står det i hälso- och sjukvårdslagen från 1982 (21). Det är
+ingen överdrift att säga att vården inte når det målet när det gäller
+utlandsfödda.
+   Dödstalen i »åtgärdbar« dödlighet är enligt hälso- och sjukvårds-
+rapporten 2009 betydligt högre hos utlandsfödda och låg­utbildade
+än hos svenskfödda och högutbildade. Med åtgärdbar dödlighet
+avses både dödlighet i sjukdomar som påverkas genom hälsopolitiska
+insatser (som sjukdom på grund av alkohol och tobak) och dödlighet
+som påverkas genom insatser i vården.
+   Personer födda utanför Norden nyttjar mer vård än de som är
+födda i Norden (fast äldre utlandsfödda använder vården mindre).
+Det kan tolkas som att de har större behov av vård. Att de ändå har
+mer åtgärdbar dödlighet kan tolkas som att de inte får rätt vård.
+Utlandsfödda vårdas oftare i sluten vård för åkommor som skulle ha
+kunnat behandlas i öppen vård, innan tillståndet blev akut (22).
+   Nyinvandrade irakier uppgav i en intervjuundersökning att de
+avstått från att söka vård. Väntetiderna sågs som för långa, och
+vården som ineffektiv. De flesta menade att vården i Irak är bättre
+– om man kan betala för sig (23).
+
+
+
+
+42   MIGR ATION OCH HÄLSA
+  VISSTE DU ATT …
+
+… självmordstalen för äldre migranter ökar i flera europeiska studier (24).
+
+
+… 65 procent av äldre syriska flyktingar i Libanon hade i en studie tecken
+på psykiska besvär, vilket var tre gånger så många som hela gruppen av
+flyktingar (9).
+
+
+… HBTQ-personer i Syrien har sedan tidigare varit utsatta och tvingats
+dölja sin läggning. Under inbördeskriget har riskerna för dessa personer
+ökat med kraftigt ökad stress som följd (9).
+
+
+… i en enkätundersökning med nyanlända irakier i Malmö fann man att
+36 procent av dem skattade nedsatt psykisk hälsa jämfört med 14 procent
+i befolkningen i riket. De skattade framförallt att de hade sämre hälsa när
+det gällde smärtbesvär och oro/nedstämdhet (26).
+
+
+… studier visar att utlandsfödda patienter med hjärtsvikt får billigare och
+äldre läkemedel än svenskfödda (22).
+
+
+… utlandsfödda patienter med hjärtinfarkt mer sällan får sådana läkemedel
+som idag rekommenderas efter hjärtinfarkt än svenskfödda (22).
+
+
+… i en studie i Danmark försämrades asylsökandes tillstånd drastiskt efter
+tio månader utan aktiviteter på asylboende. De fick försämrad hälsa och
+svårigheter att utföra vardagsaktiviteter (26).
+
+
+… i en finsk pilotstudie med intervjuer med asylsökande och andra invand-
+rare, hade de asylsökande fler besvär från tänderna och var mer missnöjda
+med tandvårdens tillgänglighet och den behandling de fick. De hade också
+tandvårdsrädsla oftare än övriga (27).
+
+
+
+
+                                                  MIGR ATION OCH HÄLSA       43
+     ATT LÄSA MER
+
+För det här avsnittet har vi använt följande källor:
+1. Från WHOs grundningsdokument, antogs vid en konferens 1946,
+     trädde i kraft 1948. Texten finns på www.who.int
+2. UNHCR. (2013). A new beginning – Refugee Integration in Sweden. It’s
+     about time. UNHCR Research Papers 2012/2013.
+3. Socialstyrelsen. Folkhälsorapport 2009, kapitel 13. Stockholm:
+     Socialstyrelsen.
+4. Hjörleifsdottir Steiner, K. (2013). Diabetes among Turkish immigrants in
+     Sweden. A study of prevalence and risk factors. Avhandling. Stockholm:
+     Karolinska institutet.
+5. SOU 2017:47. Kommissionen för jämlik hälsa. (2017). Nästa steg på
+     vägen mot en mer jämlik hälsa. Förslag för ett långsiktigt arbete för en
+     god och jämlik hälsa. Stockholm: Wolters Kluwer.
+6. Gilliver, S., Sundquist, J., Li, X. & Sundquist, K. (2014). Recent research
+     on the mental health of immigrants to Sweden: a literature review.
+     European Journal of Public Health, 24(Suppl. 1):72–79.
+7. Hjern, A., Wicks, S. & Dalman, C. (2004). Social adversity contributes to
+     high morbidity in psychoses in immigrants – a national cohort study in
+     two generations of Swedish residents. Psychological Medicine, 34(6):
+     1025–1033.
+8. Bursztein Lipsicas, C., Mäkinen, I.H., Apter, A., De Leo, D., Kerkhof, A.
+     m.fl. (2012). Attempted suicide among immigrants in European
+     countries: an international perspective. Social Psychiatry and Psychiatric
+     Epidemiology, 47: 241–251.
+9. Hassan, G, Kirmayer, LJ, Mekki-Berrada A., Quosh, C., el Chammay, R. m
+     fl. (2015). Culture, Context and the Mental Health and Psychosocial
+     Wellbeing of Syrians: A Review for Mental Health and Psychosocial
+     Support staff working with Syrians Affected by Armed Conflict.
+     Genève: UNHCR.
+10. Hollander, A.C., Dal, H., Lewis, G., Magnusson, C., Kirkbride, J.B. &
+     Dalman, C. (2016). Refugee migration and risk of schizophrenia and
+     other non-affective psychoses: cohort study of 1.3 million people in
+     Sweden. British Medical Journal, 352:i1030.
+
+
+
+
+44    MIGR ATION OCH HÄLSA
+11. Tinghög, P., Arwidson, C., Sigvardsdotter, E., Malm, A. & Saboonchi, F.
+   (2016). Nyanlända och asylsökande i Sverige: En studie av psykisk ohälsa,
+   trauma och levnadsvillkor. Röda Korsets Högskolas rapportserie 2016:1.
+12. Goosen, S., Kunst, A.E., Stronks, K., van Oostrum, I.E., Uitenbroek, D.G.
+   & Kerkhof, A.J. (2011). Suicide death and hospital-treated suicidal
+   behaviour in asylum seekers in the Netherlands: a national registry-
+   based study. BMC Public Health, 11:484.
+13. Staehr, M. & Munk-Andersen, E. Selvmord og selvmordsadfærd blandt
+   asylansøgere i Danmark i perioden 2001- 2003. En retrospektiv
+   undersøgelse. Ugeskrift Laeger, 168(17):1650-1653.
+14. Ekblad, S. & Shahnavaz, S. (2004). Trauma, postmigrationsstress och
+   suicidala tankar hos asylsökande. Suicidologi, 9(1): 19-31.
+15. Fazel, M., Reed, R.V., Panter-Brick, C. & Stein, A. (2012). Mental health
+   of displaced and refugee children resettled in high-income countries:
+   risk and protective factors. The Lancet, 379(9812):266-282.
+16. Socialstyrelsen (2017). Analys av situationen i socialtjänsten våren 2017.
+   Fokus på ensamkommande flickor, yngre barn, nätverksplaceringar
+   samt suicidrisk – delrapport 3. Stockholm: Socialstyrelsen. Hämtad från
+   www.socialstyrelsen.se
+17. Kosidou, K., Hellner-Gumpert, C., Fredlund, P., Dalman, C., Hallqvist, J.,
+   Isacsson, G. & Magnusson, C. (2012). Immigration, transition into adult
+   life and social adversity in relation to psychological distress and suicide
+   attempts among young adults. PLoS One, 7(10):e46284
+18. Socialstyrelsen. (2016). Hälso- och sjukvård och tandvård till asylsökande
+   och nyanlända. Slutrapport oktober 2016. Stockholm: Social­styrelsen.
+   Hämtad från www.socialstyrelsen.se
+19. Klefbom, C. (2010). Behov av tandvård bland asylsökande och gömda
+   (med fokus på barn) 2007/2008. Stockholm: Transkulturellt centrum.
+20. Olerud, E., Hagman Gustafsson, M.L. & Gabre, P. (2017). Munhälsa hos
+   äldre som invandrat till Sverige. Uppsala: Kunskapscentrum för äldre-
+   tandvård, Folktandvården, Uppsala län.
+21. Socialdepartementet. Hälso- och sjukvårdslag (1982:763).
+   www.riksdagen.se
+
+
+
+
+                                                   MIGR ATION OCH HÄLSA         45
+22. Socialstyrelsen. Hälso- och sjukvårdsrapport 2009.
+     www.socialstyrelsen.se
+23. Tillman, A. & Westerling, R. Nyanlända irakiers syn på hälsa och den
+     svenska hälso- och sjukvården. Socialmedicinsk tidskrift nr 2 2012.
+24. Kristiansen, M., Razum, O., Tezcan-Güntekin, H. & Krasnik, A. (2016).
+     Aging and health among migrants in a European perspective. Public
+     Health Reviews, 37:20.
+25. Daryani, A., Löthberg, K., Feldman, I. & Westerling, R. Olika villkor –
+     olika hälsa. Hälsan bland irakier folkbokförda i Malmö. Socialmedicinsk
+     tidskrift nr 2 2012.
+26. »Livsviktig aktivitet.« Arbetsterapeuten 8/2015. Hämtad från http://
+     ebooks.exakta.se/arbetsterapeuten/2015/1508/#/1/
+27. Mattila, A., Ghaderi, P., Tervonen, L., Niskanen, L., Pesonen, P.,
+     Anttonen, V. & Laitala, M.L. (2016). Self-reported oral health and use
+     of dental services among asylum seekers and immigrants in Finland
+     – a pilot study. European Journal of Public Health, 26(6):1006-1010.
+
+
+Fler litteraturtips:
+Shahnavaz, S. (2012). Tandvårdspsykologi. (1. uppl.) Kapitel 8:
+     »Transkulturell psykologi i tandvården«. Lund: Studentlitteratur.
+Klinge, B. (2010). Munnen: tänder, kropp och själ. Stockholm: Karolinska
+     Institutet University Press.
+
+
+Webbplatser med mer material:
+www.uppdragpsykiskhalsa.se/asylsokande-och-nyanlanda Webbplats
+som Sveriges kommuner och landsting ansvarar för, syftar till att stärka
+insatser för psykisk hälsa. Titta särskilt på »Verktygsbanken«. Där finns
+material som vänder sig till allt från myndigheter till de asylsökande själva.
+Information på olika språk. Informationsfilmer och filmade utbildningar.
+
+
+
+
+46    MIGR ATION OCH HÄLSA
+Kultur och hälsa
+»Kulturen är lika ständigt närvarande och transparent som vatten,
+förutom i mötet mellan olika kulturer, då världsbilden bryts och
+därmed återspeglas.«
+Kirmayer & Minas, 2000 (1)
+Vad är kultur?
+
+Kultur är ett abstrakt begrepp som har getts många definitioner.
+Varje definition speglar sin tid, plats och rådande kunskapssyn.
+Gemensamt är att kultur handlar om att tolka omvärlden. Det hand-
+lar både om värderingar och om beteenden. Kulturen rör det som
+ger mening åt människors liv.
+   Kirmayer och Minas liknar kultur och kulturmöten med fiskens
+vatten, något som blir synligt när det bryts mot något annat. Denna
+syn på kultur betonar det ömsesidiga i kulturmötet. I mötet synlig-
+görs det som annars ter sig självklart och oreflekterat.
+   Kulturen är som ett raster genom vilket den yttre och inre världen
+förstås. I det ingår att tolka såväl yttre intryck och upplevelser som
+inre sinnesintryck och reaktioner.
+   Kulturen är inte statisk. Den förändras hela tiden och påverkas av
+nya intryck, idéer och kunskapsutveckling.
+   Ingen människa i världen idag är påverkad av bara en kultur.
+Människor har tillgång till olika kulturellt färgade meningssystem.
+   Kulturen är inte homogen. Människor använder det kulturella
+rastret på ett individuellt sätt.
+   Vi får inte tillskriva en människa vissa värderingar och beteenden
+utifrån hens bakgrund.
+   Ofta talar vi som möter människor med olika kulturell bakgrund
+i våra yrken om »deras« kultur, ofta underförstått som något som är
+ett problem. Det gäller att inte glömma att även vi har en kultur, som
+vi vanligen inte är medvetna om. I mötet med det främmande kan vi
+lättare se vår egen kultur.
+
+
+
+
+                                                 KULTUR OCH HÄLSA   49
+Kultur och familj
+
+I alla samhällen finns det traditioner och gemensamma normer för
+familjebildning och för våra relationer till den närmaste omgivningen
+liksom till samhället.
+   Ibland talar man om individcentrerade respektive gruppcentre-
+rade samhällen. I ett gruppcentrerat samhälle är familjen den
+grundläggande enheten. Själva identiteten ligger i att tillhöra en
+familj- eller släktgrupp. Som individ har du ansvar för och får stöd
+från hela gruppen. Ett centralt värde i livet är att det ska gå bra för
+din grupp och att föra familjen vidare. Det är viktigt att bevara
+familjens anseende utåt.
+   I ett individcentrerat samhälle handlar värderingarna mer om
+individens självförverkligande och personliga utveckling. I ett sam-
+hälle som Sverige, som anses som osedvanligt individualistiskt, är
+rättigheterna knutna till individen.
+   Det är viktigt att känna till sådana här skillnader. Annars blir det
+svårt att som yrkesperson förstå till exempel varför unga patienter
+inte vill flytta hemifrån, eller varför en persons psykiska problem
+kan få syskonen att bli rädda att de inte ska bli gifta.
+   Men det är också viktigt att inte generalisera. Familjemönster
+över hela världen är stadda i förändring. Många ifrågasätter också
+bilden av den självtillräckliga västerländska individen och ser den
+som en illusion.
+   I en del patriarkaliska samhällen som har en tydlig makthierarki
+med en styrande man i toppen och med strikta könsroller förekom-
+mer starka föreställningar om heder. De unga familjemedlemmarnas
+handlingsutrymme begränsas för att skydda familjens heder. Det
+leder ibland till så kallad hedersproblematik, med allt från hård
+kontroll till våld. I vård och omsorg är det viktigt att vara lyhörd för
+tecken på hedersproblem.
+
+
+
+
+50   KULTUR OCH HÄLSA
+Att samtala om
+Mötet med Peter, 16 år
+
+Peter som precis har börjat på gymnasiet söker en dag upp skolku-
+ratorn Birgitta. Peter berättar att han mår dåligt och inte vet vad
+han ska göra. Han känner sig pressad av sina föräldrar som börjat
+prata om att han ska gifta sig efter studenten.
+   – Att gifta sig när man är 19, det är inte klokt, säger Peter. Jag
+vill plugga data och skaffa jobb innan jag gifter mig.
+   Det framkommer att föräldrarna inte tycker att det är nödvän-
+digt med högskoleutbildning. Peter kan alltid jobba som chef i
+familjeföretaget som de äger, och de säger till honom att han kom-
+mer att mogna när han gifter sig med en flicka som de redan har
+valt ut.
+   – Men jag vill bestämma själv vem jag gifter mig med, säger
+Peter. Annars vet jag inte vad jag tar mig till.
+   Birgitta känner sig orolig för Peters mående och berättar för
+honom att hon har en skyldighet att göra en anmälan till social-
+tjänsten. Peter är bekymrad över vad föräldrarna ska säga, men
+uttrycker också tacksamhet över att Birgitta tar tag i saken.
+   När Peter lämnat hennes mottagningsrum sitter Birgitta och
+funderar på vad som händer nu. Hur kan socialtjänsten och skolan
+stödja Peter? Och finns det något de kan göra för föräldrarna?
+
+
+
+
+                                                KULTUR OCH HÄLSA   51
+Kultur och psykisk ohälsa
+
+Psykisk ohälsa kan uttrycka sig olika i olika kulturer. Depression
+kan upplevas mer som energilöshet och värk än som negativa tankar
+och skuld. Att höra röster behöver inte vara uttryck för psykos utan
+kan vara en andlig upplevelse. Rituella beteenden behöver inte vara
+tvångssyndrom utan kan ha religiös bakgrund. Den som har social
+fobi blir besvärad av att andra uppmärksammar hen. I en del länder,
+till exempel Japan och Korea, finns det beskrivet att personer kan
+utveckla ångesttillstånd som snarare yttrar sig i tankar om att man
+själv besvärar andra (2).
+    Psykisk sjukdom kan även tolkas på olika sätt – som kroppsliga
+problem eller som tecken på störda relationer. Det förekommer
+övernaturliga tolkningar, som onda ögat, påverkan av demoner eller
+djinner. Depressiva symtom tolkas som en del av livets upp- och ned-
+gångar och en andlig utmaning, och inte som tecken på en sjukdom.
+    Synen på psykisk ohälsa och stigma, det vill säga hur stämplande
+det är att ha en sjukdom, varierar. Kanske är det som drabbar indivi-
+dens förmåga till självförverkligande mest stämplande i individ­
+centrerade kulturer, medan psykiska problem som leder till isole-
+ring eller går ut över familjen leder till högre grad av stigma i
+gruppcentrerade kulturer.
+    I en del kulturer är det väldigt känsligt att tala med någon utan-
+för familjen om psykiska problem. När man väl söker vård kan det
+vara mer acceptabelt att tala om emotionella problem med kropps-
+liga beskrivningar.
+    Tankarna om lämplig behandling växlar också. Det förekommer
+att personer söker religiösa ledare eller traditionella behandlare
+innan de kommer till den svenska sjukvården.
+
+
+
+
+52   KULTUR OCH HÄLSA
+Att samtala om
+Mötet med Demir, 20 år och hans familj
+
+Underläkaren Carlos på den låsta psykiatriska vårdavdelningen
+håller i ett familjesamtal med Demir, hans äldre bror Fuat, modern
+Meryam, samt kontaktpersonen Eva och turkisktalande tolk.
+Demir kom in på avdelningen för tre veckor sedan, sedan han
+insjuknat i en akut psykos. Han har endast långsamt börjat må
+bättre.
+    Fadern är död sedan länge och Fuat som ser sig som familjens
+överhuvud har hela tiden önskat samtal med läkaren. Han har
+tyckt att det är helt onödigt att modern är med vid samtalen,
+särskilt med tanke på att hon är den enda som behöver tolk.
+Men Demir har berättat för Carlos att modern är den viktigaste
+personen i hans liv. Därför har personalen fortsatt att bjuda in
+henne till mötena, trots att hon suttit helt tyst vid varje samtal.
+    Vid dagens samtal är Fuat mycket irriterad över att Demir
+fort­farande hör röster. Carlos försöker förklara att det tar tid att
+återhämta sig från en psykos.
+    Efter en kvart säger Meryam något till tolken, som denne till
+synes tvekande översätter:
+    – Är ni säkra på att det inte är det onda ögat?
+    En besvärad tystnad lägger sig i rummet.
+    Carlos känner att han måste ta initiativet och säga något.
+Hur ska han besvara Meryams fråga? Hur kan samtalet utvecklas
+till något bra?
+
+
+
+
+                                                KULTUR OCH HÄLSA   53
+Varför är kultur viktigt i vård och omsorg?
+
+Om vi tror att psykisk ohälsa upplevs och uttrycks på exakt samma
+sätt överallt, finns det risk för feldiagnos från vårdens sida.
+   Den psykiatriska diagnoshandboken DSM-5 tar redan i inled-
+ningen upp vikten av att göra en kulturell formulering, det vill säga
+att undersöka kulturella förhållanden och föreställningar för att
+kunna ställa en så korrekt diagnos som möjligt. Handboken går
+också igenom kulturella skillnader för var och en av diagnoserna.
+Till exempel betonar man att depression inte uttrycks likadant i
+alla kulturer. Man varnar också för risken för överdiagnostik av
+schizofreni (3).
+   På flera håll i världen – bland annat här i Sverige – har kliniker i
+psykiatrin tagit fasta på DSM-5:s uppmaning att göra en kulturell
+formulering, och börjat använda den kulturformuleringsintervju
+(förkortad KFI) som finns i DSM-5. Intervjun innehåller 16 frågor
+om kultur kring områden som hur personen själv ser på sina besvär,
+vad man tänker kring orsak, vad man kan få för stöd och hjälp,
+stressfaktorer, självbild, hur man hanterat besvär och sökt hjälp
+samt förväntningar på vården (4). KFI är tänkt att användas i mötet
+med alla patienter, vi är alla kulturbärare (2).
+   Men förståelse av kultur är inte viktigt bara för diagnostik utan
+för att kunna förstå de språkliga svårigheterna, utforska patientens
+syn på sjukdom och förväntningar på behandling.
+   Om vi inte undersöker vilka föreställningar, farhågor och för-
+väntningar den individ vi möter har, riskerar vi att alltid föreslå
+samma stereotypa åtgärder – och vi kommer att få ett sämre
+sam­arbete med vår patient/klient och behandlingen riskerar att
+misslyckas.
+
+
+
+
+54   KULTUR OCH HÄLSA
+När djinner möter svensk psykiatri
+
+»Psykiatri är starkt förknippad med stigma och människor vill inte
+gärna se på sig själva som galna och i behov av psykiatrisk vård.
+Den som är galen blir inte respekterad av andra och riskerar tappa
+kontakt med familjen och mista allt socialt stöd.
+   Många tror att psykisk ohälsa är orsakad av djinner och före-
+drar att söka hjälp hos en sheikh framför en psykiater. Begreppet
+sheikh har lite olika betydelser men kan handla om en religiös
+ledare som besitter läkande krafter eller en folklig läkeman.
+Sheikhen kan hjälpa till med djinnerna. En sheikh, kunnig i Islam,
+läser ur koranen som behandling. De kan också använda vatten
+med läkande kraft.«
+Ur en intervju med Sadik Hajinur, läkare från Somalia som arbetat
+som hälsokommunikatör i Stockholm (5).
+
+I samma artikel beskrivs djinner som en sorts andar som finns i
+koranens universum. Tron på djinner är mycket utbredd i många
+länder. De kan vara både onda och goda och när de straffar män­
+niskor kan dessa drabbas av psykisk sjukdom. Sjukdomarna kan
+vara av olika slag, till exempel förlamningar och förvridna armar
+och ben. Ibland kan djinnerna påverka äktenskap och orsaka skils-
+mässa. Ifall djinnerna orsakar allvarlig sjukdom kan de behöva
+drivas ut (5).
+
+
+
+
+                                              KULTUR OCH HÄLSA   55
+Olika sjukdomsförklaringar – exemplet Somalia
+
+I det somaliska samhället förekommer olika sjukdomsförklaringar
+till psykisk ohälsa. Det finns andliga förklaringar, att sjukdomen
+kan vara en prövning från Gud eller att ”bara Gud vet”. En del tolkar
+psykisk sjukdom som besatthet av djinner eller som uttryck för
+onda andar.
+    Men det förekommer också såväl biologiska som mer sociala för-
+klaringar – att sjukdomen beror på khatmissbruk eller på stressande
+livshändelser. Man tänker då på inbördeskriget, exilen, separation
+från familjen och fattigdom. En mer emotionell förklaring är att
+överdrivna känslor kan leda till psykisk sjukdom. De känslor man
+oftast avser är avundsjuka eller svartsjuka relaterat till polygami.
+    Mot den bakgrunden förstås också ibland ett speciellt tillstånd
+kallat zar som finns beskrivet i Öst- och Nordafrika samt i delar av
+Mellanöstern, och som oftast drabbar gifta kvinnor. Personen
+beskrivs som besatt av en zar-ande. Tillståndet kan yttra sig drama-
+tiskt med att kvinnan antingen drar sig undan och blir apatisk, eller
+skriker, skrattar, sjunger och gråter. Föreställningen är att hon kan
+återfå sin hälsa om hon lyckas lugna anden och återfå fredliga kon-
+takter med den.
+    Besattheten av zar-andar kan bli ett sätt att uttrycka psykolo-
+giska svårigheter så att de blir acceptabla. Det blir också ett sätt att
+uttrycka känslor som annars vore socialt oacceptabla, till exempel
+en hustrus ilska mot sin make. Tillståndet kan leda till att familj och
+vänner mobiliseras för att stödja kvinnan i olika ritualer. En sådan
+ceremoni kan ge gruppen kvinnor möjlighet att tillbringa tid till-
+sammans i ett avslappat och informellt sammanhang (6).
+
+
+
+
+56   KULTUR OCH HÄLSA
+Går det att använda skalor?
+
+Det finns problem med att använda skalor och tester för utredning
+av personer med annan kulturell bakgrund. Psykologen Agnes
+Botond, som själv är erfaren klinisk psykolog och föreläsare kring
+neuropsykiatriska frågeställningar, har beskrivit några faktorer
+som kan leda till sämre resultat:
+• Frågor som förutsätter ordförståelse.
+• Olika kulturella associationer kring icke-verbala test, till
+  exempel bilder.
+• Om personen kommer från en kultur som ser kvalitet och djup i
+  tänkande, snarare än snabbhet, som intelligenstecken.
+• Samtidig kroppslig sjukdom.
+• Kulturella skillnader i hur människor är benägna att svara på en
+  fråga i en självskattningsskala, om man svarar nära mittpunkten
+  eller väljer ett ytterlighetsalternativ.
+• Låg skolutbildning eftersom utbildning både gynnar vissa kogni-
+  tiva förmågor och leder till en del färdigheter som ofta testas.
+• Frågor som rör samhällsområden som är verklighetsfrämmande
+  för testpersonen.
+• Låg motivation ifall personen känt sig tvingad att delta eller inte
+  förstår varför en utredning görs (7).
+
+Botond förespråkar att man anpassar testmetoder, ger mer instruk-
+tioner till personen och får denne att bli mer bekväm i testsituationen.
+»Mjukdata« i intervjun kan komplettera testets hårddata.
+   RUDAS (The Rowland Universal Dementia Assessment Scale) är
+ett multikulturellt kognitivt screeninginstrument för demenssjuk-
+dom, som anses vara minimalt påverkat av språk, kultur och utbild-
+ningsnivå. Sedan 2014 ordnar Kunskapscentrum för demenssjuk-
+domar i Malmö utbildningar kring det (8).
+
+
+
+
+                                                  KULTUR OCH HÄLSA    57
+Kultur och somatisk ohälsa
+
+Kulturformuleringsintervjun har utvecklats för att förbättra psyki-
+atrisk diagnostik. Men det finns i lika hög grad kulturella aspekter
+av somatisk ohälsa.
+   Sjukdomsförklaringar varierar och kan bidra till stigma samt
+påverka var personen söker hjälp. I västvärlden sägs det vara vanli-
+gare med sjukdomsförklaringar som lägger skulden hos personen
+själv och dennes livsstil. Sådana sjukdomar – som fetma, alkoho-
+lism, sexuellt överförda sjukdomar – är ofta stigmatiserade. Men
+även vanliga förkylningar kan förklaras med att personen »gjort
+något onormalt« som att utsätta sig för kyla eller drag (9).
+   Stigma anses vara högre för sjukdomar som är knutna till fattig-
+dom och sociala problem, liksom för sjukdomar som anses obotliga.
+När tuberkulos var en vanlig sjukdom i Sverige, vilken förknippades
+med fattigdom, trångboddhet och alkoholism, var den stigmatise-
+rad (10). Idag finns det fortfarande stigma kring tbc i flera länder där
+den är vanlig.
+   I ett västerländskt modernt sammanhang är det vanligt att
+beskriva kroppen som en maskin. »Du måste ladda batterierna«, är
+ett vanligt och förmodligen oskyldigt uttryck. Men maskinmodellen
+kan också leda till att patienter får orealistiska förväntningar på vad
+vården ska kunna »reparera« och att de tenderar att se lösningen
+som tillförsel av »bränsle« i form av kaffe, alkohol, vitaminer eller
+psykostimulantia som beställs via internet (9).
+   Sedan årtusenden är det vanligt i många kulturer med föreställ-
+ningar om att hälsan beror av balansen mellan »varmt« och »kallt«,
+där det inte handlar om temperaturer utan mer symboliska egen-
+skaper. Ett »hett« tillstånd behandlas med intag av »kalla« födo­
+ämnen (9).
+
+
+
+
+58   KULTUR OCH HÄLSA
+Vårt smärtbeteende
+
+Smärta uppstår när nerver utsätts för skadliga stimuli – en upplevelse
+som väl borde vara universell. Eller är det inte så? Det händer att
+svensk vårdpersonal uttrycker att patienter med annan kulturell
+bakgrund »överdriver« sin smärta.
+   Den brittiske antropologen och allmänläkaren Cecil Helman
+skriver om smärtans två komponenter, själva sinnesintrycket och
+reaktionen på sinnesintrycket. Det senare kallas smärtbeteende och
+Helman delar in det i den privata smärtan och den offentliga.
+   Om den privata smärtan vet vi bara det som personen meddelar
+oss. I en del kulturer anses det viktigt att hålla smärtan inom sig,
+och det kan leda till att vårdgivaren missar den.
+   Det offentliga smärtbeteendet beror enligt Helman av sociala,
+kulturella och psykologiska faktorer. En »normal« smärta leder till
+ett annat beteende än »avvikande«. Ett exempel är menssmärtor
+som kan ses som något normalt men också som en funktionsstörning.
+Förväntningar på smärta leder till olika smärtbeteende. Det kan till
+exempel gälla förlossningssmärtor.
+   Smärtbeteendet påverkas av hur smärtan tolkas. Är den en olycks-
+händelse, är den tecken på ett moraliskt felsteg, uttryck för ett
+gudomligt straff, eller är den resultatet av andras illvilja?
+   Likaså påverkas smärtbeteendet av tillgången på hjälp och bot.
+   Vilken form smärtbeteendet tar är i hög grad kulturellt bestämt –
+liksom det svar som ges på smärtbeteendet. Människor kommer att
+få mest uppmärksamhet och sympati ifall deras smärtbeteende
+stämmer med uppfattningen i deras eget samhälle eller samhälls-
+grupp om hur smärta ska uttryckas (9).
+
+
+
+
+                                                KULTUR OCH HÄLSA   59
+Somatisering
+
+Med somatisering menas en psykisk störning med återkommande
+kroppsliga symtom, utan att det finns sjukliga förändringar i
+kroppsliga organ som kan förklara dessa.
+   Det finns föreställningar om att somatisering är vanligare bland
+patienter från en del icke-europeiska kulturer, framförallt från
+Asien och Afrika. Men allt fler forskare pekar på att somatisering
+förekommer överallt. Vanliga psykiatriska tillstånd som ångest och
+depression tar sig kroppsliga uttryck. Vilka dessa uttryck är kan
+däremot variera.
+   Det har beskrivits som en västerländsk tradition att ställa soma-
+tisering i motsats till psykologisering, att uttrycka lidande i psykolo-
+giska termer. Många kulturer skiljer inte på kropp och själ på detta
+sätt. Forskare har påpekat att kroppsliga symtom i ett globalt per-
+spektiv är ett förväntat, vanligt och socialt accepterat sätt att
+uttrycka emotionella problem. Såväl somatisering som psykologise-
+ring kan med ett sådant synsätt ses som olika kommunikationssti-
+lar, som varierar mellan kulturer. Den viktiga frågan blir då inte att
+avgöra om patienten »egentligen« har psykologiska besvär, utan att
+vara lyhörd för och utforska patientens somatiska språk (2).
+
+
+
+
+60   KULTUR OCH HÄLSA
+Att samtala om
+Mötet med Amina, 45 år
+
+Amina är en kvinna från Somalia som nyligen kommit till Sverige
+tillsammans med tre tonårsbarn för att återförenas med sin make
+Muhammed, som bott här i tio år. Amina kommer till distriktsläka-
+ren Emma på vårdcentralen med hänvisning från Arbetsförmed-
+lingen, eftersom hon inte orkat börja i etableringsprogammet. Det
+visar sig att hon mest sitter hemma i lägenheten och endast sällan
+kommer ut för att träffa släktingar i grannskapet.
+    Amina kommer från landsbygden i södra Somalia. En av hennes
+söner har dödats i inbördeskriget. Amina har aldrig gått i skolan
+och talar endast somaliska. Hon har haft ont i ryggen en längre tid,
+men har aldrig sökt sjukvård. Vid några tillfällen har hon fått ört-
+medicin av den traditionella behandlaren i byn.
+    När Emma frågar vad hon har för problem, svarar hon: ”Jag
+har ont i levern.” Emma blir förvånad men frågar vidare om
+Aminas besvär. Hon får svaret: ”Jag har ont i hela kroppen.”
+    Det går inte att få Amina att precisera. När Emma ställer upp-
+följande frågor, säger hon närmast buttert: ”Det ska väl du veta
+som är läkare.”
+    På Emmas fråga om varför hon inte gått ut hemifrån, svarar
+Amina endast:
+    –Jag måste vila.
+    Emma tycker inte att hon kommer någon vart, men undrar nu
+hur hon ska kunna förstå Amina bättre. Hur kan hon få reda på
+mer om Aminas symtom och vad de står för? Hur ska hon kunna
+intressera henne för den behandling hon eventuellt har att
+erbjuda?
+
+
+
+
+                                               KULTUR OCH
+                                                        X XHÄLSA
+                                                            XXXX   61
+     VISSTE DU ATT …
+
+… vårdpersonalen är också mångkulturell. Bland de 15 vanligaste yrkena
+för utrikesfödda personer fanns år 2015 hemservicepersonal och kategorin
+övriga läkare (11).
+
+
+… utrikesfödda utgjorde samma år 15 procent av de anställda på arbets-
+marknaden. Den yrkesgrupp som hade störst andel utrikesfödda var pizza-
+bagare (69 procent), följda av städare, övriga hemservicepersonal och dok-
+torander (11).
+
+
+… en studie bland personer från zulufolket i Sydafrika visade att ett av skä-
+len att ta avstånd från de sjuka, var att de sågs som trollkarlar eller häxor
+eftersom de hade makten att orsaka sjukdom hos andra människor (9).
+
+
+…i en studie i USA sade 72 procent av kvinnor med bröstcancer som inter-
+vjuats att andra människor behandlade dem annorlunda sedan de fått
+reda på diagnosen. 52 procent uppfattade att andra var rädda för dem
+eller undvek dem (9).
+
+
+
+
+62    KULTUR OCH HÄLSA
+  ATT LÄSA MER
+
+För det här avsnittet har vi använt följande källor:
+1. Kirmayer, L & Minas, H. (2000).The future of cultural psychiatry: An inter-
+   national perspective. Canadian Journal of Psychiatry, 45(5): 438-446.
+2. Bäärnhielm, S. (2014) Transkulturell psykiatri. Lettland: Natur & Kultur.
+3. American Psychiatric Association. (2013). Diagnostic and Statistical
+   Manual of Mental Disorders, Fifth Edition. Arlington, VA: American
+   Psychiatric Association.
+4. Intervjun finns gratis tillgänglig på webbplatsen www.pilgrimpress.se
+5. Bäärnhielm, S. När djinner möter svensk psykiatri. Tidskriften för svensk
+   psykiatri, nr 1 2011, s.64-65.
+6. Cavallera, V., Reggi, M., Abdi, S., Jinnah, Z., Kivelenge, J., m.fl. (2016).
+   Culture, context and mental health of Somali refugees: a primer for
+   staff working in mental health and psychosocial support programmes.
+   Genève: UNHCR.
+7. Botond, A. (2017). Kulturell psykologi. Lund: Studentlitteratur, s 257 ff.
+8. Se webbplats https://vardgivare.skane.se/kompetens-utveckling/sak-
+   kunniggrupper/kunskapscentrum-demenssjukdomar
+9. Helman, C.G. (2007). Culture, health and illness. Fifth ed. Boca Raton:
+   Taylor & Francis Group.
+10. Puranen, B. & Zetterholm, T. (1987). Förälskad i livet: en bok om tuber-
+   kulosens historia. Höganäs: Wiken.
+11. Statistiska centralbyrån. Statistiska meddelanden. Yrkesregistret med
+   yrkesstatistik 2015. Finns på www.scb.se
+
+
+Fler litteraturtips:
+Svenska Psykiatriska föreningen. (2018). Transkulturell psykiatri. Kliniska
+   riktlinjer för diagnostik och behandling. Stockholm: Svenska psykia-
+   triska föreningen & Gothia förlag.
+Asaad, A. (2011). Stjärnlösa nätter. En berättelse om kärlek, svek och rätten
+   att välja sitt liv. Stockholm: Nordstedt.
+Länsstyrelsen i Skåne, Länsstyrelsen Östergötland, Integrations- och jäm-
+   ställdhetsenheten. (2007). Hedersrelaterat våld och förtryck: ett kun-
+   skapsunderlag för hälso- och sjukvården. Linköping: Integrations- och
+   Jämställdhetsenheten, Länsstyrelsen Östergötland [distributör].
+
+
+
+
+                                                         KULTUR OCH HÄLSA         63
+Trauma
+»Jag ser det som en jordbävning i själen.«
+Fried, 2000 (1)
+
+»…(S)amhällelig stabilitet (kan) vara den bästa psykoterapeuten
+på befolkningsnivå.«
+Silove, Steel & Psychol, 2006 (2)
+Vad är trauma?
+
+Ordet »trauma« kommer från ett grekiskt ord för ”sår” och används
+inom medicinen för såväl kroppsliga som psykiska skador.
+    Det är välbekant sedan länge att människor kan drabbas av kvar-
+stående skador efter psykisk chock. Under första världskriget
+utvecklades de första försöken att behandla soldater som återvände
+från skyttegravarna med så kallad granatchock. Efter andra världs-
+kriget visade studier av de överlevande från koncentrationslägren
+på omfattande hälsoproblem. Erfarenheterna från Vietnamkriget
+mellan 1965 och 1975 då tusentals amerikaner återvände hem till
+USA med bestående psykiska problem ledde till att kunskapen och
+behandlingsformerna började utvecklas. Vid samma tid växte
+sig också kvinnorörelsen stark, och effekterna av att ha utsatts för
+sexuella övergrepp började uppmärksammas.
+    Man skiljer på »trauma« och »potentiellt traumatiserande hän-
+delse«. Alla får inte samma »sår« av samma upplevelse. En potentiellt
+traumatiserande händelse i psykologisk mening definieras som en
+extrem händelse som uppfattas som att den kan leda till döden eller
+till allvarlig fysisk skada eller hot mot vår personliga integritet.
+Bland de trauman som kan drabba alla finns rån, misshandel, sexu-
+ella övergrepp, allvarliga olyckor och naturkatastrofer. Flyktingar
+kan ha med sig minnen av trauman från situationer av krig och för-
+tryck, till exempel fängelsevistelser, tortyr, kidnappning, våldtäkter
+och att befinna sig i strid.
+
+
+
+
+                                                          TR AUMA   65
+Vilka konsekvenser har trauma?
+
+Ofta när myndigheter och vårdpersonal tänker kring effekterna
+av traumatiserande händelser, tänker man på risken att få så
+kallat posttraumatiskt stressyndrom. Men effekterna av trauma
+är bredare än så.
+    De australiensiska forskarna Silove och Steel har formulerat
+den så kallade ADAPT-modellen, Adaptation and Development
+after Persecution and Trauma (»Anpassning och utveckling efter
+för­följelse och trauma«, 2). De beskriver fem olika psykosociala
+om­råden som skadas av trauma:
+• Förmågan att uppleva trygghet och säkerhet;
+• Band och nätverk med andra personer, som familjen, släkten,
+   folkgruppen, samhället;
+• Behovet av rättvisa och skydd från övergrepp;
+• Identitet och roller, t ex föräldrarollen, yrkesrollen, rollen som
+   ledare i en social rörelse;
+• Institutioner som ger existentiell mening och sammanhang, som
+   traditioner, religion, andlig praktik, politiskt och samhälleligt
+   engagemang.
+
+Grunden för återhämtning efter trauma är att återuppbygga dessa
+skadade system och de institutioner som stöder dem, menar Silove
+och Steel. Att garantera säkerhet, återförena familjer, hjälpa till med
+utbildning och arbete, skapa rättvisa, göra det möjligt att återuppta
+egna traditioner bidrar till läkning.
+    Vårdpersonal och myndigheter i Sverige tänker ofta att traumat
+tillhör det förgångna. Men det är viktigt att komma ihåg att flyk-
+tingar råkar ut för traumatiska upplevelser även i vårt land. Upp­
+levelser av diskriminering, otrygghet och utanförstående kan åter-
+uppväcka minnen av traumat och försämra den psykiska hälsan.
+
+
+
+
+66   TR AUMA
+Psykologiska reaktioner vanligast
+
+De vanligaste reaktionerna på katastrofsituationer är allmän­
+mänskliga psykologiska reaktioner, som inte behöver utvecklas
+till psykisk sjukdom.
+    Det kan handla om emotionella problem som ledsenhet, sorg,
+rädsla, frustration, ångest, ilska och förtvivlan. Kognitiva problem
+med hjälplöshet, oro, grubbel, leda, hopplöshet, kontrollförlust är
+också vanliga. Många får fysiska symtom som trötthet, sömnsvårig-
+heter, aptitförlust eller oförklarade kroppsliga symtom. Sociala och
+beteendeproblem förekommer också. Personen kan dra sig undan,
+visa aggressivitet eller få svårigheter i relationer (3).
+    När nyanlända från Syrien och asylsökande från Syrien, Eritrea
+och Somalia i en studie fick frågor om psykisk hälsa var det en hög
+andel som hade lågt psykiskt välbefinnande, även om de inte angav
+kriterier för några psykiska diagnoser. De asylsökande hade lägre
+välbefinnande än gruppen med uppehållstillstånd (4).
+
+
+
+
+                                                         TR AUMA   67
+Posttraumatiskt stressyndrom, PTSD
+
+Posttraumatiskt stressyndrom kallas de symtom som en person
+som upplevt, bevittnat eller på annat sätt konfronterats med en
+traumatisk händelse kan få. Att först reagera med intensiv rädsla,
+hopplöshet eller skräck är normalt. Likaså är det vanligt att få en
+akut stressreaktion med mardrömmar, overklighetskänslor och
+oförmåga att minnas någon viktig del av händelsen. Det är först om
+besvären varar mer än en månad – eller om de börjar långt senare –
+som man kan misstänka diagnosen PTSD.
+
+I PTSD-bilden ingår:
+• Återupplevande av de traumatiska händelserna i form av påträng-
+   ande minnesbilder (ibland även doft- och ljudminnen) som har en
+   sådan kvalitet att personen uppfattar det som att den traumatise-
+   rande situationen från då händer här och nu. Traumamardrömmar
+   – ofta samma mardröm som återkommer – innebär ett nattligt
+   återupplevande som förhindrar vila.
+• Allmänt ökat spänningstillstånd med vaksamhet för hot vilket
+   medför sömnstörningar, irritabilitet och vredesutbrott, koncen-
+   trationssvårigheter och kroppslig smärta. Att drabbas av panik-
+   ångest i anslutning till påträngande minnen och traumatriggers
+   är vanligt.
+• Undvikande av allt som kan påminna om traumat och starkt
+   obehag inför situationer som påminner om den. Som ett resultat
+   undviker och isolerar sig den traumatiserade personen från
+   omgivningen.
+• Negativa förändringar av tankeverksamhet och sinnesstämning,
+   till exempel svårigheter att minnas någon del av händelsen, nega-
+   tiv självuppfattning, avsaknad av positiva känslor. Depressiva
+   symtom och samsjuklighet med depression är vanligt (5).
+
+
+
+
+68   TR AUMA
+Trauma i primärvården
+
+Sjuksköterskan i primärvården är ofta den första som möter asyl­
+sökande, eftersom alla asylsökande erbjuds en kostnadsfri hälso­
+undersökning. En del av samtalet ska handla om hur patientens
+psykosociala situation och tidigare traumatiska upplevelser påver-
+kar hälsan (6).
+   Hälsoundersökningen blir således en möjlighet att identifiera
+trauman. Trots tidsbrist och svårigheten att tala om trauman med
+en person man nyligen mött, ger det patienter en viktig öppning
+för att kanske för första gången få hjälp med ett svårt lidande. Att
+primärvården ofta kan erbjuda kontinuitet underlättar. Allt behöver
+inte avhandlas vid första besöket.
+   Asylsökande kan också söka vårdcentralen för alla slags kropps-
+liga och psykiska besvär. Många symtom kan föranleda misstanke
+om trauma. Det kan till exempel gälla smärttillstånd, sömnsvårig-
+heter, oförklarade kroppsliga symtom som yrsel och öronsusningar,
+beteendestörningar hos barn eller nedsatt social funktion.
+   I ett kunskapsunderlag från Socialstyrelsen rekommenderar
+man personal i primärvården att utforska trauman på ett hänsyns-
+fullt sätt. Man behöver inte fråga patienten direkt om den trauma-
+tiska händelsen utan kan börja med att fråga om möjliga symtom
+som sömnstörningar, mardrömmar, hjärtklappningar och svett-
+ningar. På så sätt kan en dialog om patientens tillstånd och möjliga
+orsaker till detta inledas (6).
+   Kunskapsunderlaget framhåller också vikten av tidig diagnostik
+av posttraumatiska besvär och att patienten motiveras för psyko­
+terapeutisk behandling, för att undvika mer komplicerade tillstånd.
+Samtidigt varnar man för att alltför tidigt remittera patienten till
+psykiatrin, utan ordentlig bedömning och motivering i primär­
+vården. Risken anses då större att patienten uteblir eller snabbt
+avbryter behandlingen (6).
+
+
+
+                                                        TR AUMA   69
+Psykosocialt stöd – grunden i pyramiden
+
+I internationella riktlinjer framhålls idag att grunden i stöd och
+omhändertagande av människor som utsatts för svåra händelser är
+att erbjuda psykosocialt stöd. Det handlar om att tillgodose grund-
+läggande behov och trygghet, om att stärka stödet från familjen och
+övriga nätverket och att skapa sammanhang.
+    – Psykosocialt stöd är ett sätt att främja personers psykiska och
+sociala förmåga att klara av vardagen – med andra ord att hjälpa
+dem till en så meningsfull och normal tillvaro som möjligt, säger
+Sara Hedrenius, krisstödsexpert vid Röda Korset i en intervju (7).
+    Psykosocialt stöd kan beskrivas som den breda basen i en pyra-
+mid av stöd som rekommenderas i internationella riktlinjer. Se figu-
+ren här på sidan. Stödet hjälper personer och grupper att hantera
+psykosociala problem och gå vidare. Det syftar också till att minska
+risken för att utveckla psykisk ohälsa.
+
+
+
+
+                                Specialist-
+                                  vård
+
+
+                         Första linjens psykiatri,
+                         Socialt stöd i vardagen
+
+
+
+                     Stärka familje- och samhällsstöd
+                      – återförening, föräldrarstöd,
+                    kvinnogrupper, ungdomsklubbar
+
+
+
+                   Grundläggande service och trygghet
+                 – mat, boende, grundläggande sjukvård
+
+
+
+
+70   TR AUMA
+Att samtala om
+Mötet med Goran, 55 år
+
+Goran kom till Sverige från Turkiet på 1980-talet. Han lärde sig
+svenska snabbt och började jobba.
+  Hans syster Latife som är sjuksköterska vet att han i perioder
+har stora sömnsvårigheter. Goran talar inte gärna om det, men
+hon har förstått att det är minnen från polisarresten i Turkiet som
+väcker honom. Vid något tillfälle har han antytt att han hör och
+känner skrik och slag som om det vore här och nu. Dagarna är
+bättre, men under de här perioderna drar han sig helt undan
+sociala kontakter.
+  Nu är Goran inne i en sömnlös period igen. När Latife frågar
+mer berättar han motvilligt att vid minsta stress fylls huvudet av
+dånade turkisk marschmusik. Det kommer också fram att
+sömnsvårighet­erna den här gången började efter att Goran fått
+besked om att han är övertalig i affären där han arbetar sedan
+20 år.
+  Latife försöker liksom många gånger förr övertala Goran att
+söka vård, men han säger än en gång nej. Hon diskuterar med sin
+make Yilmaz som kontaktar en bekant och lyckas ordna ett nytt
+arbete åt Goran med att köra budbil.
+  Några veckor senare kommer Goran hem till Latife och Yilmaz
+på middag. Han berättar då att sömnen nu börjat bli bättre och att
+han tagit en lång promenad samma dag. Latife funderar på vad
+som egentligen hjälper Goran, och hur hon ska kunna hjälpa
+honom framöver.
+
+
+
+
+                                                        TR AUMA   71
+Behandling av PTSD
+
+I det akuta skedet efter en traumatisk händelse bör man erbjuda
+psykologisk »första hjälpen« i form av information, tröst, känslo-
+mässigt och praktiskt stöd. Oftast kan den egna familjen och nät-
+verket stå för det stödet, men ibland behövs vårdens insatser.
+   När det gäller diagnostiserad PTSD, delas behandlingen in i olika
+faser. Samtidigt betonas allt oftare en kontinuitet mellan psykosocialt
+stöd och traumabehandling och en växelverkan mellan olika faser
+(8). I första fasen behöver patienten stöd till yttre stabilitet (boende,
+skola, sömn, mat och känslomässigt stöd) såväl som till inre stabilitet
+(att lära sig avslappning, att känna igen egna reaktioner, att hantera
+ångest).
+   Den specifika traumabehandlingen ges oftast vid psykiatriska
+kliniker och vid specialmottagningar för traumatiserade personer.
+Bland de studier som har bäst vetenskaplig evidens finns trauma­
+fokuserad kognitiv beteendeterapi och andra exponeringsbaserade
+terapier. Det gemensamma för dem är att patienten tillsammans
+med terapeuten, konfronteras med olika sinnesintryck eller aktive-
+rar minnen som har med traumat att göra. Till dessa hör också
+Narrative exposure therapy, där patienten både exponeras för
+traumatiska minnen och får konstruera en livsberättelse. Ytterligare
+en terapiform med vetenskapligt stöd är ögonrörelsebehandling,
+EMDR (9).
+   Läkemedel, framförallt så kallade SSRI-preparat med effekt mot
+depression och ångest, bör också övervägas ifall patienten har både
+PTSD och depression eller om patienten inte kan eller vill delta i
+psykologisk behandling (9).
+   Efter bearbetat trauma kommer ytterligare en fas av omoriente-
+ring och återuppbyggnad, där personen behöver stöd att bearbeta
+sorgen och gå vidare i livet.
+
+
+
+
+72   TR AUMA
+Depression och ångest efter trauma
+
+Trauma leder oftare till sådana psykiska folksjukdomar som depres-
+sioner och ångesttillstånd än till PTSD (10).
+   Depression är ett tillstånd med ökad nedstämdhet och minskat
+intresse för flertalet aktiviteter. Andra vanliga symtom är minskad
+aptit, viktnedgång, sömnsvårigheter, handlingsförlamning, och
+koncentrationssvårigheter. Vid svårare depressioner kan personen
+ha starka skuldkänslor och självmordstankar.
+   Depression kan uttryckas både i psykologiska termer och som
+kroppsliga symtom. Internationella studier från WHO pekar på att
+det finns en gemensam kärna av besvär vid depression mellan olika
+kulturer. I den ingår ledsenhet och att sakna glädje men också oro,
+spänningar och brist på energi. Den patient som söker för trötthet,
+smärta och huvudvärk kan vara deprimerad (11).
+   I vardagsbeskrivningen av måendet kan man »ha ångest« för vad
+man ska ha på sig, eller för ett prov i skolan. När vi talar om ångest
+som en psykisk störning handlar det om mycket plågsam rädsla och
+starkt obehag som påverkar funktionsförmågan. Det finns olika
+ångesttillstånd, bland annat panikångest som kommer attackvis,
+social fobi med oresonlig rädsla för att ses och granskas av andra
+människor och generaliserad ångest, med ständig rädsla och oro.
+Till ångesttillstånden räknas också tvångssyndrom, då man besväras
+av ofrivilliga tankar eller handlingar.
+   De kulturellt färgade uttrycken för ångest varierar. Ångest kan
+beskrivas som andnöd, hjärtbesvär och rädsla. Om patienten har en
+annan kultur än vårdgivaren och inte är förtrogen med psykologiska
+termer eller psykiatrisk vård, är det möjligt att hen bara uttrycker
+ångest i kroppsliga termer (11).
+
+
+
+
+                                                          TR AUMA   73
+Att möta en traumatiserad person
+
+Att möta en person som är traumatiserad kan innebära speciella
+utmaningar:
+• Personen är ofta väldigt känslig för intryck och särskilt uppmärk-
+  sam på händelser och kommentarer som kan uppfattas som kri-
+  tiska eller hotfulla. Traumatiserade personer kan svänga snabbt i
+  sitt mående vid ökad stress.
+• Tilliten till andra är rubbad, och du kan som vårdgivare känna
+  frustration över att bli misstrodd. Ibland kan det missuppfattas
+  som förföljelsetankar, paranoida symtom.
+• Psykiska funktionshinder växlar ofta beroende på situation och
+  ibland från dag till dag. Svängningarna kan vara ännu mer uttalade
+  när någon blivit traumatiserad. På ytan tycks personen normal
+  men funktionen i vardagen pendlar kraftigt.
+• De undvikande strategierna kan bli oerhört handikappande.
+  Personen vill ha hjälp, men av rädsla backar hen hela tiden inför
+  vårdens förslag.
+• Personen har ofta svårt med koncentrationen vilket gör det svårt
+  att få någon röd tråd i vardagen. Det blir svårt att bygga relationer
+  och att lära sig nya strategier.
+• Livsberättelsen är söndertrasad, ofullständig och ständigt när­
+  varande. Personen vill kanske inte berätta om sitt liv, men gör det
+  ändå – i situationer när personalen vill tala om annat.
+
+
+
+
+74   TR AUMA
+Att bygga tillit
+
+Att minska stressnivån är viktigt. Mediciner mot depression och
+ångest kan behövas, liksom hjälp med avslappning, fysisk aktivitet
+och att bryta isoleringen. Att få hjälp att tolka verkligheten i det nya
+landet är i sig stressminskande.
+   För att bygga upp tilliten stegvis behövs kontinuitet och uthållig-
+het. Stressen minskas ju mer förutsägbart och tydligt mötet med
+vårdgivaren blir. Med tanke på minnesluckorna och svårigheterna
+att koncentrera sig och vara närvarande i mötet kan det vara till för-
+del att ha kortare men tätare samtal. Att skriva ned det som sagts
+under mötet och kolla hur personen uppfattat det kan vara ett hjälp-
+medel. Mobilpåminnelser och att fota av bilder och symboler som
+hjälper personer med koncentrationssvårigheter att minnas under-
+lättar kontakten.
+   Det är inte farligt att personen talar om trauma! Givetvis bör man
+vara tydlig med vilken kompetens man har, och det är olämpligt
+att tvinga personen att berätta saker. Men ofta vill personen själv
+berätta något för den som hen fått förtroende för – och om vård­
+givaren avvisar det kan det ge signalen att ingen orkar lyssna på
+berättelsen om traumat. Att lyssna och ta emot kan bli ingången till
+senare terapi.
+   Ofta tar det lång tid innan en person är redo att berätta om de
+trauman hen varit utsatt för. Det är också vanligt att traumatiserade
+personer berättar olika historier från gång till gång. Det kan i asyl-
+processen feltolkas som att personen inte är trovärdig, eftersom han
+ändrar sin berättelse, men beteendet är ett uttryck för minnes- och
+koncentrationssvårigheterna.
+
+
+
+
+                                                            TR AUMA   75
+Att samtala om
+Mötet med Hassan, 37 år
+
+Pirkko som är boendestödjare i socialpsykiatrin i Nytorp har fått
+kontakt med den irakiske flyktingen Hassan.
+   Hassan lärde sig svenska snabbt när han kom till Sverige för
+7 år sedan, men försämrades senare psykiskt och fick diagnosen
+PTSD. Han har stora problem i vardagen med mat, hygien och
+sömn. I kontakter med myndigheterna hamnar han ständigt i
+konflikt.
+   Teamet har talat om att det är viktigt att Pirkko hjälper Hassan
+att upprätta strukturer. Men när Pirkko gjort hembesök har
+Hassan ofta inte varit hemma eller inte öppnat. Pirkko har förstått
+att han ibland legat och sovit eftersom han vänt på dygnet. Vid
+varje träff verkar han helt ha glömt vad som sades senast.
+   Vid dagens hembesök börjar Hassan med att upprört berätta
+att han blivit hotad med uppsägning.
+   – Jag har ju bara glömt att betala en enda hyra, säger han.
+   När Pirkko vill tala om vad de kan göra åt det, tycks Hassan
+snart tappa intresset. Han vill hellre tala om en actionfilm på TV
+kvällen innan och verkar då nästan glad och avslappnad. Pirkko
+försöker allt mer stressat byta samtalsämne. När fem minuter
+återstår säger hon desperat:
+   – Du verkar inte alls intresserad av att få hjälp. Varför vill du
+egentligen ha boendestöd?
+   – Därför att det är roligt att prata med dig, svarar Hassan.
+
+Pirkko funderar: Hur ska hon förstå Hassans beteende? Och vad
+kan hon göra för att få lov att hjälpa honom med livssituationen?
+
+
+
+
+76   TR AUMA
+Att möta barn med trauma
+
+Traumatisering hos barn uttrycks ofta med andra symtom än hos
+vuxna. Om ett litet barn visar ökad separationsångest och går till-
+baka i utvecklingen kan det vara ett symtom på PTSD. Lite äldre
+barn kan reagera med ökad irritation, oro, skol- och inlärnings­
+svårigheter, sömnsvårigheter och ilskeutbrott. Barn kan bli hyper-
+aktiva eller passiva (12).
+   Den australienske psykologen Howard Bath har utvecklat en
+modell för traumamedveten omsorg, som används i arbetet med
+barn och ungdomar efter svåra händelser. Barn är känsliga för över-
+väldigande och ihållande stress, vilket kan leda till överdriven vak-
+samhet och larmberedskap. Därför menar Bath att första pelaren i
+omsorgen måste vara att skapa trygghet. Den andra pelaren är att
+(åter)skapa positiva, tillitsfulla relationer mellan unga och viktiga
+vuxna. Slutligen består den tredje pelaren i att hjälpa barnet att ut-
+veckla copingstrategier för att hantera känslor och utmaningar (13).
+   Att få vardagen att fungera med mat, skolgång och sömn är
+grundläggande i omsorgen av nyanlända barn. För ensamkom-
+mande barn är det oftast personal i boende och skola samt gode män
+som kan ge det vardagliga stödet. I Stockholms läns landsting finns
+det kompetens i första linjens psykiatri för barn och ungdomar på
+ett antal vårdcentraler och barn- och ungdomsmedicinska mottag-
+ningar. Barnet kan behöva specialistbedömning och ibland behand-
+ling vid barn- och ungdomspsykiatrisk klinik. Några viktiga sym-
+tom som bör föranleda kontakt med BUP är om barnet är mycket
+passivt och till exempel inte går ur sängen, ifall hen skadar sig själv
+och har självmordstankar eller om hen får kraftiga ilskeutbrott som
+omgivningen inte kan hantera (14).
+
+
+
+
+                                                           TR AUMA   77
+Att samtala om
+Mötet med Tewelde, 17 år
+
+Personalen på ett stödboende för ensamkommande ungdomar
+ringer BUP-mottagningen och berättar att Tewelde, en asylsökande
+pojke från Eritrea, riggat en snara i sitt rum. Han får en tid för sam-
+tal senare på dagen hos Per, som är underläkare och dagjour.
+   Per rådfrågar psykologen på mottagningen som suckar och
+säger att det är svårt att göra något vettigt terapeutiskt arbete så
+länge asylprocessen pågår.
+   Tewelde kommer till mottagningen med personal från boendet
+som berättar att Tewelde på sistone ofta stannat hemma från sko-
+lan och dragit sig undan på sitt rum. Han har klagat på huvudvärk
+och personalen har gett honom Panodil.
+   Samtalet förs med hjälp av tigrinjatalande telefontolk. Tewelde
+är fåordig i kontakten och ser trött och tagen ut. Han berättar att
+han sover dåligt och har mardrömmar samt klagar över huvud-
+värk. På Pers fråga berättar han att han kom till Sverige för sju
+månader sedan efter en resa via Sudan och Libyen. Han har spora-
+disk telefonkontakt med mamma och syskon som är kvar i Eritrea.
+Tewelde ser ingen framtid om han inte får stanna i Sverige. Efter en
+lång paus frågar han om asylprocessen, och vad Per tror om hans
+chanser att få stanna (det är det enda han förmedlar spontant).
+   Det visar sig att Tewelde nyligen blivit ”åldersuppgraderad”
+av handläggaren på Migrationsverket. Beslutet är överklagat av
+juridiska ombudet. Eftersom LMA-kortet inte är uppdaterat och
+fortfarande säger 17 år, så valde boendet att söka BUP istället för
+vuxenpsykiatrin.
+   Per funderar på hur han ska bedöma Teweldes mående och
+självmordsbenägenhet. Hur ska han och hans arbetskamrater
+göra för att stödja Tewelde mitt i asylprocessen?
+
+
+
+
+78   TR AUMA
+Känsla av sammanhang, resiliens, coping
+
+Alla personer som varit utsatta för trauman får inte psykiska pro-
+blem. Många kan ha symtom av PTSD men ändå (oftast) vara väl-
+fungerande och till exempel kunna arbeta. Modern forskning ställer
+sig allt oftare frågan: vad hjälper människor att må bra, trots de
+upplevelser de bär med sig? Och det är ju en fråga som är oerhört
+väsentlig i vardagen för oss som möter människor med erfarenheter
+av trauma i vårt arbete.
+   Den israeliske sociologen Aaron Antonovsky har studerat faktorer
+som orsakar och upprätthåller hälsa – så kallade salutogena faktorer.
+Han konstruerade begreppet KASAM (känsla av sammanhang)
+som en beskrivning av de faktorer som gjorde att en del överlevande
+från koncentrationslägren kunde bevara en god psykisk hälsa. Att
+världen upplevs som meningsfull, begriplig och hanterbar är faktorer
+som stärker KASAM (15).
+   Ett annat begrepp som allt oftare används är resiliens. Det
+beskrivs som en förmåga eller egenskap som gör att individer, grup-
+per och miljöer lyckas hantera svårigheter, kriser och katastrofer
+utan att nedslås av dem. Det nutida synsättet är att det beror av ett
+samspel mellan individens egenskaper (god självkänsla), egenskaper
+hos den närmaste omgivningen (goda relationer i familjen) och
+egenskaper i den vidare omvärlden (tillgång till föreningsliv, vänner
+och arbetskamrater) (16).
+   Med coping menas de förhållningssätt personer använder för att
+hantera stress. Man talar om att människor har olika coping-strate-
+gier. Sådana strategier kan vara mer inriktade på att hantera känslor
+eller på att lösa problem, de kan vara individuella eller kollektiva,
+undvikande eller uppgiftsfokuserade.
+
+
+
+
+                                                         TR AUMA   79
+     VISSTE DU ATT …
+
+… de flesta människor upplever minst en potentiellt traumatisk händelse
+under sin livstid. Andra människors avsiktliga handlingar leder oftare till
+PTSD än till exempel en naturkatastrof. Män upplever fler traumatiska
+händelser än kvinnor, men kvinnor utvecklar oftare PTSD (9).
+
+
+… i en internationell studie fick 10 procent av flyktingar som studerades
+diagnosen PTSD, men siffrorna varierar kraftigt mellan olika studier (10).
+
+
+… i ett projekt vid Röda Korsets Center för torterade flyktingar i Stockholm
+fick en socionom i uppdrag att kartlägga psykosociala behov och arbeta
+med psykosocialt stöd, i första hand genom nätverksarbete. Patienternas
+förmåga att tillgodogöra sig psykoterapibehandlingen vid centret ökade
+samtidigt som de fick hjälp med andra behov (11).
+
+
+… PTSD-begreppet ibland har kritiserats för att alltför mycket bygga på de
+symtombilder och lidandespråk som uttryckts av västerländska patienter,
+som Vietnamveteranerna i USA. Västerländska behandlare har kritiserats
+för att exportera behandlingsmodeller till andra länder utan att ta hänsyn
+till kulturella normer och sociala sammanhang (17).
+
+
+… syriska tonåringar i Jordanien beskrev 2014 att deras vanligaste coping-
+mekanism var att tala med föräldrar och vänner, men de använde också
+ofta ”tillbakadragande”. Andra metoder för coping var att tänka på de
+gamla goda tiderna i Syrien, att läsa Koranen, lyssna på musik, se på TV.
+Det fanns också de som beskrev rökning, att stjäla och slå andra som
+copingmetoder (3).
+
+
+… bland äldre somaliska flyktingar i Finland spelade en stark religiositet en
+buffrande roll för att förhindra utveckling av PTSD-symtom hos personer
+utsatta för krigstrauman (18).
+
+
+… i en studie av irakiska asylsökande i Nederländerna betydde lång asyltid
+mer för utvecklingen av PTSD-symtomen än mängden trauma (19).
+
+
+
+
+80    TR AUMA
+… i en studie i USA uppgav flyktingar att en anledning att de inte berättat
+för sin distriktsläkare om sina trauman var att de överhuvudtaget saknade
+kunskap om att trauma påverkar hälsan. Men när de fick frågan sade de
+flesta att de ville tala om krig och trauma och lära sig mer (20).
+
+
+… i en svensk intervjustudie med bosniska kvinnor som väntat många år
+med att söka hjälp efter traumatisering framkom flera hinder för hjälp­
+sökande: att kvinnorna ville undvika att bli påminda om traumat, att de
+först ville skaffa sig fast mark under fötterna i det svenska samhället, att
+undvika stigmatisering och att de inte hade ett fungerande språk för att
+tala om våld och övergrepp med andra (21).
+
+
+… i ett projekt där Läkare Utan Gränser intervjuade asylsökande i Skaraborg
+som genomgått hälsoundersökning var det bara 26 procent som uppgav
+att de fått någon fråga om sin psykiska hälsa (22).
+
+
+… i samma projekt erbjöd Läkare Utan Gränser psykosocialt stöd i form av
+screening av psykisk ohälsa, individuella stödsamtal, hälsoinformation,
+hjälp med hänvisning till vård och psykosociala aktiviteter till asylsökande
+i Skaraborg. Mobila team på asylboendena och hembesök hos de asyl­
+sökande med eget boende ansågs bidra till förtroende för stödet (22).
+
+
+
+
+                                                                     TR AUMA   81
+     ATT LÄSA MER
+
+För det här avsnittet har vi använt följande källor:
+1. Fried, H. (2000). Ett tredje liv: från jordbävning i själen till meningsfull
+     tillvaro. Stockholm: Natur & Kultur.
+2. Silove, D., Steel, Z. and Psychol, M. (2006). Understanding community
+     psychosocial needs after disasters: Implications for mental health
+     services. Journal of Postgraduate Medicine, 52(2): 121-5.
+3. Hassan, G, Kirmayer, LJ, Mekki-Berrada A., Quosh, C., el Chammay, R.
+     m fl. (2015). Culture, Context and the Mental Health and Psychosocial
+     Wellbeing of Syrians: A Review for Mental Health and Psychosocial
+     Support staff working with Syrians Affected by Armed Conflict.
+     Genève: UNHCR
+4. Tinghög, P., Arwidson, C., Sigvardsdotter, E., Malm, A. & Saboonchi, F.
+     (2016). Nyanlända och asylsökande i Sverige: En studie av psykisk ohälsa,
+     trauma och levnadsvillkor. Röda Korsets Högskolas rapportserie 2016:1.
+5. American Psychiatric Association. (2013). Diagnostic and Statistical
+     Manual of Mental Disorders, Fifth Edition. Arlington, VA: American
+     Psychiatric Association.
+6. ”Psykisk ohälsa hos asylsökande och nyanlända migranter – ett
+     kunskapsunderlag för primärvården”. Laddas ned från
+     www.socialstyrelsen.se
+7. “Det viktigaste är inte vad man gör utan att man gör något”, Röda
+     Korsets tidning Henry 2/16.
+8. Envall Ryman, E. (2017). Hur nyanlända kan landa. Slutrapport för
+     Landaprojektet om hur ett psykosocialt stöd för svårt traumatiserade
+     flyktingar kan möjliggöra en väg in i samhället. Stockholm: Röda
+     Korsets Center för torterade flyktingar.
+9. Svenska Psykiatriska föreningen. (2018). Transkulturell psykiatri.
+     Kliniska riktlinjer för diagnostik och behandling. Stockholm: Svenska
+     psykiatriska föreningen & Gothia förlag.
+10. Fazel, M., Wheeler, J. & Danesh, J. (2005). Prevalence of serious mental
+     disorder in 7000 refugees resettled in western countries: a systematic
+     review. Lancet, 365(9467): 1309-14.
+11. Bäärnhielm, S. (2014) Transkulturell psykiatri. Lettland: Natur & Kultur,
+     s 199–216.
+
+
+
+
+82    TR AUMA
+12. Sollentuna kommun. Trauma i klassrummet. En handbok för personal i
+    skolan. Hämtat från www.sollentuna.se
+13. ”Mer om traumamedveten omsorg”. Hämtat från www.raddabarnen.se
+14. ”När ska barn och unga som flytt till Sverige söka stöd från BUP?”
+    Hämtat från www.bup.se
+15. Antonovsky, A. (1991). Hälsans mysterium. Stockholm: Natur & Kultur.
+16. Egidius, H. Natur & Kulturs Psykologilexikon.
+    Finns på www.psykologiguiden.se
+17. Watters, E. (2010). Crazy like us. The globalization of the American
+    psyche. New York: Free Press.
+18. Mölsä, M., Kuittinen, S., Tiilikainen, M., Honkasalo, M.L. &
+    Punamäki, R.L. (2017) Mental health among older refugees: the role of
+    trauma, discrimination and religiousness. Aging & Mental Health,
+    21(8):829-837.
+19. Laban, C.J., Gernaat, H.B., Komproe, I.H., van der Tweel, I., De Jong, J.T.
+    (2005). Postmigration living problems and common psychiatric disorders
+    in Iraqi asylum seekers in the Netherlands. Journal of Nervous and
+    Mental Disease, 193(12):825-32.
+20. Shannon, P., O’Dougherty, M. & Mehta, E. (2012). Refugees’ perspecti-
+    ves on barriers to communication about trauma histories in primary
+    care. Mental Health in Family Medicine, 9:47–55.
+21. Eastmond, M. (2017). Trauma och tystnad: Kvinnor, våld, krig och
+    flyktingskap. Göteborg: Närhälsan Kris-och traumamottagning.
+22. Läkare Utan Gränser. (2018). Ett liv i limbo. En överblick av Läkare Utan
+    Gränsers psykosociala stöd till asylsökande i Skaraborg. Länk till rap-
+    porten https://lakareutangranser.se/sites/default/files/media/rapport-
+    ett-liv-i-limbo-msf.pdf
+
+
+Fler lästips:
+Ascher, H. & Hjern, A. (2013). Från apati till aktivitet. Teori och behandling
+   av flyktingbarn med svår psykisk ohälsa. Lund: Studentlitteratur.
+Hedrenius, S. & Johansson, S. (2013). Krisstöd vid olyckor, katastrofer och
+   svåra händelser: att stärka människors motståndskraft. Stockholm:
+   Natur & Kultur.
+
+
+
+
+                                                                   TR AUMA    83
+Tankar om kulturmötet
+»Om du är på semester utomlands och ni inte förstår varandra,
+så försöker ni från bägge håll skapa förståelse. Inte bara en av er.
+Det är inget problem att ni inte vet så mycket om varandras kultur,
+det viktiga är att visa varandra en vilja att förstå.«
+Citat ur en intervju med en anhörig till en patient med psykos
+(vår översättning).
+Hultsjö, Berterö & Hjelm, 2009, s.67(1)
+
+
+
+    XXXXXX
+Hur uppfattas mötet i vård och omsorg?
+
+När distriktsläkaren Kristian Svenberg intervjuade somaliska per-
+soner om deras möten med den svenska sjukvården, beskrev de att
+de hade höga förväntningar på vården med dess höga standard, men
+att de inte kände sig tagna på allvar. De förväntade sig att läkaren
+ställer diagnos och föreslår behandling utan att ställa alltför många
+frågor. De uppfattade vården som avvisande. Läkaren trodde inte på
+deras besvär och de tyckte att de ständigt fick beskedet »det är ingen-
+ting«. De klagade ofta över bristfällig kroppsundersökning och
+kände sig sämre behandlade i vården för att de inte talade svenska
+felfritt. Ofta ledde detta till att de sökte vård utomlands (2).
+    I samma forskningsprojekt intervjuades blivande specialistläkare
+i allmänmedicin om sina erfarenheter av mötet med patienter från
+Somalia. De uppfattade också att patienterna hade höga förvänt-
+ningar på vården och upplevde själva ett kulturellt avstånd till
+patienterna. Man kan tänka sig att patienternas förväntan på en
+mer auktoritär läkarroll kom i konflikt med vad de lärt sig under
+utbildningen om patientens rätt att vara med och fatta besluten.
+Några läkare beskrev också en osäkerhet om hur de skulle bete sig i
+mötet. Hur skulle de hälsa på patienten? Hur skulle de undersöka
+patienter av motsatt kön (2)?
+
+
+
+
+                                           TANK AR OM KULTURMÖTET    85
+Speciella utmaningar i mötet med
+nyanlända flyktingar
+
+Att det inte bara är patienterna som har svårigheter att känna tillit
+bekräftas i Sally Hultsjös intervjuer med personal i somatisk och
+psykiatrisk akutvård som möter asylsökande flyktingar. Några
+beskrev att de uppfattar att de asylsökande söker vård först efter
+avslag på ansökan om uppehållstillstånd, och att de rekommende-
+rats att söka psykiatrisk vård av tolkar och advokater (3).
+
+Starka känslor kan väckas hos den som i sitt arbete möter personer
+som varit utsatta för svåra trauman. Som behandlare blir du lätt en
+väldigt viktig person för den nyanlände flyktingen och du kan få
+uppleva att du blir idealiserad, »den enda som förstår mig« – för att
+i en annan situation bli ifrågasatt som representant för det oförstå-
+ende svenska samhället. Birgitta Angel och Anders Hjelm beskriver
+flyktingarbetarens kris i olika faser:
+• Bristande tilltro till flyktingens berättelse, som ter sig ofattbar.
+• Skräck, ångest, överidentifikation med personen.
+• Överdriven välvilja, svårighet att sätta gränser.
+• Man finner en balans i arbetet och kan se vad som går att
+   uträtta (4).
+
+
+
+
+86   TANK AR OM KULTURMÖTET
+Måste man vara kulturkompetent?
+
+I Sally Hultsjös intervjuer med patienter i psykosöppenvården var
+det en del patienter som menade, att vårdpersonalen bör bestämma
+behandlingen. Men andra ville vara delaktiga. Patienterna hade
+också olika syn på psykisk sjukdom: en del menade att psykisk
+sjukdom är Guds vilja, medan andra anammade vårdpersonalens
+förklaringsmodeller (5).
+    Det här illustrerar fördelen men också risken med att ta hänsyn
+till kulturella faktorer i vårdmötet. Det är en tillgång att veta att det
+kan finnas kulturella variationer i synen på psykisk sjukdom och
+dess behandling. Men det är också viktigt att inte göra det till en ny
+stereotyp. Lika lite som jag kan utgå från att alla andra delar mina
+egna värderingar och föreställningar – lika lite kan jag tro att jag vet
+allt om deras föreställningsvärld utifrån deras kulturella bakgrund.
+    Av det skälet kan man vara kritisk till begreppet »kulturkompe-
+tens« som används brett i undervisning inom bland annat vårdyrken,
+främst i USA. Det leder lätt till att man objektifierar patienten, och
+ser kulturkompetens som en »färdighet« man kan lära sig lika väl
+som att ta ett blodprov eller lyssna på hjärtat (6).
+    Självklart är det viktigt att personalen i vård och omsorg avspeglar
+det mångkulturella samhälle vi verkar i och som patienter/klienter
+tillhör, och det är en stor tillgång i arbetsgruppen att det finns kon-
+kret kunskap om olika kulturer. Men det är samtidigt viktigt att ingen
+upplever ett onödigt avstånd till personer av annan kulturell bak-
+grund, och av den anledningen blir hämmad i sin yrkesutövning.
+
+
+
+
+                                            TANK AR OM KULTURMÖTET     87
+Att intressera sig för den andres perspektiv
+
+Men vad är då alternativet? Hur kryssar man mellan att inte se per-
+sonens kultur och därmed riskera missförstånd och att tillskriva
+hen en kulturellt präglad uppfattning? Ett vanligt förslag på förhåll-
+ningssätt skulle kunna sammanfattas med orden: att intressera sig
+för den andres perspektiv.
+    I Hultsjös undersökning framkom att de utlandsfödda patienter-
+nas familjer inte önskade någon speciellt utformad behandling på
+grund av sin bakgrund. Däremot önskade de att vårdpersonalen
+skulle visa intresse och ta sig tillräckligt mycket tid för att utveckla
+en ömsesidig förståelse. Hon menar att vårdpersonalen tidigt i
+mötet med en patient bör fråga om vilken syn hen har på delaktig-
+het, på olika behandlingar, vilka erfarenheter och förväntningar
+som finns och hur personen själv ser på sin sociala situation och
+dess inverkan (1).
+    De läkare Svenberg intervjuade beskrev att de valde olika strate-
+gier i mötet med somalierna, till exempel att inta en mer gammel-
+dags auktoritär attityd eller att vara mer nyfiken på patientens bak-
+grund och person. Svenberg själv menar utifrån egen erfarenhet att
+det ofta går att nå fram till en bättre dialog och samförstånd. Det
+förutsätter att patient och läkare träffas upprepade gånger, så att
+tilliten kan byggas. Han betonar också betydelsen av att kompen-
+sera språkliga kommunikationssvårigheter med en noggrann
+kroppsundersökning och – inte minst – att visa respekt och vänlig-
+het, till exempel genom att lära sig några ord på patientens hem-
+språk och några fakta om hemlandet (2).
+
+
+
+
+88   TANK AR OM KULTURMÖTET
+Att samtala om
+Mötet med Ahmed, 32 år
+
+Det är morgon och den öppna distriktssköterskemottagningen har
+precis börjat. Det är mörkt ute, slaskigt och så där absolut urtrist
+väder. Som ett brev på posten kommer förkylningar och influensor.
+De akuta läkartiderna är redan uppbokade.
+   Distriktssköterskan Lisa får reda på att nästa patient, Ahmed,
+redan varit framme i luckan och klagat över att han får vänta. Han
+har absolut inte velat ha tolk utan bara sagt att han måste få träffa
+en läkare.
+   Lisa frågar Ahmed mer om hans besvär, och han visar på
+pannan och tar sig åt örat och halsen.
+   – Feber! Ont!
+   Lisa tar tempen som bara är lätt förhöjd och tittar i svalget och
+öronen. Ahmed visar på sina fingrar att han haft besvär i två
+dagar.
+   – Du är förkyld, säger Lisa. Vila, drick mycket. Köp Alvedon på
+apoteket och näsdroppar så blir det bättre i örat. Blir du sämre och
+är sjuk mer än en vecka så kom tillbaka. Två dagar är en kort tid,
+du måste ha tålamod.
+   – NEJ! säger Ahmed högt. Jag sjuk! Vill se doktor och få antibiotic!
+   Han går ut och smäller igen dörren.
+   – Jag invandrare, ingen doktor, ingen antibiotic, skriker han.
+
+På andra sidan dörren står Lisa handfallen. Varför blev det så fel?
+Hur ska hon kunna förklara hur man tänker här om behandling
+och egenvård i detta land? Hur ska hon förstå varför Ahmed är
+så arg?
+
+
+
+
+                                           TANK AR OM KULTURMÖTET    89
+Ett hjälpmedel i dialogen
+
+Den kulturformuleringsintervju som vi tidigare berättat om kan
+vara ett stöd just för att åstadkomma den dialog Svenberg beskriver.
+Intervjun syftar till att hjälpa vårdpersonalen att utforska patien-
+tens egen subjektiva värld och tar upp förslag till konkreta frågor om
+kultur inom följande områden:
+• egen problembeskrivning
+• förklaringar till individens sjukdom
+• stress och möjligt stöd i individens sociala sammanhang
+• identitet
+• sjukdomshantering och tidigare hjälpsökande
+• hinder för att få vård
+• förväntningar på vården
+• relationen mellan individen och yrkespersonen (7).
+
+Vid behov finns tolv kompletterande intervjuer varav sex är ett stöd
+för fördjupade intervjuer om innehållet i KFI. De övriga intervju-
+erna avser patientgrupper med särskilda behov som barn och ung-
+domar, äldre, flyktingar och invandrare samt anhörigas och
+omvårdnadspersoners perspektiv.
+    Intervjun är inte bara ett hjälpmedel för att ställa diagnos. Att göra
+en kulturformulering – eller mer allmänt, att aktivt intressera sig för
+patientens livshistoria, identitet, föreställningar och vad som ger
+mening åt patientens liv – bidrar framförallt till en ökad förståelse
+och en bättre vårdrelation. Kulturformuleringsintervjuns syftar till
+att nå fram till patientens berättelse, med tanken att det är den som
+öppnar för förståelsen.
+    I den meningen är en kulturformulering precis lika användbar
+för alla yrkeskategorier i vården och även i mötet med svenskfödda
+patienter. Den kan inspirera även den som möter klienter till exempel
+i socialtjänsten eller på Arbetsförmedlingen.
+
+
+
+90   TANK AR OM KULTURMÖTET
+Olika vägar att nå patientens berättelse
+
+Strävanden att ställa patientberättelsen i centrum pågår inom olika
+delar av vården av patienter oavsett kulturell bakgrund, och erfaren-
+heterna av dem kan berika varandra.
+   Inom primärvården talar man om patientcentrerad vård.
+Patientcentrering innebär att vårdmötet – konsultationen – läggs
+upp så att patienten inte styrs mot vårdpersonalens (mer eller mindre
+medvetna) mål, utan att mötet utgår från patientens tankar, känslor
+och förväntningar. Man talar om vikten av att efterforska de »tre F«
+– farhågor, föreställningar och förhoppningar. Läkaren ska hålla till-
+baka sina egna funderingar tills patienten fått formulera sitt perspek-
+tiv. Efter läkarens sammanfattning, undersökning och presentation
+av sina tankar ska mötet avslutas med en gemensam del, där patient
+och läkare tillsammans diskuterar sig fram till vad som bör göras (8).
+   Personcentrerad vård har blivit ett honnörsord på många håll i
+vården. Det pågår också ett systematiskt arbete med att utveckla
+begreppet både praktiskt och teoretiskt. Personcentrerad vård
+beskrivs som ett partnerskap mellan patienter/närstående och pro-
+fessionella inom vård, omsorg och rehabilitering. Ett noggrant lyss-
+nande på patientens och ofta även närståendes berättelse lägger en
+grund för att skriva en gemensam hälsoplan. Dokumentationen av
+både berättelse och planen är en viktig del av förhållningssättet (9).
+   Narrativ medicin beskrivs som en klinisk metod för att öka såväl
+läkares som andra yrkesgruppers förmåga att förstå och möta
+patienters sjukdom, lidande och utsatthet. Genom att lära av littera-
+tur, film, konst och filosofi kan vårdpersonal utveckla förmågan att
+lyssna på berättelsen och förbättra sitt bemötande av patienten (10).
+
+
+
+
+                                           TANK AR OM KULTURMÖTET    91
+Att samtala om
+Mötet med Zara, 42 år
+
+Psykologen Dorte träffar Zara, en marockansk kvinna, för ett
+första samtal på den psykiatriska öppenvårdsmottagningen. Av
+distriktsläkarens remiss framgår att han haft diagnostiska samtal
+med Zara med hjälp av arabisktalande tolk. Resultaten har varit
+motsägelsefulla och läkaren har prövat två olika antidepressiva
+läkemedel utan att Zara förbättrats. Distriktsläkaren skriver
+också i remissen att han är osäker på om Zara tagit medicinen.
+   Vid dagens samtal säger Zara först att hon klarar sig utan tolk,
+men Dorte lyckas övertyga henne om att låta tolken stanna. Dorte
+bestämmer sig för att göra en intervju enligt kulturformuleringen.
+När hon ställer frågor om kulturell identitet framkommer det
+att Zara är berb från Marocko och har en berbisk dialekt som
+modersmål.
+   När Dorte frågar Zara vad hon själv tror att hon har för besvär
+visar det sig att hon inte har en aning.
+   – Men förklarade inte läkaren att han bedömer att du har en
+depression? frågar Dorte. Tolken översätter detta med en lång
+ramsa, och han och Zara börja diskutera inbördes. När Dorte lite
+irriterat frågar vad det handlar om, säger tolken att Zara inte
+förstår vad depression är, trots att han försökt förklara. Hon har
+aldrig hört talas om det.
+   På Dortes fråga om vad Zara önskar för hjälp och behandling
+för sina besvär rycker hon på axlarna:
+   – Det är skrivet för mig. Jag ska vara stark.
+
+Dorte försöker nu sammanfatta samtalet för sig själv. Visst förstår
+hon Zaras problem något bättre. Kanske kan det finnas nya idéer
+om hur Zara ska kunna få hjälp att må bättre, tänker hon.
+
+
+
+
+92   TANK AR OM KULTURMÖTET
+  VISSTE DU ATT …
+
+… i en brittisk undersökning av diabetiker visade det sig att färgade
+patienter från Västindien, trots att de talade samma språk som läkaren,
+inte fick sina frågor om sjukdomen besvarade i samma utsträckning som
+vita, speciellt om dessa färgade personer var äldre (11).
+
+
+… i en studie med spanskspråkiga patienter i Los Angeles i samtal med och
+utan tolk visade det sig att läkarna trodde att patienterna i tolksamtalen
+känt sig mindre förstådda och fått mindre hjälp än vad patienterna själva
+ansåg (11).
+
+
+… i en studie av utrikesfödda patienter vid en psykosöppenvårdsmottag-
+ning ändrades patienternas diagnoser i 56,5 % av fallen, när frågor från en
+kulturformuleringsintervju användes (12).
+
+
+
+
+                                               TANK AR OM KULTURMÖTET        93
+     ATT LÄSA MER
+
+För det här avsnittet har vi använt följande källor:
+1. Hultsjö, S., Berterö, C., & Hjelm, K. (2009). Foreign-born and Swedish-
+     born families’ perceptions of psychosis care. International Journal of
+     Mental Health Nursing, 18(1): 62-71.
+2. Svenberg, K. Det »transkulturella sjukvårdsmötet« – erfarenheter
+     bland somaliska flyktingar och läkare i Sverige. Socialmedicinsk
+     tidskrift nr 2 2012.
+3. Hultsjö, S. & Hjelm, K. (2005). Immigrants in emergency care:
+     Swedish health care staff’s experiences. International Nursing
+     Review 52, 276-285.
+4. Angel, B & Hjelm, A. (2004). Att möta flyktingar. (2. uppl.) S. 135 ff.
+     Lund: Studentlitteratur.
+5. Hultsjö, S., Berterö, C. & Hjelm, K. Perceptions of psychiatric care
+     among foreign- and Swedish-born people with psychotic disorders.
+     Journal of advanced nursing 60(3): 279-288.
+6. Kleinman, A. & Benson, P. (2006). Anthropology in the clinic:
+     the problem of cultural competency and how to fix it. PLoS Medicine
+     3(10): e294.
+7. Intervjun finns gratis tillgänglig på webbplatsen www.pilgrimpress.se
+8. Ahlkvist, S. & Hedberg, C. Patientcentrerad konsultation. Hämtad från
+     www.internetmedicin.se
+9. Se webbplatsen för GPCC – Centrum för personcentrerad vård,
+     www.gpcc.gu.se
+10. Se webbplatsen för Svensk förening för narrativ medicin,
+     narrativmedicin.se
+11. Refererade i Ottosson, J. (red.) (1999). Patient – läkarrelationen: läke-
+     konst på vetenskaplig grund. Stockholm: Natur & Kultur i samarbete
+     med Statens beredning för utvärdering av medicinsk metodik (SBU).
+12. Bäärnhielm, S., Åberg Wistedt, A. & Rosso, M.S. (2015). Revising psychi-
+     atric diagnostic categorisation of immigrant patients after using the
+     Cultural Formulation in DSM-IV. Transcultural psychiatry, 52(3):287-310.
+
+
+
+
+94    TANK AR OM KULTURMÖTET
+Fler lästips:
+Ekman, I., Swedberg, K., Taft, C., Lindseth, A., Norberg, A. m fl. (2011).
+   Person-centered care – ready for prime time. European Journal of
+   Cardiovascular Nursing, 10: 248–251
+Fossum B. (red.) (2007). Kommunikation. Samtal och bemötande i vården.
+   Stockholm: Studentlitteratur.
+
+
+
+
+                                                TANK AR OM KULTURMÖTET       95
+Språk och tolkning
+»Tolken berättade i intervjun att hon skulle kunna förklara ordet
+’psykos’ på följande sätt: ’Det här problemet påverkar din själ och
+man kan inte skilja på kropp och själ, det påverkar din själ här
+inne’.«
+Sundvall, 2011(1).
+Finns det ord för allt lidande?
+
+Språkskillnaderna nämns ofta som den största barriären i vårdmötet
+med patienter av annan kulturell bakgrund. Att det finns tillgång på
+kompetenta tolkar är det allra viktigaste för att sänka den barriären.
+   Men det går inte alltid att översätta ord rakt av mellan språk.
+Ord och begrepp kan ha olika kulturella betydelser och olika känslo-
+mässig laddning (2).
+   Medicinska termer som ångest, depression och i viss mån psykos
+förekommer i det svenska vardagsspråket. Så var det inte för bara
+några årtionden sedan. De flesta använde säkert inte ordet »ångest«
+då. Snarare kunde man säga att »mamma har problem med ner-
+verna«. Historikern Karin Johannisson har i flera böcker visat hur
+sjukdomsbegrepp förändrats över århundradena (3).
+   I andra länder där psykiatrin inte är utbyggd och där stigma gör
+att det är svårare att tala om känsliga sjukdomar är de medicinska
+begreppen mer okända.
+   »Min själ är trött«, kan vara ett sätt för en person från Syrien att
+uttrycka allmänt psykiskt lidande. Men det förekommer också
+uttryck knutna till kroppsliga förnimmelser, som smärta i bröstet,
+kramp i tarmar eller myror som kryper under huden. På samma sätt
+uttrycks ofta ångest eller rädsla hos syrier med bilder knutna till
+hjärtat. »Mitt hjärta faller ned« kan till exempel uttrycka en plötslig
+rädsla (4).
+   I det somaliska språket finns inte ordet »depression«. Det finns
+andra begrepp, till exempel »murug« som betyder nedstämd,
+»wali« som betyder galen och »buufis«, ett nytt begrepp som
+avspeglar exiltillvarons vånda och beskriver ett depressivt tillstånd
+med paranoida drag och isoleringstendens (5).
+
+
+
+
+                                               SPR ÅK OCH TOLKNING   97
+Att samtala om
+Mötet med Maryam, 26 år
+
+På eftermiddagsmottagningen möter syster Marta en upprörd
+Maryam, som säger att hon snart inte har någonstans att bo och
+att »soc« skickat henne till vårdcentralen.
+   Marta hänger inte med riktigt. Hur fungerar det för flyktingar
+nu för tiden? Måste inte kommunen ordna en riktig bostad åt
+denna ensamma kvinna? Det verkar inte vara något för en distrikts-
+sköterska. Varför kom hon hit?
+   Maryam säger tveksamt något om att handläggaren tycker att
+hon är galen.
+   – Avfärdar handläggaren hennes sociala problem med att hon
+är galen och lägger över det hela på vården!? tänker Marta.
+   Maryam säger nu att familjen sitter i hennes hjärta och att det
+spränger som om det skulle kunna gå sönder. Hon talar om hur
+hjärtat »springer« och att hon inte kan sova. Mariam säger också
+något svårförståeligt om att anhöriga har dött i hemlandet och hon
+var inte med för att säga adjö. Nu vill de inte lämna henne i fred. De
+kommer på natten och anklagar henne för att ha lämnat dem.
+   – Är det allvarligare psykiska problem ändå? Marta önskar att
+det funnes en tolk att tillgå akut. Hon tar blodtrycket, det är nor-
+malt. Pulsen är givetvis snabb, men patienten är ju så upprörd.
+   Maryam verkar lite lugnare nu och ler nästan mot Marta:
+   – Hjärtat orkar inte. Kan inte doktorn ge mig någon medicin?
+   Marta känner sig förvirrad av dessa svängningar, men ändå lite
+mindre orolig. Hon funderar nu på hur hon ska kunna förstå bättre
+hur vårdcentralen ska kunna hjälpa Maryam vidare.
+
+
+
+
+98   SPR ÅK OCH TOLKNING
+Kommunikation utan ord
+
+Det brukar sägas att den allra största delen av vår kommunikation
+är icke-verbal. Det är en viktig tillgång, när vi inte kan lita på orden.
+   Samtidigt är det viktigt att veta att även icke-verbal kommunika-
+tion präglas av kulturella normer. I psykiatrin gör man ofta bedöm-
+ningar som bygger på det som i journalen beskrivs som ”kontakt”.
+Är patienten undvikande, avskärmad eller frånvarande i sin egen
+värld, eller får behandlaren ett bra gensvar? Den skillnaden kan
+vara avgörande till exempel vid en bedömning av en persons själv-
+mordsbenägenhet eller psykosnärhet. Det är då viktigt att veta att
+det kan bli missförstånd över kulturgränser.
+   En tolk berättade en historia om en läkare som blivit frustrerad i
+mötet med en somalisk kvinna, som varken ville ta honom i handen
+eller titta honom i ögonen. Tack och lov hade tolken möjlighet att
+tala med läkaren efter besöket, och förklara att kvinnans beteende
+var ett tecken på att hon ville visa honom respekt.
+
+
+
+
+                                                 SPR ÅK OCH TOLKNING   99
+Att använda tolk
+
+I Sverige förekommer idag tolkning på närmare 200 olika språk och
+dialekter. Personer som inte behärskar svenska språket har rätt till
+kostnadsfri tolkservice i kontakten med myndigheter och offentlig
+service. Personer utan anknytning till Sverige får dock själva betala
+kostnader för tolk.
+    Innan man beställer tolk är det viktigt att ta reda på exakt vilket
+språk det gäller. Personer från samma land kan ha olika modersmål.
+Fråga om klienten har något önskemål om kön på tolken. Efterfråga
+auktoriserad tolk, och inom vården sjukvårdstolk, men sådana tolkar
+finns inte på alla språk.
+   Patienter säger ibland nej till tolk och vill att någon anhörig tolkar.
+Det kan vara känsligt att ha utomstående med i personliga samtal
+och många misstror tolkarnas tystnadsplikt. Stigma för psykisk
+sjukdom ökar rädslan.
+   Personalen bör noggrant förklara varför det inte är lämpligt att
+anhöriga tolkar. Viktiga budskap kan förvrängas, men det är också
+så att anhörigas egna behov i samtalet kommer på undantag ifall de
+också ska tolka. Barn ska inte användas som tolk. Det är att lägga en
+alltför stor börda på dem (6).
+   De läkare Svenberg intervjuade beskrev att de kände sig utanför i
+tolksamtalet. En enkel fråga kunde följas av en längre konversation
+mellan patienten och tolken (5). Ibland sägs det att tolken kostar
+pengar och att tolksamtalet tar längre tid. Tolken Eva Entrena som
+skrivit om hur man kommunicerar via tolk påpekar att det tar
+längre tid att kommunicera dåligt på svenska. Missförstånd och
+felbehandling kan bli ännu dyrare (6).
+
+
+
+
+100 SPR ÅK OCH TOLKNING
+Hur går tolksamtalet till?
+
+Tolken presenterar sig oftast själv för patienten och förklarar att hen
+har tystnadsplikt. Hen översätter ordagrant och utan att lägga in
+egna kommentarer eller värderingar. I översättningen använder hen
+jagform.
+   Så ser tolkningsidealet ut. Samtidigt förstår vi av föregående
+avsnitt att det inte är lätt för tolken att översätta ordagrant. Ofta
+måste hen använda omskrivningar för att förklara det behandlaren
+har sagt. Vårdgivaren kan då bli frustrerad, eftersom det låter som
+om tolken säger mycket mer på sitt eget språk. Men allt hänger inte
+på tolken. Tolkanvändaren har ansvar för sakfrågan och patienten
+för att tala i egen sak (6). Problemet med att medicinska uttryck
+ibland är oöversättbara löser man inte med »bättre tolkar« utan
+med att vårdgivaren noggrannare förklarar de uttryck hen använder.
+Det är klokt även med svensktalande patienter!
+   Tolken ska förhålla sig opartiskt och neutralt. Man bör erbjuda
+tolken ett särskilt väntrum, så att hen inte dras in i privata samtal
+med patienten. Tolken ska inte heller användas som kulturexpert.
+Däremot är det både nödvändigt och möjligt att förbereda tolken
+före samtalet, särskilt om det handlar om någon komplicerad utred-
+ning. Det kan också vara lämpligt att gå igenom samtalet med tolken
+efteråt, för att kontrollera att allt blivit rätt uppfattat. I så fall bör
+man informera patienten/klienten om varför man gör det.
+   Det blir allt vanligare med telefontolk, inte minst mot bakgrund
+av den stora tolkbristen. Patienter föredrar ibland telefontolk av
+sekretesskäl. Personalen kan känna sig obekväm, men med övning
+är det inte svårare att använda telefontolk (7).
+
+
+
+
+                                                 SPR ÅK OCH TOLKNING 101
+Att samtala om
+Mötet med Sead, 53 år och tolken Stanojka
+
+Stanojka har kastat sig på bussen för att hinna till nästa tolksamtal
+på psykosmottagningen i Rotlunda.
+   Väl framme är det lugnt. Sjuksköterskan Helmi som möter upp
+berättar att patienten Sead är sen, förresten alltid brukar vara sen
+och att det till och med är osäkert om han kommer att komma.
+Stanojka och Eva börjar småprata och upptäcker att de har
+gemensamma bekanta och kanske till och med har träffats förut.
+De sitter i väntrummet och skrattar och pratar när Sead faktiskt
+kommer.
+   De går in i ett angränsande rum och sätter på den röda lampan
+för att ingen ska störa. Stämningen är fortfarande lättsam mellan
+Stanojka och Helmi och de försöker få med Sead som inte verkar på
+så bra humör. De glömmer att informera om sekretessen. Sead är
+tyst och svarar enstavigt på Helmis frågor om hur han har haft det
+sedan senast de möttes. Helmi som vet att högtiden Bayram nyligen
+infallit frågar om Sead firat den. När han inte svarar, frågar hon
+Stanojka hur hon firat den. Stanojka beskriver detta. Sead
+frågar om han kan gå hem. Vad kan Helmi göra för att rädda
+samtalet?
+
+
+
+
+102 SPR ÅK OCH TOLKNING
+  VISSTE DU ATT …
+
+… det i några landsting finns hälsokommunikatörer. I Stockholms län är
+hälsokommunikation en del av Transkulturellt Centrums uppdrag. Hälso-
+kommunikatörerna har vårdutbildning och egen migrationsbakgrund och
+har som uppdrag att informera nyanlända flyktingar och andra personer
+som invandrat och inte kommit in i samhället om bland annat hur vården
+fungerar men också om hälso- och livsstilsfrågor (8).
+
+
+…linkworker, kulturtolk, cultural broker är internationella begrepp för
+personer som samarbetar med vården och andra myndigheter. Genom
+utbildning och egen erfarenhet har de kunskap både om patientens och
+behandlarens värld och kan översätta inte mellan olika språk, utan mellan
+olika kulturella meningssystem (2).
+
+
+… det finns risker för empatitrötthet och så kallad sekundär traumatisering
+hos tolkar. Vid Röda Korsets Behandlingscenter för krigsskadade och torte-
+rade i Göteborg har man sedan 2016 infört rutiner med ökad uppmärk-
+samhet på tolkarnas situation (9).
+
+
+
+
+                                                   SPR ÅK OCH TOLKNING 103
+  ATT LÄSA MER
+
+För det här avsnittet har vi använt följande källor:
+1. Sundvall, M. (2011). ”Familjen kan aldrig släppa taget” – erfarenheter
+   från familjearbete i ett psykosteam i mångkulturell miljö. Fokus på
+   familien (3): 196-209.
+2. Bäärnhielm, S. Möten i den mångkulturella vården. (2007). I Fossum, B.
+   (red.) Kommunikation. Samtal och bemötande i vården. S. 287-307.
+   Lund: Studentlitteratur.
+3. Johannisson, K. (2009). Melankoliska rum: om ångest, leda och sårbar-
+   het i förfluten tid och nutid. Stockholm: Bonnier.
+4. Hassan, G, Kirmayer, LJ, Mekki-Berrada A., Quosh, C., el Chammay, R.
+   m fl. (2015). Culture, Context and the Mental Health and Psychosocial
+   Wellbeing of Syrians: A Review for Mental Health and Psychosocial
+   Support staff working with Syrians Affected by Armed Conflict.
+   Genève: UNHCR.
+5. Svenberg, K. Det ”transkulturella sjukvårdsmötet” – erfarenheter
+   bland somaliska flyktingar och läkare i Sverige. Socialmedicinsk
+   tidskrift nr 2 2012.
+6. Entrena, E. (2007). Att kommunicera med hjälp av tolk. I Fossum, B.
+   (red.) Kommunikation. Samtal och bemötande i vården. S. 309-327.
+   Lund: Studentlitteratur.
+7. Socialstyrelsens broschyr »Att samtala genom tolk – en kort vägled-
+   ning« (laddas ned från www.socialstyrelsen.se) innehåller samlad enkel
+   information för vårdgivare.
+8. Bäärnhielm, S., Hussein, H., Baker, U. & Allebeck, P. Hälsokommunika­
+   törer kan bidra till bättre hälsa hos utlandsfödda. Läkartidningen.
+   2013;110:CAZZ
+9. Durehed, S. (2016). Jag påverkas av det min mun säger. Uppsats,
+   Psykotraumatologi 15 hp. Uppsala universitet.
+
+
+
+
+104 SPR ÅK OCH TOLKNING
+Fler lästips:
+Kammarkollegiet. (2016). Kammarkollegiets tolkföreskrifter.
+   KAMFS2016:4. Hämtad från Kammarkollegiets webbplats
+   http://www.kammarkollegiet.se
+Grabos, M. & Hagström, M. (2006). Psykoterapi med tolk. Möjligheter –
+   svårigheter. Examensuppsats. Svenska institutet för kognitiv
+   psykoterapi. Finns på www.slso.sll.se/tc under länken Litteratur.
+
+
+Aktuell information:
+Information för patienter i Stockholms läns landsting om språktolk
+https://www.1177.se/Stockholm/Regler-och-rattigheter/Tolktjanst/
+
+
+Information för personal i Stockholms läns landsting om tolkanvändning
+http://www.vardgivarguiden.se/patientadministration/tolktjanster/
+
+
+Hälsokommunikatörerna i Stockholms län
+http://transkulturelltcentrum.se/halsokommunikation/
+
+
+
+
+                                                  SPR ÅK OCH TOLKNING 105
+Nätverk och
+delaktighet
+»Ofta försöker modern kontrollera sonen eller dottern som är
+sjuk … det är ett hinder för oss som har ett program för att stödja
+ett självständigt liv …«
+Citat från intervju med arbetsterapeut som möter patienter med
+bakgrund från Mellanöstern.
+Pooremamali, Persson & Eklund, 2011 (1)
+
+»Den hjälpande relationen mellan behandlare och patienter går
+från att handla om expert/patient till mentorskap, coaching eller
+partnerskap på en personlig upptäcktsresa. Behandlaren ska vara
+till hands, inte styra.«
+Recovery Devons webbplats (2)
+
+
+
+106 X X X X X X
+Att engagera familj och anhöriga
+
+Det sociala nätverket betyder mycket för alla, även när det gäller
+hälsan. Isolering och ensamhet är riskfaktorer för psykisk ohälsa.
+När en person får allvarliga psykiska besvär blir familjen berörd, är
+delaktig och tar stort ansvar (3). Familjebehandling har visat sig
+förebygga återfall (4).
+   Så familjen är redan engagerad när någon behöver vård. Ändå
+finns det långa traditioner i Sverige av att bortse från, eller till och
+med utestänga, familjer från vården. Delvis har det att göra med att
+Sverige är ett individorienterat samhälle, där lagar och regler utgår
+från individens relation till samhället.
+   Det här är ofta svårbegripligt för personer från mer familje­
+orienterade kulturer, där familjen har ett ansvar som aldrig upphör.
+Familjen förväntas ta hand om den sjuke. Att ta emot boendestöd-
+jare eller flytta till gruppboende kan vara oacceptabelt. Och familjen
+som har ansvaret kan inte förstå den svenska sekretesslagstift-
+ningen. Det kan uppfattas som respektlöst att vården informerar
+patienten direkt om sjukdomen och prognosen (5).
+   Men vården är i förändring. Kommunerna har skyldighet att ge
+stöd till personer som hjälper, vårdar eller stödjer en anhörig. Enligt
+Socialstyrelsens riktlinjer ska anhöriga till personer med schizofreni
+erbjudas familjeutbildning (4). Kanske kan ett förändrat synsätt
+också förbättra mötet med familjer med annan kulturell bakgrund.
+   I en studie intervjuades arbetsterapeuter som mötte patienter
+med en bakgrund från Mellanöstern. Samtidigt som de ibland
+tyckte att familjen kontrollerade sina vuxna barn för mycket såg de
+familjen som ett positivt stöd. Och de talade om »att bygga kulturella
+broar« till patienterna bland annat genom att använda familjernas
+resurser mer (1).
+
+
+
+
+                                          NÄT VERK OCH DEL AK TIGHET 107
+Att samtala om
+Mötet med Dureid, 30 år och hans mor Nadyat
+
+Anna-Lisa som är skötare på den psykiatriska slutenvårdsavdel-
+ningen är kontaktperson för Dureid, som kom in med vårdintyg
+för tre dagar sedan efter att ha hotat en granne med kniv. I första
+samtalet med avdelningsläkaren tedde han sig stundtals från­
+varande och rastlös. Vid ett tillfälle talade han om »djinner«.
+Han blev arg när läkaren talade om att han hade en psykos.
+Mot Anna-Lisa har han hittills varit avvisande och endast frågat
+om praktiska saker.
+   Modern Nadyat har kommit till avdelningen varje förmiddag
+innan besökstiden börjat. Och hon har haft med sig mat till Dureid,
+trots att personalen förklarat att det inte är lämpligt.
+   Anna-Lisa försöker tala med Nadyat som emellertid inte förstår
+svenska alls. Så Anna-Lisa och kuratorn Sven bokar ett samtal
+med modern och arabisktalande tolk till följande dag.
+   Vid samtalet berättar Nadyat att familjen flydde från Irak för
+fem år sedan. Hon bor med Dureid, två yngre bröder och en äldre
+syster i en trerummare. Yngsta brodern som har kontakt med BUP
+är ofta orolig om kvällarna och nätterna.
+   Dureid har haft ett svängande humör en längre tid, och har
+ibland blivit aggressiv mot familjen. Det beror på svårigheter i livet
+men det är inget psykiskt fel på honom, säger Nadyat. Hon blir
+ganska upprörd när Sven tar upp frågan om maten. Dureid mår
+bättre om han får sin mammas mat.
+   Anna-Lisa tänker att det är viktigt att hon som kontaktperson
+får ett bra samarbete med både Dureid och Nadyat. Men hur ska
+hon gå tillväga?
+
+
+
+
+108 NÄT VERK OCH DEL AK TIGHET
+Barn som anhöriga
+
+Enligt hälso- och sjukvårdslagen är vårdpersonalen skyldiga att se
+till barns behov av information, råd och stöd bland annat om för­
+äldern har allvarlig fysisk eller psykisk sjukdom. Målet är att barnet
+ska kunna bibehålla en god hälsa trots föräldrarnas svårigheter (6).
+    Hur kan vården stödja barnen till traumatiserade föräldrar? I en
+filmad intervju som ingår i en webbutbildning beskriver barn- och
+ungdomspsykiatern Cécile Rousseau från Kanada att familjer har
+olika sätt att kommunicera kring trauma (7). En del familjer tystar
+ned traumat och barnen får inget veta. Barnet som ser att föräldrarna
+är upprörda eller nedstämda, tror att det är hens fel. I andra familjer
+talar föräldrarna oavbrutet om traumat, och tror att barnen är för
+små att förstå. Barnen påminns ständigt om traumat och kan reagera
+med ilska eller gå in i en föräldraroll.
+    I Rousseaus arbete försöker hon att stödja föräldrarna att
+anpassa berättelsen. De kan tala med barnen så att de förstår, utifrån
+deras utvecklingsnivå. Föräldrarna kan berätta tillräckligt mycket
+om de svårigheter de varit med om men inte så mycket att barnen
+överväldigas.
+    – Det viktigaste är att se till hela familjen, eftersom vi vet att
+familjen är basen för återhämtning efter trauma, säger Rousseau i
+intervjun. Traumat kan tas upp som en del av det som påverkar
+familjens relationer. Den förälder som utsatts för tortyr kan få
+styrka när hen upplever att familjen är trygg, och att hen inte bara
+är en börda för familjen.
+
+
+
+
+                                          NÄT VERK OCH DEL AK TIGHET 109
+Att samtala om
+Mötet med Hawwa, 40 år
+
+Gladys som är sjuksköterska på en psykiatrisk öppenvårdsmottag-
+ning träffar patienten Hawwa som har haft kontakt med mottag-
+ningen i flera år på grund av återkommande depressioner. Det har
+också framkommit att Hawwa har svåra erfarenheter från kriget i
+Irak. Hawwa är skild och har en tioårig dotter, Nadia, som Gladys
+aldrig har träffat.
+   När Gladys erbjuder Hawwa att ta med Nadia på ett samtal blir
+hon mycket upprörd. Hennes dotter mår bra och är duktig i skolan,
+det är inget fel på henne. Om Nadia får veta är dessutom risken stor
+att släktingarna får reda på det. Det kommer att få negativa konse-
+kvenser för både Nadia och Hawwa, säger hon.
+   – Vi talar inte om psykiska problem i vårt land, förklarar hon upp-
+bragt. Och hon vill inte höra talas om frågan mer.
+   När Gladys och Hawwa talar mer om detta vid ett senare tillfälle
+kommer det emellertid fram att Nadia på sistone vid flera tillfällen
+blivit arg och inte gått att lugna. Hawwa gråter och säger att det inte
+känns som om hon och Nadia har samma fina förhållande som tidi-
+gare. Hon är rädd att Nadia är besviken på henne för att hon inte är
+med i så många aktiviteter med henne som andra mammor.
+   Gladys funderar nu på hur hon åter ska kunna väcka frågan om
+att erbjuda stöd till Nadia. Hur ska hon kunna övertyga Hawwa om
+att det kan gynna dem bägge? I vilken form kan det vara bäst att
+erbjuda stöd?
+
+
+
+
+110 NÄT VERK OCH DEL AK TIGHET
+Delaktighet och återhämtning
+
+I Hälso- och sjukvårdslagen, HSL, står att »hälso- och sjukvården
+ska bygga på respekt för patientens självbestämmande och integri-
+tet« (6). En snarlik formulering finns i Socialtjänstlagen (8). HSL
+säger också att vård och behandling »så långt det är möjligt« ska
+utformas i samråd med patienten som ska få information om hälso-
+tillstånd, vård och behandling.
+    Så formellt är rätten till delaktighet klar. Men i praktiken finns
+det en lång tradition av förmyndarskap, kanske särskilt inom psyki-
+atrin, där det ju finns möjlighet att tvångsvårda personer och där
+sjukdomstillståndet ibland gör det svårt för patienten att utöva sitt
+självbestämmande.
+    Inom psykiatrin finns idag ett nytt intresse för recovery, åter-
+hämtning. Det kan närmast kallas för en internationell rörelse
+bland personal och brukare som bygger på nygammal forskning om
+att det faktiskt är möjligt att återhämta sig även från allvarlig psy-
+kisk störning som psykos (9). I flera länder har rörelsen starkt stöd i
+officiella riktlinjer.
+    Men återhämtning förutsätter delaktighet. Ingen annan kan åter-
+hämta dig, det är en aktiv process du genomför som individ. Det
+handlar om att återerövra makten över ditt eget liv – makt i förhål-
+lande till symtomen; i förhållande till behandling och andra insatser;
+och i förhållande till omgivningens fördomar och stigmatiserings-
+försök.
+    Det som personal kan göra för att stötta någon i dennes återhämt-
+ning är bland annat att ge hopp, att hjälpa personen med enkla
+materiella behov som pengar, mat och husrum och att samverka
+med personen kring dennes behov och behandling (9).
+
+
+
+
+                                          NÄT VERK OCH DEL AK TIGHET 111
+Kan migranten behöva återhämta sig?
+
+Återhämtningsbegreppet kommer ur forskningen om allvarliga
+psykiska tillstånd, och har egentligen inget att göra med relativt
+friska migranters behov. Men även i migrationskrisen kan personen
+förlora kontrollen över sitt liv och hamna i en situation av påtvingad
+hjälplöshet. Kanske kan personal som möter asylsökande och flyk-
+tingar just därför ha nytta av inte se sig själva som experterna utan
+som partner och coacher?
+    Ett närliggande begrepp till återhämtning är empowerment, att
+stärka personers egenmakt och hjälpa dem att ta kontroll över sina
+liv. Det har inte använts särskilt mycket i forskning kring integration.
+Karin Blight Johansson påpekar i en artikel att det fordras kollek-
+tiva, strukturella insatser för integration av flyktingar. Det finns en
+risk att empowermentbegreppet används så att allt ansvar läggs på
+den enskilde (10). Det finns dock exempel på att empowerment
+använts i introduktionen av nyanlända flyktingar (11).
+    Det kan finnas särskilda hinder för delaktighet för personer som
+migrerat. Patienten kan uppfattas som passiv och obenägen att ta en
+aktiv roll i vården. Vårdgivaren förväntas bestämma över behand-
+lingen. Den som är psykiskt sjuk förväntas inte vara aktiv (1). Rätt
+använda skulle återhämtnings- och empowermentbegreppen kunna
+hjälpa oss att se att sådana iakttagelser kan förklaras av kulturella
+faktorer och av okunskap om det svenska vårdsystemet men också
+av den ojämlika maktrelationen i vårdmötet.
+
+
+
+
+112 NÄT VERK OCH DEL AK TIGHET
+Att samtala om
+Mötet med Mona, 42 år
+
+Katarina är arbetsförmedlare inom etableringsreformen i
+Västlunda och har lärt känna Mona, en irakisk kvinna som varit
+i Sverige i drygt två år. Mona bor med sin man och sina två barn
+som är tio och fjorton år gamla. Hennes äldsta dotter Hanaa är
+kvar i Irak.
+    Monas man är kemist och har lyckats få ett vikariat. Barnen går
+i skolan och lär sig svenska snabbt. Mona är utbildad gymnasie­
+lärare men hittills har det varit svårt att se hur hon skulle kunna
+använda den utbildningen i Sverige.
+    Till Katarina säger hon alltid att hon är trött, rädd för att gå ut
+och känner sig orolig. Sedan en tid tillbaks har hon nämnt att hon
+börjat läsa koranen oftare och tycker att det ger henne stöd i stun-
+den, annars har hon tappat lusten till det mesta.
+    Katarina var nyligen på en utbildning där en föreläsare talade
+om empowerment. Under föreläsningen kom Katarina att tänka
+på Mona och att hon skulle vilja locka henne att bli mer aktiv och ta
+plats. När de möts har hon förberett för att de ska gå igenom målen
+i etableringsplanen igen.
+    Hon presenterar glatt detta för Mona. Men Mona muttrar inshallah
+och säger att Katarina måste hjälpa hennes dotter att komma till
+Sverige. Hanaa har just berättat på telefon att hon är gravid. När
+hon säger det, ser Mona glad ut för första gången sedan
+Katarina träffade henne.
+    Katarina säger att hon inte har den makten. Hur ska Katarina
+hjälpa Mona till egenmakt och återhämtning?
+
+
+
+
+                                          NÄT VERK OCH DEL AK TIGHET 113
+Samverkan mellan myndigheter
+
+När man förr talade om nätverksmöten inom vård och socialtjänst
+menade man ofta att samla de professionella – utan patient eller
+klient. Det är ett framsteg att patienters och deras anhörigas delak-
+tighet idag blivit mer självklar.
+    Men det hindrar inte att samverkan mellan myndigheter är vik-
+tigt. I en skrift om rehabilitering/habilitering listar Socialstyrelsen
+fyra tunga motiv för gränsöverskridande samverkan:
+• Det etiska motivet – att brukaren avlastas bördan att själv hitta
+   rätt i vårdapparaten och inte riskerar att falla mellan stolarna.
+• Verksamhetsmotivet – att en enskild aktör inte ensam kan lösa
+   brukarens problem.
+• Effektivitetsmotivet – att brukaren kan få högre livskvalitet till
+   lägre samhällskostnad.
+• Kunskapsmotivet – samverkan ökar kunskapen hos var och en av
+   de deltagande verksamheterna (12).
+
+Det går att översätta dessa motiv till den nyanländes situation.
+Ingen enskild myndighet kan lösa alla migrantens problem. Den
+som är ny i systemet kan lätt tappa bort sig i myndighetsdjungeln.
+Det är lättare att komma vidare med praktik och arbete, ifall man
+samtidigt kan få stöd med hälsoproblem och med barnens situation
+i skolan. Och ifall personal från vård, kommun och Arbetsförmedling
+samverkar, fördjupar vi kunskapen om varandra och också vår egen
+specialistkunskap.
+    Det är viktigt att formulera mål för samverkan som är angelägna
+för den person det gäller. Om öppenvårdsmottagningen i psykiatrin
+vill bjuda in socialtjänsten till samverkan kring en patient gäller det
+att tydligt kunna formulera vad som skulle kunna bli bättre om man
+samverkade. Skriften från Socialstyrelsen ger exempel på förutsätt-
+ningar och hinder att tänka igenom för att kunna samverka (12).
+
+
+
+114 NÄT VERK OCH DEL AK TIGHET
+  VISSTE DU ATT …
+
+… ensamkommande har organiserat sig i egna föreningar, vilket kan ses
+som ett sätt att stärka empowerment (13).
+
+
+… empowerment kan också stärkas om nyanlända själva engageras i pro-
+jekt för att stödja andra nyanlända. Ett exempel är Svenska livräddnings-
+sällskapets treåriga satsning där nyanlända ska utbildas till simlärare för
+andra nyanlända (14).
+
+
+… i Socialstyrelsens nationella riktlinjer sägs att hälso- och sjukvården och
+socialtjänsten bör erbjuda personer med schizofreni en modell för delat
+beslutsfattande (shared decision making), ett specifikt arbetssätt som ger
+personen inflytande över beslutsfattandet kring upplägget och innehållet
+i den egna kontakten med verksamheten (4).
+
+
+
+
+                                              NÄT VERK OCH DEL AK TIGHET 115
+  ATT LÄSA MER
+
+För det här avsnittet har vi använt följande källor:
+1. Pooremamali, P., Persson, D. & Eklund, M. (2011). Occupational thera-
+   pists’ experience of working with immigrant clients in mental health
+   care. Scandinavian Journal of Occupational Therapy, 18(2): 109–121.
+2. www.recovery.co.uk Informationsbladet ”Putting recovery at the
+   heart of all we do”.
+3. Flyckt, L., Löthman, A., Jörgensen, L., Rylander, A. & Koernig, T. Burden
+   of informal care given to patients with psychoses: A descriptive and
+   methodological study. International Journal of Social Psychiatry
+   November 17, 2011 e-publikation.
+4. Socialstyrelsen. (2017). Nationella riktlinjer för psykosociala insatser
+   vid schizofreni eller schizofreniliknande tillstånd: stöd för styrning och
+   ledning. Remissförslag. Stockholm: Socialstyrelsen.
+   På www.socialstyrelsen.se
+5. Sundvall, M. (2011). ”Familjen kan aldrig släppa taget” – erfarenheter
+   från familjearbete i ett psykosteam i mångkulturell miljö. Fokus på
+   familien (3): 196-209.
+6. Svensk författningssamling. Hälso- och sjukvårdslag (1982:763).
+   www.riksdagen.se
+7. Ur webbutbildningen Migration och familj. Hämtat från webbplatsen
+   Kunskapsguiden.se
+8. Svensk författningssamling. Socialtjänstlag (2001:453).
+   www.riksdagen.se
+9. Topor, A. & Sundström, K. (2007). Återhämtning – en introduktion:
+   återhämtning. Vad är det? : Hur är den möjlig? Årsta: FoU-enheten,
+   Psykiatri Södra Stockholm, Stockholms läns sjukvårdsområde.
+10. Johansson Blight, K. Empowerment i integration och introduktion –
+   hur är det med makten? Socialmedicinsk tidskrift, nr 3 2006.
+11. Guerrero, K. (2011). Utvärdering av MIRA-projektet – utifrån ett myn-
+   dighetsperspektiv. Projektarbete. Huddinge: Södertörns högskola,
+   Institutionen för samhällsvetenskaper.
+12. Socialstyrelsen (2008). Samverkan i re/habilitering: en vägledning.
+   Stockholm: Socialstyrelsen.
+
+
+
+
+116 NÄT VERK OCH DEL AK TIGHET
+13. Se http://ensamkommandesforbund.se/om-oss/
+14. Se http://www.svenskalivraddningssallskapet.se.
+
+
+Fler lästips:
+Andersson, G., Bülow, P., Denhov, A. & Topor, A. (2016). Från patient till
+   person. Om allvarliga psykiska problem – vardag, vård och stöd. Lund:
+   Studentlitteratur.
+Topor, A. (2001). Återhämtning från svåra psykiska störningar. Stockholm:
+   Natur & Kultur.
+
+
+Webbplatser:
+www.youmo.se
+Webbplats med texter och filmer på flera språk, vänder sig till ungdomar.
+
+
+www.uppdragpsykiskhalsa.se/asylsokande-och-nyanlanda
+Webbplats som Sveriges kommuner och landsting ansvarar för, syftar till
+att stärka insatser för psykisk hälsa. Titta särskilt på »Verktygsbanken«.
+Där finns material som vänder sig till allt från myndigheter till de asyl­
+sökande själva. Information på olika språk. Informationsfilmer och
+filmade utbildningar.
+
+
+www.barnombudsmannen.se
+Webbplats för Barnombudsmannen. Innehåller bl a information som
+vänder sig direkt till barn och unga på flera språk.
+
+
+
+
+                                               NÄT VERK OCH DEL AK TIGHET 117
+Vad är Transkulturellt centrum?
+
+Transkulturellt Centrum är ett kunskapscentrum inom Stockholms
+läns landsting. Här finns kompetenser inom transkulturell psykiatri,
+vård och tandvård för asylsökande och flyktingar. Dessutom erbjuder
+centret hälsokommunikation till nyanlända och andra personer
+med migrationsbakgrund.
+
+Transkulturellt Centrum vänder sig till alla som arbetar inom
+Stockholms läns landsting eller inom upphandlade vårdverksam­
+heter. Centret stödjer också en övergripande utveckling av länets
+hälso- och sjukvård för att möta en alltmer mångkulturell befolkning.
+
+Det här erbjuder Transkulturellt Centrum
+• Handledning och konsultation inom det psykiatriska vårdområdet
+• Handledning och konsultation för personal inom hälso- och sjuk-
+  vård och tandvård som möter asylsökande och nyanlända.
+• Utbildningar samt kompetens- och metodutveckling inom
+  transkulturell psykiatri, hälso- och sjukvård samt tandvård för
+  asyl­sökande och nyanlända.
+• Nätverk som vänder sig till personal inom olika yrkeskategorier
+  och vårdgrenar.
+
+Centrets hälsokommunikatörer har kompetens i kulturella aspekter
+av hälsofrågor. Deras uppdrag är att informera och vägleda invand-
+rare och flyktingar, bland annat om hur man hittar rätt i vården,
+migration och hälsa. Det gör de på arabiska, tigrinja, dari och
+somali. På www.transkulturelltcentrum.se finns aktuella utbild-
+ningar, tillsammans med material kring centrets olika verksam­
+heter – som intervjuer, artiklar, rapporter och filmer. Här finns
+
+
+
+
+118 VAD ÄR TR ANSKULTURELLT CENTRUM?
+också länkar till andra organisationer med transkulturell anknytning
+och en förteckning av facklitteratur i centrets referensbibliotek.
+
+Så här får du kontakt med Transkulturellt Centrum:
+Telefon: 08-123 486 80
+E-post: tc@sll.se
+Postadress: Transkulturellt centrum,
+Solnavägen 4, plan 10, 113 65 Stockholm
+
+
+
+
+                                VAD ÄR TR ANSKULTURELLT CENTRUM? 119
+                  Det här studiehäftet vänder sig till dig som arbetar i vård och
+                  omsorg och i ditt arbete möter asylsökande och flyktingar.
+                  Vi vill ge information och kunskap om vad det innebär att byta
+                  land för personen och för den psykiska hälsan.
+
+                  Vi vill också stimulera till samtal kring hur mötet i vård och
+                  omsorg påverkas av att vi som möts har olika kulturell bakgrund
+                  och olika erfarenheter – och vad vi kan göra för att mötet ska
+                  bli så bra som möjligt.
+
+                  Vi tror att häftet lämpar sig väl för gemensamma diskussioner,
+                  till exempel för en studiecirkel på en mottagning eller ett
+                  boende. Vår förhoppning är att det leder till spännande samtal,
+                  där ni kan dela era erfarenheter med varandra. Studiehäftet
+                  publicerades första gången 2012, men utvidgades och uppdate-
+                  rades 2018.
+
+
+
+
+Transkulturellt centrum
+Stockholms läns landsting
+Tel 08-123 486 80
+Mail tc@sll.se
+www.transkulturelltcentrum.se
+

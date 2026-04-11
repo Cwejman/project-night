@@ -22,55 +22,9 @@ The strange (at `~/git/agi/`) is the intellectual parent of this work. Night is 
 
 ## Mirrors in the makers
 
-This work does not arrive in a vacuum. The people who built the substrate we all stand on — the ones who invented Unix, Lisp and Smalltalk, hypertext and the web, the relational model and the commit graph — were listening for something, each in their own way. A recurring note runs through the set: almost every one of them has said, at some point, that the industry took the surface of their work and dropped the substance. That pattern is itself a clue. The shape this file is listening for has been glimpsed before, differently, by different people, and each glimpse was partly lost in what became mainstream.
+The intuitions in this file did not arrive in a vacuum. The people who built the substrate we all stand on — Unix, Lisp and Smalltalk, hypertext and the web, the relational model and the commit graph — were listening for something, each in their own way, and a recurring shape can be read across them. Not lineage claimed, not authority borrowed: shape recognized. The fuller essay and per-inventor portraits live in `research/inventors/`.
 
-A few of the mirrors. Not lineage claimed, not authority borrowed — shape recognized. See `research/inventors/` for the fuller portraits.
-
-Ken Thompson, Dennis Ritchie, Rob Pike on Unix: small tools that compose, the file as a universal interface, a handful of sharp primitives beating a grid of specialized ones. Pike's *"if you've chosen the right data structures and organized things well, the algorithms will almost always be self-evident"* sits close to why chunks and placement come before everything else here.
-
-Grace Hopper on machines speaking human languages rather than the reverse. An older form of the *folk-level* insistence: the substrate is for people first and agents second, and the power comes from the "for people" part, not despite it.
-
-Alan Kay on the computer as a new medium for thought, not a faster adding machine. *"Simple things simple, complex things possible."* A system always available to itself, late-bound, live. Kay's lament that the industry took the surface of OOP and left the substance sits uncomfortably close to what the strange says about AI today, and to what this file is trying to notice in its own way.
-
-Douglas Engelbart on the augmentation of collective intellect, and on bootstrapping — tools used to improve the tools used to build the tools. Code-as-derivation in an older language, from a decade when the word for it was different.
-
-Ted Nelson on intertwingularity — *"everything is deeply intertwingled"* — and on lossy abstractions as betrayals: transclusion instead of copy, documents carrying their lineage. One face of what *lossless* is reaching for. Placement as reference rather than duplication shares his complaint about the copy.
-
-Edgar Codd on data described by its logical structure, independent of how it is stored. The refusal to bake the physical into the logical, the insistence that meaning belongs to the reader and the shape to the system. Barbara Liskov, differently but nearby, on abstraction as the discipline of knowing what to hide. The spec/body separation practiced here rhymes with both, turned in a different direction, but the discipline is the same.
-
-Dan Ingalls: *"an operating system is a collection of things that don't fit into a language. There shouldn't be one."* The system always modifiable from within itself, while running. Ingalls's liveness sits adjacent to the intuition that interfaces should be generated from the inside, not wired to it.
-
-Rich Hickey on simple-not-easy, on values over places, on time as a first-class concern. Datomic treats the database as an ever-growing log of facts, never overwritten — close kin to the cyclical, non-overwriting intuition that *lossless* is groping toward here, and to the commit-and-branch history at the same time.
-
-Gerald Sussman on programming as procedural epistemology — the act of writing a program as the act of clarifying what you actually know. Leslie Lamport on specification as the thinking, with code being what is left when the thinking is done. Edsger Dijkstra on programs as derived, not debugged. The inside-out claim in this file is a version of the same intuition, pushed a step further: the values and visions are the thinking, and mechanism is what is left when the thinking is done.
-
-Ken Iverson on notation as a tool of thought. The tools we reach for shape what we can think. The substrate is, in the end, a kind of notation — a placing of things such that the thoughts a reader can easily have are the thoughts that serve coherence.
-
-Bret Victor on creators needing immediate connection to what they are creating; on computing as a profound failure of imagination, the medium barely discovered. Victor's exasperation is close to the feeling that prompted this file. The thing he points at has not been built, and the reason is partly that the tools in hand do not let the thought form.
-
-Others could have been given their own paragraph — Niklaus Wirth on fewer features chosen with care, Tony Hoare on *"simple enough that there are obviously no deficiencies,"* Donald Knuth on the program as literature addressed to humans, Tim Berners-Lee on decentralization assumed in good faith, Vint Cerf and Bob Kahn on the end-to-end principle, Jim Gray on correctness under failure, Radia Perlman on robustness by construction, Linus Torvalds on data structures dominating code, John Carmack on first-principles and profiling before believing. The set is longer than the space.
-
-Across all of them, the recurring note: the industry kept the surface, dropped the substance. They disagreed about which substance mattered, often fiercely. What the mirroring offers is simpler than inheritance: the shape this system is listening for has been glimpsed before, and the ways it has been glimpsed differ in ways worth reading for anyone who wants to check their intuition against something older than the current month.
-
-### Where they think differently
-
-The mirrors above are real, but they are not consensus. If you laid this file's values side-by-side with these figures' work, several of the values would be actively pushed against — not by omission but by conviction. Leaving that out would be a subtle form of hero-feeding. The contrast is part of why the mirrors are worth reading.
-
-Most of the engineers in the set treat good design as hard-won invention shaped by discipline, not as *listening for something already present*. Stonebraker's "build it, ship it, learn, build it again" is an iterative-invention ethic. Carmack reasons from first principles under rigor, not from a pre-existing natural form. Dijkstra's "programs should be derived" sounds close but means derived from a formal specification, not from a listening. The quasi-mystical register of *uncovered, not invented* would land as overclaim for most of them.
-
-The relational tradition Gray and Codd stand on is built on overwriting — transactional updates are the norm, and the rigor lives in guaranteeing consistency under change, not in refusing to change. Torvalds's Git has rewritable history (force push, rebase, garbage collection). Stonebraker would say one size does not fit all: some workloads need versioning, others do not, and insisting on either across the board is an error. The database tradition, broadly, does not agree that nothing should be destroyed.
-
-The Unix tradition is explicit that the tool is the tool and the data is the data — their separation is what lets Unix compose. Liskov's *abstraction as knowing what to hide* depends on clean separation between interface and implementation — close to the opposite of *knowledge is the agent*. Lamport would locate identity in a specification, not in a coherence pattern that cannot be pointed at. The poetic register of *retrieval is the act of becoming* would be resisted by most of the formalists in the set as overclaim or category mistake.
-
-Kay's late binding depends on behavior emerging from messages whose mechanism is deliberately hidden — not transparent. Ingalls's Smalltalk image lets you modify anything, but the modifications live in a running system that is notoriously hard to reason about statically. The *philosophy of pureness* against opaque representations would be resisted by practitioners who work with neural networks, where the wins from opacity are real and the trade between transparency and power is not one-sided.
-
-Dijkstra was hostile to BASIC and to lowering the bar; he insisted students should learn to think, not to type, and would not take "software engineering" seriously as a discipline. Wirth demanded programmer discipline as the primary quality control. Knuth's pace and rigor are not folk-accessible, and he has said plainly that is the industry's problem, not his. Sussman's SICP assumes a serious mathematical background. Several of these figures believe good tools require sophisticated users — close to the opposite of the *folk-level* insistence here.
-
-And the engineering tradition is overwhelmingly outside-in. Torvalds: "Talk is cheap. Show me the code." Stonebraker: academic theory must pay for itself in running systems. Carmack: profile before you believe. Even Lamport's *specification is the thinking* wants the thinking to be a formal artifact, checkable by someone else, not a layer of values. *Values first, mechanism derived* would strike most of them as backwards — the kind of thing someone says when they have not done the work yet. That critique is serious and deserves to be held rather than explained away.
-
-The more poetic visions — the jazz band, archetypal bodies, boundary and opening, the shadow layer — would be dismissed by much of the formal-methods tradition as psychologizing or mystification. The Unix tradition would ask for a concrete interface before entertaining them. Dijkstra would not be patient with any of it.
-
-Holding these disagreements in view matters for a reason the file already names: *distinguish thought from truth*. The resonances above are real; they are not endorsement. The people this file is reflected in would, for the most part, push back — sharply in some cases. Their pushback is part of what the file has to survive if its intuitions are sound. If the values and visions collapse under the weight of Dijkstra or Liskov or Carmack asking a hard question, they were not load-bearing to begin with.
+The reading is not consensus. Several of the values below would be actively pushed against by the same figures whose work mirrors parts of it — sometimes sharply. The engineering tradition is overwhelmingly outside-in, and *values first, mechanism derived* would strike many of its best voices as backwards — the kind of thing someone says when they have not done the work yet. Holding that pushback is part of the reading, not a footnote to it; *distinguish thought from truth* applies to resonances as much as to claims. The full contrast sits alongside the portraits.
 
 ---
 
@@ -124,7 +78,9 @@ The current pilot uses binary instance/relates placements. The concern that shap
 
 ### Folk-level
 
-Like UNIX. Primitives simple enough that ordinary people can wield them, powerful enough that their wielding uncovers things beyond the original intent. If only experts can use it, we have the wrong primitive. The substrate is for people first and agents second — and because it is for people, it is also the right shape for agents.
+Like UNIX. Primitives simple enough that ordinary people can wield them, powerful enough that their wielding uncovers things beyond the original intent. If only experts can use it, the primitive is wrong.
+
+Not a claim that humans come before agents in priority — that framing does not survive. Parts of the substrate may be optimized for agents; the whole of it, as it evolves, may eventually be most naturally reached through models — a kind of coherent model-organism, open. What the folk-level insistence holds is simpler: a shape a person can grasp at the primitive level tends to be a shape that is *genuinely* simple, and genuinely simple shapes are the ones any reader works well inside, human or model. Graspability-by-a-person is an anchor for whether the primitive is right, not a ranking of who the substrate serves first.
 
 ### The inside orients the outside
 
