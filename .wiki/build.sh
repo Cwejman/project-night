@@ -16,6 +16,14 @@ mkdir -p "$OUT"
 # Copy the stylesheet to the site root.
 cp "$SCRIPT_DIR/style.css" "$OUT/style.css"
 
+# Derive the GitHub repo URL from the origin remote, normalizing SSH → HTTPS.
+REMOTE=$(git remote get-url origin 2>/dev/null || echo "")
+if [[ -n "$REMOTE" ]]; then
+  REPO_URL=$(printf '%s' "$REMOTE" | sed -E 's|^git@([^:]+):|https://\1/|; s|\.git$||')
+else
+  REPO_URL=""
+fi
+
 # Collect all markdown files, excluding build output, git internals, the wiki
 # tooling itself, archives, and node_modules. Portable to bash 3.2 (macOS).
 MD_FILES=()
@@ -62,6 +70,7 @@ for f in "${MD_FILES[@]}"; do
     --lua-filter "$SCRIPT_DIR/rewrite-md.lua" \
     --variable sidebar="$sidebar_html" \
     --variable root="$depth" \
+    --variable repo_url="$REPO_URL" \
     --output "$out_file"
 done
 

@@ -68,6 +68,25 @@ html, body {
   text-decoration: none;
 }
 
+.sidebar-footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule);
+}
+
+.sidebar-footer .source-link {
+  display: inline-block;
+  color: var(--fg-dim);
+  text-decoration: none;
+  font-size: 0.9em;
+  padding: 0.2em 0;
+}
+
+.sidebar-footer .source-link:hover {
+  color: var(--link);
+  background: transparent;
+}
+
 /* ---- Sidebar tree ---------------------------------------------------------
  * One unified row metric for both dir labels and file links. Every nesting
  * level indents by exactly one "rail" (1.4em). The rail is where the chevron

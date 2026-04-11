@@ -10,6 +10,11 @@
 <div class="layout">
 <nav class="sidebar">
 $sidebar$
+$if(repo_url)$
+<div class="sidebar-footer">
+<a class="source-link" href="$repo_url$" target="_blank" rel="noopener">source ↗</a>
+</div>
+$endif$
 </nav>
 <main class="content">
 $body$
