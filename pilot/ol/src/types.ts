@@ -3,6 +3,7 @@ export type Spec = {
   readonly accepts?: readonly string[]
   readonly required?: readonly string[]
   readonly unique?: readonly string[]
+  readonly propagate?: boolean
 }
 
 export type Chunk = {

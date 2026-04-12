@@ -12,16 +12,16 @@ Current state and what comes next. Updated as things move.
 
 ## Next — in priority order
 
-**1. InsideOut VP — one addition, then done.**
-The grant landscape has been mapped (`insideout/grant-landscape.md`). The author's place has been explored (`insideout/place.md`). What settled: the author builds InsideOut's website and digital presence using AI tools that are part of the research. The VP needs one line about developing digital presence and communications capacity — a normal operational addition. The author's broader research does not need to be named in the VP; it is the author's own work. See `place.md` for the full record of what moved and what stayed open.
+**1. Pilot requirements — architecture settled, open items remain.**
+Core architecture resolved: engine (dispatch, boundaries, VM, invocable protocol) sits between substrate lib and everything that dispatches. Spec composition implemented (`propagate` in spec.ts). Host/VM split settled: lib, engine, UI on host; invocables in VM; engine mediates all database access.
+Remaining open before building:
+- Invocable protocol transport (HTTP, WebSocket, Unix socket).
+- Dispatch tile user flow (selection vs creation, inline context/boundary assembly).
+- UI inference for unordered scope-set types (boundaries).
+- Context lifecycle in the UI (pinned vs evolved, no structural distinction yet).
+- `interface.md` alignment with settled pilot decisions.
 
-**2. Pilot requirements — resolve before building.**
-The pilot spec (`pilot.md`) has been reordered but not yet reconciled with the purified inside. Open questions flagged by the stress test:
-- Build order: the agent loop (step 7) is where the values are actually proven, but it's last. Consider pulling it forward.
-- Spec gaps: `accepts` resolution path, `relates` ordering semantics, `unique` scope, containment enforcement — these need concrete answers before implementation.
-- Current state: `ol` is listed as "Done" but what actually runs is not documented. A sentence on current state would help any session calibrate.
-
-**3. Pilot implementation.**
+**2. Pilot implementation.**
 Comes after the pilot requirements are resolved. The build order in `pilot.md` is the starting point.
 
 ---

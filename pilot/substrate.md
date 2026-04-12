@@ -74,11 +74,12 @@ A chunk's spec defines the structural contract for its instances. The system enf
 
 ```json
 {
-  "ordered":  true,                    // instances must have seq on placement
-  "accepts":  ["prompt", "answer"],    // instances must be instance of one of these
-                                       // (names resolved within this chunk's scope)
-  "required": ["tool", "exit"],        // instances must have these body keys
-  "unique":   ["name"]                 // these body keys must be unique across instances
+  "ordered":   true,                    // instances must have seq on placement
+  "accepts":   ["prompt", "answer"],    // instances must be instance of one of these
+                                        // (names resolved within this chunk's scope)
+  "required":  ["tool", "exit"],        // instances must have these body keys
+  "unique":    ["name"],                // these body keys must be unique across instances
+  "propagate": true                     // spec propagates to instances' children (composition)
 }
 ```
 
@@ -89,6 +90,8 @@ A chunk's spec defines the structural contract for its instances. The system enf
 **`required`** — instance chunks must have these keys present in their body.
 
 **`unique`** — these body keys must have values that are unique across all instances of this scope.
+
+**`propagate`** — when true, the spec is not enforced on direct placements on this chunk. Instead, it propagates to instances: anything placed on an instance of this archetype is checked against this spec. Multiple propagating archetypes compose by union — if a chunk is an instance of two archetypes that both have `propagate: true`, the effective contract on that chunk's children is the union of both specs. Each archetype's `accepts` names are resolved within that archetype's own scope.
 
 ### Archetypes
 

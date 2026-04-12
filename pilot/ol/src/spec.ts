@@ -49,42 +49,130 @@ const resolveNameInScope = (
   return row?.chunk_id ?? null
 }
 
+/**
+ * Collect the composed spec for a scope by walking its archetype chain.
+ * The scope's own spec is composed with specs from every archetype it is
+ * an instance of (union for accepts, required, unique; any ordered wins).
+ * Each archetype's accepts names are resolved within that archetype's scope
+ * and returned as resolved IDs alongside the raw spec.
+ */
+const collectSpecs = (
+  db: Db,
+  scopeId: string,
+  branch: string,
+): {
+  ordered: boolean
+  required: string[]
+  unique: string[]
+  acceptedTypeIds: string[]
+  acceptedNames: Map<string, string> // archetype scope id → comma-joined names (for type-def bypass)
+} => {
+  const ownSpec = getSpec(db, scopeId, branch)
+
+  // Gather specs: own (if not propagating) + propagating specs from archetypes
+  const specs: { spec: Spec; scopeId: string }[] = []
+
+  // Own spec is enforced on direct children only if it's NOT propagate
+  // (propagate means the spec is for instances' children, not own children)
+  if (!ownSpec.propagate) {
+    specs.push({ spec: ownSpec, scopeId })
+  }
+
+  // Walk archetype chain recursively with cycle detection
+  const visited = new Set<string>()
+  const queue = [scopeId]
+  while (queue.length > 0) {
+    const current = queue.shift()!
+    if (visited.has(current)) continue
+    visited.add(current)
+
+    const archetypeRows = db
+      .query<{ scope_id: string }, [string, string]>(
+        `SELECT scope_id FROM current_placements
+         WHERE chunk_id = ? AND branch = ? AND type = 'instance'`,
+      )
+      .all(current, branch)
+
+    for (const row of archetypeRows) {
+      const archetypeSpec = getSpec(db, row.scope_id, branch)
+      if (archetypeSpec.propagate) {
+        specs.push({ spec: archetypeSpec, scopeId: row.scope_id })
+      }
+      if (!visited.has(row.scope_id)) {
+        queue.push(row.scope_id)
+      }
+    }
+  }
+
+  // Compose
+  let ordered = false
+  const required: string[] = []
+  const unique: string[] = []
+  const acceptedTypeIds: string[] = []
+  const acceptedNames = new Map<string, string>()
+
+  for (const { spec, scopeId: specScopeId } of specs) {
+    if (spec.ordered) ordered = true
+
+    if (spec.required) {
+      for (const key of spec.required) {
+        if (!required.includes(key)) required.push(key)
+      }
+    }
+
+    if (spec.unique) {
+      for (const key of spec.unique) {
+        if (!unique.includes(key)) unique.push(key)
+      }
+    }
+
+    if (spec.accepts) {
+      acceptedNames.set(specScopeId, spec.accepts.join(','))
+      for (const name of spec.accepts) {
+        const typeId = resolveNameInScope(db, name, specScopeId, branch)
+        if (typeId && !acceptedTypeIds.includes(typeId)) {
+          acceptedTypeIds.push(typeId)
+        }
+      }
+    }
+  }
+
+  return { ordered, required, unique, acceptedTypeIds, acceptedNames }
+}
+
 export const enforce = (
   db: Db,
   chunk: ChunkDeclaration & { readonly id: string },
   placement: PlacementDeclaration,
   branch: string,
 ): void => {
-  const spec = getSpec(db, placement.scope_id, branch)
-
-  if (Object.keys(spec).length === 0) return
-
   // Spec enforcement only applies to instance placements
   if (placement.type !== 'instance') return
 
-  if (spec.ordered && placement.seq == null) {
+  const composed = collectSpecs(db, placement.scope_id, branch)
+
+  // Quick exit if nothing to enforce
+  if (
+    !composed.ordered &&
+    composed.required.length === 0 &&
+    composed.unique.length === 0 &&
+    composed.acceptedTypeIds.length === 0
+  ) {
+    return
+  }
+
+  if (composed.ordered && placement.seq == null) {
     throw new SpecViolation(
       `Placement on ordered scope ${placement.scope_id} requires seq`,
     )
   }
 
-  if (spec.accepts) {
-    // If the chunk's name matches an accepted type name, it's a type definition — skip
-    const chunkName =
-      chunk.name ??
-      db
-        .query<
-          { name: string | null },
-          [string, string]
-        >('SELECT name FROM current_chunks WHERE chunk_id = ? AND branch = ?')
-        .get(chunk.id, branch)?.name
+  if (composed.acceptedTypeIds.length > 0) {
+    // If the chunk IS one of the accepted type chunks, it's a type definition — skip
+    const isTypeDef = composed.acceptedTypeIds.includes(chunk.id)
 
-    if (!chunkName || !spec.accepts.includes(chunkName)) {
-      const accepted = spec.accepts
-        .map((name) => resolveNameInScope(db, name, placement.scope_id, branch))
-        .filter((id): id is string => id !== null)
-
-      const isAccepted = accepted.some((typeId) =>
+    if (!isTypeDef) {
+      const isAccepted = composed.acceptedTypeIds.some((typeId) =>
         isInstanceOf(db, chunk.id, typeId, branch),
       )
 
@@ -96,9 +184,9 @@ export const enforce = (
     }
   }
 
-  if (spec.required) {
+  if (composed.required.length > 0) {
     const body = chunk.body ?? {}
-    for (const key of spec.required) {
+    for (const key of composed.required) {
       if (!(key in body)) {
         throw new SpecViolation(
           `Missing required key "${key}" for scope ${placement.scope_id}`,
@@ -107,9 +195,9 @@ export const enforce = (
     }
   }
 
-  if (spec.unique) {
+  if (composed.unique.length > 0) {
     const body = chunk.body ?? {}
-    for (const key of spec.unique) {
+    for (const key of composed.unique) {
       if (!(key in body)) continue
       const value = JSON.stringify(body[key])
 
