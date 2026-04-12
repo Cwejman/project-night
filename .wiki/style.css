@@ -225,7 +225,7 @@ strong em, em strong, b i, i b {
 blockquote {
   border-left: 2px solid var(--quote);
   padding-left: 1em;
-  margin: 0.7em 0;
+  margin: 1.5em 0;
   color: var(--quote);
   font-style: italic;
 }
@@ -269,7 +269,7 @@ a:hover {
 hr {
   border: none;
   border-top: 1px solid var(--rule);
-  margin: 1.5em 0;
+  margin: 2.5em 0;
 }
 
 ul, ol {
