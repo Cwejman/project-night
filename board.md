@@ -6,23 +6,18 @@ Current state and what comes next. Updated as things move.
 
 ## In progress
 
-**Inside purification.** The values and visions in `inside.md` have been through a deep refinement pass. The inside is held well enough to orient the pilot and the InsideOut work.
+**Pilot implementation.** The spec is resolved. Build order from `pilot.md`:
 
----
+1. ~~`ol` — substrate library + CLI.~~ Done.
+2. **Bootstrap** — seed script. Next up.
+3. **Engine** — dispatch, boundaries, VM, invocable protocol (stdin/stdout pipes).
+4. **UI scaffold** — SvelteKit app with binary tree tiling.
+5. **Command palette + selector**
+6. **Read tile**
+7. **Dispatch tile**
+8. **Claude invocable**
 
-## Next — in priority order
-
-**1. Pilot requirements — architecture settled, open items remain.**
-Core architecture resolved: engine (dispatch, boundaries, VM, invocable protocol) sits between substrate lib and everything that dispatches. Spec composition implemented (`propagate` in spec.ts). Host/VM split settled: lib, engine, UI on host; invocables in VM; engine mediates all database access.
-Remaining open before building:
-- Invocable protocol transport (HTTP, WebSocket, Unix socket).
-- Dispatch tile user flow (selection vs creation, inline context/boundary assembly).
-- UI inference for unordered scope-set types (boundaries).
-- Context lifecycle in the UI (pinned vs evolved, no structural distinction yet).
-- `interface.md` alignment with settled pilot decisions.
-
-**2. Pilot implementation.**
-Comes after the pilot requirements are resolved. The build order in `pilot.md` is the starting point.
+UI interaction details (dispatch tile flow, scope-set builders, context lifecycle display) resolve during UI implementation.
 
 ---
 
