@@ -60,7 +60,9 @@ pilot/
   ol/              — substrate library + CLI
   engine/          — dispatch, boundaries, VM, protocol (host side) + client (invocable side)
   ui/              — SvelteKit app
-  invocables/      — claude, filesystem, shell, web (run in VM)
+  project/         — the working project (ol init target)
+    .openlight/db  — the substrate database
+    invocables/    — claude, filesystem, shell, web (run in VM)
 ```
 
 **VM packaging.** The VM is stateless — invocable code is mounted read-only via virtio-fs. `.env` for configuration (API keys). A setup script installs runtime dependencies. Reproducible environments come later.
