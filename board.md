@@ -6,7 +6,7 @@ Current state and what comes next. Updated as things move.
 
 ## In progress
 
-**Inside purification.** The values and visions in `inside.md` have been through a deep refinement pass. The inside is now held well enough to orient the pilot and the InsideOut work. Further refinement will happen as the pilot and the VP work test it — but the inside is no longer what's blocking.
+**Inside purification.** The values and visions in `inside.md` have been through a deep refinement pass. The inside is now held well enough to orient the pilot and the InsideOut work. Further refinement will happen as the pilot and the VP work test it — but the inside is has found a coherent body.
 
 ---
 
