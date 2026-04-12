@@ -16,6 +16,16 @@ mkdir -p "$OUT"
 # Copy the stylesheet to the site root.
 cp "$SCRIPT_DIR/style.css" "$OUT/style.css"
 
+# Copy static assets (images) preserving directory structure.
+find . -type f \( -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" \
+  -o -name "*.gif" -o -name "*.svg" -o -name "*.webp" -o -name "*.ico" \) \
+  -not -path "./_site/*" -not -path "./.git/*" -not -path "*/node_modules/*" \
+  | while IFS= read -r img; do
+    img="${img#./}"
+    mkdir -p "$OUT/$(dirname "$img")"
+    cp "$img" "$OUT/$img"
+  done
+
 # Derive the GitHub repo URL from the origin remote, normalizing SSH → HTTPS.
 REMOTE=$(git remote get-url origin 2>/dev/null || echo "")
 if [[ -n "$REMOTE" ]]; then
