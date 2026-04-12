@@ -9,13 +9,13 @@ Current state and what comes next. Updated as things move.
 **Pilot implementation.** The spec is resolved. Build order from `pilot.md`:
 
 1. ~~`ol` — substrate library + CLI.~~ Done.
-2. **Bootstrap** — seed script. Next up.
-3. **Engine** — dispatch, boundaries, VM, invocable protocol (stdin/stdout pipes).
-4. **UI scaffold** — SvelteKit app with binary tree tiling.
-5. **Command palette + selector**
-6. **Read tile**
-7. **Dispatch tile**
-8. **Claude invocable**
+2. **[Bootstrap](pilot/bootstrap.md)** — seed script. Next up.
+3. **[Engine](pilot/engine.md)** — dispatch, boundaries, VM, invocable protocol (stdin/stdout pipes).
+4. **[UI](pilot/ui.md) scaffold** — SvelteKit app with binary tree tiling.
+5. **[UI](pilot/ui.md)** command palette + selector
+6. **[UI](pilot/ui.md)** read tile
+7. **[UI](pilot/ui.md)** dispatch tile
+8. **[Agent](pilot/agent.md)** — claude invocable
 
 UI interaction details (dispatch tile flow, scope-set builders, context lifecycle display) resolve during UI implementation.
 
