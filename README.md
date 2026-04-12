@@ -26,6 +26,4 @@ This is not a knowledge base an agent queries. It is a computing environment —
 
 [`research/`](research/) — ecosystem reading, a portrait gallery of software inventors whose work mirrors and pushes back on the values, and the audit trail behind `inside.md`.
 
-[`insideout/`](insideout/) — InsideOut's own space. Start with [`insideout/core.md`](insideout/core.md) for the values, and [`insideout/place.md`](insideout/place.md) for the question of where the author's research meets the organization's life.
-
 ![footer](.img/footer.png)
