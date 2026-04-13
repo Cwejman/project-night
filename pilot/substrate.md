@@ -93,6 +93,8 @@ A chunk's spec defines the structural contract for its instances. The system enf
 
 **`propagate`** — when true, the spec is not enforced on direct placements on this chunk. Instead, it propagates to instances: anything placed on an instance of this archetype is checked against this spec. Multiple propagating archetypes compose by union — if a chunk is an instance of two archetypes that both have `propagate: true`, the effective contract on that chunk's children is the union of both specs. Each archetype's `accepts` names are resolved within that archetype's own scope.
 
+The distinction: **`required` describes what instances ARE** (self-enforcement, no propagate). **`accepts` describes what instances CONTAIN** (content contract, propagate). `ordered` can be either — ordered direct members (no propagate, e.g. `context`) or ordered content on instances (propagate, e.g. `session`).
+
 ### Archetypes
 
 An archetype is a chunk whose spec defines a type contract. There is no "archetype" flag — a chunk with a non-empty spec is an archetype by nature.
@@ -101,12 +103,14 @@ Archetypes enable typed interfaces. The shell can require "I need an instance of
 
 **Type definitions use `relates`.** Type-defining chunks (like `prompt` on `session`) are placed as `relates`, not `instance`. This keeps them out of ordered content (no seq required) while remaining resolvable for `accepts` name resolution. Content chunks use `instance` with dual placement — on the scope (with seq) and on the archetype (for type membership).
 
+**Dual placement enforcement.** When a chunk has dual placement (scope + type), the type-membership placement must be written before the scope placement is enforced — otherwise the `accepts` check can't find the type membership. The lib handles this by writing all placements first, then enforcing all specs second (two-pass within each chunk).
+
 ### Example: Session archetype
 
 ```
 chunk: session
   name: "session"
-  spec: { ordered: true, accepts: ["prompt", "answer", "tool-call", "tool-result", "context"] }
+  spec: { propagate: true, ordered: true, accepts: ["prompt", "answer", "tool-call", "tool-result", "context"] }
   body: { text: "A sequence of agent interaction events" }
 
 chunk: prompt (placed on session, relates)
@@ -358,6 +362,8 @@ A substrate. Not a database for a specific application. Not a retrieval layer fo
 
 ## What's Open
 
+- **Scope limit and offset.** Ordered scopes can grow large. A `limit` parameter (from seq tail) and `offset` for pagination prevent overload. Default limit prevents accidental flooding. The scope result already includes counts — agents probe shape before pulling data. Deferred for the pilot but needed soon.
+- **Seq auto-assignment.** Spec says "auto-assigned on append if omitted" but not yet implemented. When `ordered: true` and seq is null on an instance placement, set `seq = max(existing seq on scope) + 1`.
 - **Spec language evolution.** The four fields (ordered, accepts, required, unique) cover the known cases. The vocabulary may grow through use.
 - **Merge semantics.** The structure supports merge commits. Conflict resolution strategy is above the primitives.
 - **Peer protocol.** Separate databases mounted read-only. The mounting mechanism is runtime, not structural.

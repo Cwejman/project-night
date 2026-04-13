@@ -103,6 +103,7 @@ const agent: Declaration = {
       id: 'session',
       name: 'session',
       spec: {
+        propagate: true,
         ordered: true,
         accepts: ['prompt', 'answer', 'tool-call', 'tool-result', 'context'],
       },

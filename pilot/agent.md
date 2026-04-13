@@ -6,7 +6,7 @@ The claude invocable is the pilot's concrete agent. It runs in the VM, communica
 
 ```
 session
-  spec: { ordered: true, accepts: ["prompt", "answer", "tool-call", "tool-result", "context"] }
+  spec: { propagate: true, ordered: true, accepts: ["prompt", "answer", "tool-call", "tool-result", "context"] }
   body (convention, not required): { started: ISO string }
 
 prompt    (placed on agent, instance; placed on session, relates)

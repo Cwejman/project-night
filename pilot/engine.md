@@ -193,11 +193,15 @@ Boundaries operate at two levels:
 
 **Dispatch-level** — what this specific run is ALLOWED to do. Set by the user at dispatch time. Read and write boundaries placed on the dispatch chunk.
 
-The **effective boundary** is the intersection — the engine computes it at dispatch time. The dispatch can never widen what the invocable's nature allows. For nested dispatches (tool calls from an agent), the child's boundaries are intersected with the parent's — boundaries can only narrow, never widen.
+The **effective boundary** is the intersection — the engine computes it at dispatch time. The dispatch can never widen what the invocable's nature allows. For nested dispatches (tool calls from an agent), the child's boundaries are intersected with the parent's — boundaries can only narrow, never widen. An invocable with no intrinsic boundary (e.g. `boundary: "open"`) is treated as the universal set — intersection with anything yields the other set.
 
-**Read boundary.** The scopes the invocable can see. The engine filters all scope/search results against the effective set. Connected scopes outside it are visible as connections (names, counts) but not readable. The invocable sees the topology but cannot open doors outside its boundary.
+**Boundaries are transitive via instance chains.** A boundary root `[agent]` grants access to everything reachable from `agent` by walking instance placements upward. When the invocable requests `scope(['my-session'])`, the engine checks: can `my-session` reach a boundary root through instance placements? `my-session` → instance on `session` → instance on `agent` → boundary root. Accessible. The boundary gates which scopes you can open. Once you open a scope, you see everything placed on it — instances and relates alike.
 
-**Write boundary.** The scopes the invocable can modify. The write boundary defines which scopes the invocable can `apply()` to. The engine rejects any apply that touches a scope outside the effective set.
+**The dispatch scope is always accessible.** Structural invariant: every invocable can always read and write within its own dispatch's scope tree. The dispatch chunk ID is implicitly a boundary root in both read and write boundaries. This is not a boundary entry — it's architectural. Without it, an invocable can't even read its own arguments.
+
+**Read boundary.** The scopes the invocable can see. The engine checks instance-chain reachability from boundary roots. Connected scopes outside the boundary are visible as connections (names, counts) but not readable. The invocable sees the topology but cannot open doors outside its boundary.
+
+**Write boundary.** The scopes the invocable can modify. Same instance-chain reachability check. The engine rejects any apply that touches a scope outside the effective set.
 
 **Protected chunks.** The engine enforces that invocables cannot modify:
 - The dispatch chunk itself (status, pid — engine domain)

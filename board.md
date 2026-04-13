@@ -19,6 +19,12 @@ Current state and what comes next. Updated as things move.
 
 UI interaction details (dispatch tile flow, scope-set builders, context lifecycle display) resolve during UI implementation.
 
+**Known issues for engine implementation:**
+
+- **Dual placement enforcement.** `apply()` enforces specs per-placement sequentially. Dual placement (scope + type) fails if scope placement is processed before type-membership placement. Fix: two-pass per chunk — write all placements first, enforce all second.
+- **Seq auto-assignment.** Spec says "auto-assigned on append if omitted" but `apply()` passes null. Implement: `seq = max(existing) + 1` when ordered and seq is null.
+- **`accepts` ambiguity check.** Spec says a chunk can't be instance of two types in the same `accepts` list. Not enforced — `some()` finds first match, never checks for multiple.
+
 ---
 
 ## Notes
