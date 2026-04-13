@@ -61,10 +61,17 @@ pilot/
   ol/              — substrate library + CLI
   engine/          — dispatch, boundaries, VM, protocol (host side) + client (invocable side)
   ui/              — SvelteKit app
+  bootstrap.ts     — seed script (three commits simulating three peers)
   project/         — the working project (ol init target)
-    .ol/db         — the substrate database
+    .ol/db         — the substrate database (committed — the db IS the system)
     invocables/    — claude, filesystem, shell, web (run in VM)
 ```
+
+**Three root scopes in the substrate:**
+
+- `engine` — runtime contracts (invocable, dispatch, boundaries). In a peered system, mounted from the engine's own database.
+- `agent` — project tools and abstractions (session types, invocable instances). The project's own data.
+- `ui` — tiling primitives (split, leaf, view-root). In a peered system, mounted from the UI module's own database.
 
 **VM packaging.** The VM is stateless — invocable code is mounted read-only via virtio-fs. `.env` for configuration (API keys). A setup script installs runtime dependencies. Reproducible environments come later.
 

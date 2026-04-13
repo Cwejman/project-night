@@ -9,7 +9,7 @@ Current state and what comes next. Updated as things move.
 **Pilot implementation.** The spec is resolved. Build order from `pilot.md`:
 
 1. ~~`ol` — substrate library + CLI.~~ Done.
-2. **[Bootstrap](pilot/bootstrap.md)** — seed script. Next up.
+2. ~~**[Bootstrap](pilot/bootstrap.md)** — seed script.~~ Done.
 3. **[Engine](pilot/engine.md)** — dispatch, boundaries, VM, invocable protocol (stdin/stdout pipes).
 4. **[UI](pilot/ui.md) scaffold** — SvelteKit app with binary tree tiling.
 5. **[UI](pilot/ui.md)** command palette + selector
