@@ -577,6 +577,50 @@ describe('spec enforcement', () => {
     expect(result.chunks[0]!.created).toBe(true)
   })
 
+  test('single apply: later chunks see earlier chunks for spec enforcement', () => {
+    const db = open()
+
+    // One apply() call creates three chunks sequentially:
+    //   1. archetype with accepts: ['allowed-type']
+    //   2. type-defining chunk named 'allowed-type' (relates to archetype)
+    //   3. chunk placed on both allowed-type (as instance, establishing its type)
+    //      and on archetype (as instance, which must pass the accepts check)
+    //
+    // Chunk #3's second placement triggers accepts enforcement on the archetype.
+    // This requires chunk #2 to be visible in current_chunks (for type name resolution)
+    // and chunk #3's first placement to be visible in current_placements (for isInstanceOf).
+    const result = apply(db, {
+      chunks: [
+        {
+          id: 'arch',
+          name: 'arch',
+          spec: { accepts: ['allowed-type'] },
+          body: {},
+        },
+        {
+          id: 'allowed-type',
+          name: 'allowed-type',
+          body: { text: 'A type defined in the same transaction' },
+          placements: [{ scope_id: 'arch', type: 'relates' }],
+        },
+        {
+          id: 'typed-child',
+          body: { text: 'Instance of allowed-type, placed on archetype' },
+          placements: [
+            { scope_id: 'allowed-type', type: 'instance' },
+            { scope_id: 'arch', type: 'instance' },
+          ],
+        },
+      ],
+    })
+
+    expect(result.commit.id).toBeTruthy()
+    expect(result.chunks).toHaveLength(3)
+    expect(result.chunks[0]!.id).toBe('arch')
+    expect(result.chunks[1]!.id).toBe('allowed-type')
+    expect(result.chunks[2]!.id).toBe('typed-child')
+  })
+
   test('rollback on spec violation leaves no partial state', () => {
     const db = open()
     const s = apply(db, {

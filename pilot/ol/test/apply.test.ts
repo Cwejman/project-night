@@ -295,4 +295,126 @@ describe('apply', () => {
     const bIdx = result.connected.findIndex((c) => c.id === typeBId)
     expect(aIdx).toBeLessThan(bIdx)
   })
+
+  test('soft removes a placement', () => {
+    const db = open()
+    const parent = apply(db, {
+      chunks: [{ name: 'container', body: {} }],
+    })
+    const parentId = parent.chunks[0]!.id
+
+    const created = apply(db, {
+      chunks: [
+        {
+          name: 'note',
+          body: { text: 'placed' },
+          placements: [{ scope_id: parentId, type: 'instance' }],
+        },
+      ],
+    })
+    const noteId = created.chunks[0]!.id
+
+    // Verify it appears in scope
+    const before = scope(db, [parentId])
+    expect(before.chunks.items.find((c) => c.id === noteId)).toBeDefined()
+
+    // Remove the placement
+    apply(db, {
+      chunks: [
+        {
+          id: noteId,
+          placements: [{ scope_id: parentId, type: 'instance', removed: true }],
+        },
+      ],
+    })
+
+    // Should no longer appear in scope
+    const after = scope(db, [parentId])
+    expect(after.chunks.items.find((c) => c.id === noteId)).toBeUndefined()
+  })
+
+  test('removed placement no longer appears in scope queries', () => {
+    const db = open()
+    const scopeA = apply(db, {
+      chunks: [{ name: 'scope-a', body: {} }],
+    })
+    const scopeB = apply(db, {
+      chunks: [{ name: 'scope-b', body: {} }],
+    })
+    const scopeAId = scopeA.chunks[0]!.id
+    const scopeBId = scopeB.chunks[0]!.id
+
+    const created = apply(db, {
+      chunks: [
+        {
+          name: 'shared',
+          body: { text: 'in both' },
+          placements: [
+            { scope_id: scopeAId, type: 'instance' },
+            { scope_id: scopeBId, type: 'instance' },
+          ],
+        },
+      ],
+    })
+    const chunkId = created.chunks[0]!.id
+
+    // Remove from scope-a only
+    apply(db, {
+      chunks: [
+        {
+          id: chunkId,
+          placements: [{ scope_id: scopeAId, type: 'instance', removed: true }],
+        },
+      ],
+    })
+
+    // Gone from scope-a
+    const resultA = scope(db, [scopeAId])
+    expect(resultA.chunks.items.find((c) => c.id === chunkId)).toBeUndefined()
+
+    // Still in scope-b
+    const resultB = scope(db, [scopeBId])
+    expect(resultB.chunks.items.find((c) => c.id === chunkId)).toBeDefined()
+  })
+
+  test('removed placement records version with active 0', () => {
+    const db = open()
+    const parent = apply(db, {
+      chunks: [{ name: 'container', body: {} }],
+    })
+    const parentId = parent.chunks[0]!.id
+
+    const created = apply(db, {
+      chunks: [
+        {
+          name: 'note',
+          body: { text: 'versioned' },
+          placements: [{ scope_id: parentId, type: 'instance' }],
+        },
+      ],
+    })
+    const noteId = created.chunks[0]!.id
+
+    const removeResult = apply(db, {
+      chunks: [
+        {
+          id: noteId,
+          placements: [{ scope_id: parentId, type: 'instance', removed: true }],
+        },
+      ],
+    })
+
+    // Check placement_versions has the deactivation record
+    const row = db
+      .query<
+        { active: number },
+        [string, string, string]
+      >(
+        'SELECT active FROM placement_versions WHERE chunk_id = ? AND scope_id = ? AND commit_id = ?',
+      )
+      .get(noteId, parentId, removeResult.commit.id)
+
+    expect(row).toBeDefined()
+    expect(row!.active).toBe(0)
+  })
 })

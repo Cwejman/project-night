@@ -37,8 +37,13 @@ export const apply = (db: Db, declaration: Declaration): ApplyResult => {
     ])
 
     for (const entry of declaration.chunks) {
-      const isCreate = !entry.id
       const chunkId = entry.id ?? generateId()
+      const exists = db
+        .query<{ chunk_id: string }, [string, string]>(
+          'SELECT chunk_id FROM current_chunks WHERE chunk_id = ? AND branch = ?',
+        )
+        .get(chunkId, branch)
+      const isCreate = !exists
       const created = isCreate
 
       if (entry.removed) {
@@ -114,7 +119,7 @@ export const apply = (db: Db, declaration: Declaration): ApplyResult => {
           entry.body !== undefined ? JSON.stringify(entry.body) : (current?.body ?? '{}')
 
         db.run(
-          `INSERT INTO chunk_versions (chunk_id, commit_id, name, spec, body, removed)
+          `INSERT OR REPLACE INTO chunk_versions (chunk_id, commit_id, name, spec, body, removed)
            VALUES (?, ?, ?, ?, ?, 0)`,
           [chunkId, commitId, name, spec, body],
         )
@@ -139,19 +144,33 @@ export const apply = (db: Db, declaration: Declaration): ApplyResult => {
       // Process placements
       const chunkWithId = { ...entry, id: chunkId }
       for (const placement of entry.placements ?? []) {
-        enforce(db, chunkWithId, placement, branch)
+        if (placement.removed) {
+          // Soft remove placement
+          db.run(
+            `INSERT INTO placement_versions (chunk_id, scope_id, type, seq, active, commit_id)
+             VALUES (?, ?, ?, ?, 0, ?)`,
+            [chunkId, placement.scope_id, placement.type, placement.seq ?? null, commitId],
+          )
 
-        db.run(
-          `INSERT INTO placement_versions (chunk_id, scope_id, type, seq, active, commit_id)
-           VALUES (?, ?, ?, ?, 1, ?)`,
-          [chunkId, placement.scope_id, placement.type, placement.seq ?? null, commitId],
-        )
+          db.run(
+            'DELETE FROM current_placements WHERE chunk_id = ? AND scope_id = ? AND branch = ?',
+            [chunkId, placement.scope_id, branch],
+          )
+        } else {
+          enforce(db, chunkWithId, placement, branch)
 
-        db.run(
-          `INSERT OR REPLACE INTO current_placements (chunk_id, scope_id, branch, type, seq)
-           VALUES (?, ?, ?, ?, ?)`,
-          [chunkId, placement.scope_id, branch, placement.type, placement.seq ?? null],
-        )
+          db.run(
+            `INSERT INTO placement_versions (chunk_id, scope_id, type, seq, active, commit_id)
+             VALUES (?, ?, ?, ?, 1, ?)`,
+            [chunkId, placement.scope_id, placement.type, placement.seq ?? null, commitId],
+          )
+
+          db.run(
+            `INSERT OR REPLACE INTO current_placements (chunk_id, scope_id, branch, type, seq)
+             VALUES (?, ?, ?, ?, ?)`,
+            [chunkId, placement.scope_id, branch, placement.type, placement.seq ?? null],
+          )
+        }
       }
 
       results.push({ id: chunkId, created })

@@ -62,7 +62,7 @@ pilot/
   engine/          — dispatch, boundaries, VM, protocol (host side) + client (invocable side)
   ui/              — SvelteKit app
   project/         — the working project (ol init target)
-    .openlight/db  — the substrate database
+    .ol/db         — the substrate database
     invocables/    — claude, filesystem, shell, web (run in VM)
 ```
 

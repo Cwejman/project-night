@@ -46,6 +46,7 @@ export type PlacementDeclaration = {
   readonly scope_id: string
   readonly type: 'instance' | 'relates'
   readonly seq?: number
+  readonly removed?: boolean
 }
 
 export type Declaration = {
