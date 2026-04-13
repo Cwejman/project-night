@@ -1,0 +1,17 @@
+{
+  "name": "engine",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "bun test",
+    "fmt": "prettier --write .",
+    "check": "prettier --check . && bun run tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "prettier": "^3"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
