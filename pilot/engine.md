@@ -13,6 +13,68 @@ The engine is a TypeScript module imported directly by the UI's server functions
 - **Process lifecycle.** Spawns invocable processes inside the VM. Tracks PID, status (running/completed/failed), start time. Kills on timeout or user request. Updates the dispatch chunk on completion. The engine owns the status state machine: `pending → running → completed/failed`. The engine sets `pending` on creation, `running` on spawn, and `completed` (exit 0) or `failed` (non-zero exit) on process exit. Status is a body field on the dispatch chunk, updated via `apply()`. The invocable does not set its own status — it simply exits.
 - **Tool-call dispatch.** When an agent invocable requests a tool call, the engine creates a dispatch for the target invocable, spawns it, and returns the dispatch chunk ID. The agent decides when to await. Same dispatch mechanics as any invocation. The tool dispatch's boundaries are the intersection of the parent dispatch's boundaries and the target invocable's intrinsic boundaries — the engine computes this at dispatch creation.
 
+## Engine API
+
+The engine is a TypeScript module imported by the UI's server functions. These are the exported functions — the contract between the engine and the UI.
+
+```typescript
+import type { Db } from '../ol/src/db'
+import type { ChunkDeclaration } from '../ol/src/types'
+
+type Engine = {
+  /** The substrate database. The engine holds the reference. */
+  db: Db
+}
+
+type DispatchArgs = {
+  /** Chunks to place on the dispatch, as assembled by the UI from the dispatch tile.
+      The engine does not interpret these — it places them on the dispatch chunk
+      and the substrate's spec enforcement validates the contract. */
+  chunks: ChunkDeclaration[]
+  /** Scope IDs for the read boundary */
+  readBoundary: string[]
+  /** Scope IDs for the write boundary */
+  writeBoundary: string[]
+  /** Timeout in ms. Defaults to invocable's body.timeout_ms if not provided. */
+  timeout?: number
+}
+
+type DispatchResult = {
+  /** The dispatch chunk ID */
+  dispatchId: string
+}
+
+/**
+ * Initialize the engine. Opens the database, starts the VM,
+ * reconciles stuck dispatches from a previous session.
+ */
+function bootstrap(dbPath: string): Engine
+
+/**
+ * Create a dispatch. The engine creates the dispatch chunk (instance of
+ * the invocable and dispatch archetype), places the argument chunks and
+ * boundary containers on it, validates via apply(), and spawns the
+ * invocable in the VM. Returns immediately — the invocable runs
+ * asynchronously.
+ */
+function dispatch(engine: Engine, invocableId: string, args: DispatchArgs): DispatchResult
+
+/**
+ * Cancel a running dispatch. Kills the invocable process,
+ * sets status to "failed".
+ */
+function cancel(engine: Engine, dispatchId: string): void
+
+/**
+ * Shut down the engine. Kills all running invocables, stops the VM.
+ */
+function shutdown(engine: Engine): void
+```
+
+The engine is invocable-agnostic. `DispatchArgs.chunks` are the argument chunks the UI assembled from the dispatch tile's input modules — whatever the invocable's composed spec accepts. The engine doesn't interpret them. It creates the dispatch chunk, places the arguments on it, builds boundary containers from `readBoundary`/`writeBoundary` scope IDs, and calls `apply()`. The substrate's spec enforcement validates that the arguments match the invocable's contract.
+
+The UI reads the substrate directly (via the `ol` lib) for all read operations — scope, search, log. The engine is only called for dispatch, cancel, and lifecycle. The UI does not go through the engine for reads.
+
 ## Invocable Protocol
 
 The invocable runs in the VM with no direct database access. It communicates with the engine over **stdin/stdout pipes**.
@@ -145,7 +207,7 @@ dispatch
 **Dispatch body fields** (written by the engine, not in `required` on the archetype — propagate means the spec applies to children, not to dispatches themselves):
 
 ```
-body: { status: "pending"|"running"|"completed"|"failed", pid: number, started: ISO string }
+body: { status: "pending"|"running"|"completed"|"failed", pid: number, started: ISO string, timeout_ms: number }
 ```
 
 **An invocable (e.g. claude):**
@@ -179,11 +241,96 @@ All inferred. No custom dispatch UI.
 1. User assembles dispatch arguments in the UI
 2. UI calls the engine with the invocable ID and arguments
 3. Engine creates the dispatch chunk (one `apply()`), validates the contract
-4. Engine spawns the invocable in the VM, passing dispatch ID and engine endpoint
+4. Engine spawns the invocable in the VM, passing dispatch ID
 5. Invocable communicates with engine via protocol
 6. On completion, engine updates dispatch status
 
-**Traceability.** All writes relate back to the dispatch. The engine records the dispatch ID on every commit it executes on behalf of an invocable. Scope into `dispatch` for cross-invocable history; scope into the invocable for its own dispatches.
+**Dispatch creation declaration.** The engine constructs a single `apply()` that creates the dispatch chunk and places all arguments. The engine builds three things: the dispatch chunk itself, the boundary containers, and the argument placements. The argument chunks come from the UI — the engine places them on the dispatch without interpreting them. The substrate's spec enforcement validates the composed contract.
+
+The engine pre-generates IDs so chunks created in the same `apply()` can reference each other via placements. It resolves existing chunks by ID (looked up via scope queries before building the declaration).
+
+Example — dispatching `filesystem` with an `fs-command` argument and boundaries:
+
+```typescript
+import { generateId } from '../ol/src/id'
+
+// Pre-generate IDs for new chunks that need intra-declaration references
+const dispatchId = generateId()
+const rbId = generateId()
+const wbId = generateId()
+
+// Resolve existing chunk IDs via scope queries before building the declaration.
+// The engine looks up the invocable, dispatch archetype, boundary types, and
+// boundary scope references by scoping into the relevant scopes and reading IDs.
+// Here shown as constants for clarity:
+const filesystemId = '...'    // looked up: instance of invocable named "filesystem"
+const dispatchTypeId = '...'  // looked up: instance of engine named "dispatch"
+const readBoundaryId = '...'  // looked up: instance of engine named "read-boundary"
+const writeBoundaryId = '...' // looked up: instance of engine named "write-boundary"
+const fsCommandId = '...'     // looked up: relates on filesystem named "fs-command"
+const agentScopeId = '...'    // looked up: boundary scope the user selected
+
+apply(db, {
+  chunks: [
+    // 1. The dispatch chunk — engine creates this for every dispatch.
+    //    Instance of both the target invocable and the dispatch archetype.
+    {
+      id: dispatchId,
+      body: { status: 'pending' },
+      placements: [
+        { scope_id: filesystemId, type: 'instance' },
+        { scope_id: dispatchTypeId, type: 'instance' },
+      ],
+    },
+
+    // 2. Boundary containers — engine creates these from readBoundary/writeBoundary.
+    //    New chunks per dispatch. Scope references placed on them by identity.
+    {
+      id: rbId,
+      placements: [
+        { scope_id: readBoundaryId, type: 'instance' },
+        { scope_id: dispatchId, type: 'instance' },
+      ],
+    },
+    { id: agentScopeId, placements: [{ scope_id: rbId, type: 'instance' }] },
+
+    {
+      id: wbId,
+      placements: [
+        { scope_id: writeBoundaryId, type: 'instance' },
+        { scope_id: dispatchId, type: 'instance' },
+      ],
+    },
+    { id: agentScopeId, placements: [{ scope_id: wbId, type: 'instance' }] },
+
+    // 3. Argument chunks — passed through from the UI (args.chunks).
+    //    The engine adds a placement on the dispatch to each.
+    //    Spec enforcement validates the composed contract.
+    {
+      body: { operation: 'read', path: '/src/main.ts' },
+      placements: [
+        { scope_id: fsCommandId, type: 'instance' },
+        { scope_id: dispatchId, type: 'instance' },
+      ],
+    },
+  ],
+})
+```
+
+The composed spec on this dispatch's children comes from `filesystem` (`propagate: true, accepts: ["fs-command"]`) and `dispatch` (`propagate: true, accepts: ["read-boundary", "write-boundary"]`). Union: `accepts: ["fs-command", "read-boundary", "write-boundary"]`. Every child must be instance of one of those types. The boundary container is instance of `read-boundary` — passes. The argument chunk is instance of `fs-command` — passes. The substrate validates; the engine doesn't check types itself.
+
+The boundary containers are new chunks created per dispatch. The scope references placed on them ARE the boundary roots by identity — existing scope chunks placed as instances. The engine reads the boundary by scoping into the container.
+
+**Traceability.** Commits stay in their own table — single source of truth, inherently tamper-proof because `apply()` can't touch them. The read layer synthesizes them as ChunkItems when relevant. Full projection — the root scope, items, and placements are all virtual. Nothing stored as real chunks or placements.
+
+The lib exports `COMMITS_SCOPE` (`'__commits'`) as the virtual scope ID:
+
+- `scope(db, [COMMITS_SCOPE])` → all commits as synthetic ChunkItems.
+- `scope(db, [COMMITS_SCOPE, dispatchId])` → commits where `dispatch_id` matches.
+- `scope(db, [COMMITS_SCOPE, chunkId])` → commits that modified that chunk (via `chunk_versions`).
+- Connected scopes surface unique dispatch identities with counts.
+
+The `commits` table carries a `dispatch_id` column. The engine sets it by passing `{ dispatch: dispatchId }` as the third argument to `apply()` when executing applies on behalf of invocables. No new tables, no placement inflation, no circularity. Commits look like chunks to every reader but are structurally separate.
 
 ### Boundaries
 
@@ -230,3 +377,40 @@ Substrate operations (scope, search, apply by the agent itself) are NOT tool-cal
 ### Services
 
 Deferred for the pilot. All invocables are request-response.
+
+## Operational Behavior
+
+### Timeout
+
+The `dispatch` function accepts an optional `timeout` in ms. The engine writes it to the dispatch body as `timeout_ms`. If not provided, it defaults to the invocable chunk's `body.timeout_ms`. Invocable defaults: tool invocables (filesystem, shell, web): 30000ms. Agent invocables (claude): 300000ms. On expiry, the engine kills the process and sets `status: "failed"` with `body.error: "timeout"`.
+
+### Error Handling
+
+Not all errors kill the invocable. The distinction:
+
+| Condition | Engine response |
+|---|---|
+| Boundary violation on scope/search | `BOUNDARY_VIOLATION` error response. Process continues. |
+| Boundary violation on apply | `BOUNDARY_VIOLATION` error response. Process continues. |
+| Spec violation on apply | `VALIDATION_ERROR` error response. Process continues. |
+| Protected chunk modification | `BOUNDARY_VIOLATION` error response. Process continues. |
+| Unknown op or missing fields | `INVALID_REQUEST` error response. Process continues. |
+| Malformed JSON on stdout | Kill process. Set `status: "failed"`, `body.error: "protocol: malformed output"`. |
+| Process crash (non-zero exit) | Set `status: "failed"`. |
+| Process timeout | Kill process. Set `status: "failed"`, `body.error: "timeout"`. |
+
+The invocable can recover from error responses — they are informational. Parse failures and crashes are terminal.
+
+### Startup Reconciliation
+
+On bootstrap, the engine queries all dispatch chunks with `status: "pending"` or `status: "running"` and sets them to `failed` with `body.error: "engine restart"`. The processes are gone — the engine does not attempt to recover them.
+
+### Boundary Request Behavior
+
+When an invocable calls `scope` or `search` and any queried scope is not reachable from the effective read boundary roots via instance chain traversal, the engine returns `BOUNDARY_VIOLATION`. The invocable gets an explicit error rather than a silently empty result — it knows it asked for something outside its boundary.
+
+### VM Lifecycle
+
+The VM is always used. Containment is architectural, not optional. The engine starts the VM on bootstrap and stops it on shutdown. All invocables share the single VM instance. The engine health-checks the VM before spawning; if it died, it restarts it.
+
+For testing the engine protocol in isolation, a test harness can spawn mock invocables as local subprocesses — same pipe, same protocol, no real VM. This is for engine development only, not a runtime mode.

@@ -1,6 +1,6 @@
 export { open } from './db.ts'
 export { apply } from './apply.ts'
-export { scope, search, log } from './read.ts'
+export { scope, search, log, COMMITS_SCOPE } from './read.ts'
 export { SpecViolation } from './spec.ts'
 export type {
   Chunk,

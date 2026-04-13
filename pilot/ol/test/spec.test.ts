@@ -2,23 +2,23 @@ import { describe, test, expect } from 'bun:test'
 import { open, apply, SpecViolation } from '../src/index.ts'
 
 describe('spec enforcement', () => {
-  test('ordered: rejects placement without seq', () => {
+  test('ordered: auto-assigns seq when omitted', () => {
     const db = open()
     const s = apply(db, {
       chunks: [{ name: 'session', spec: { ordered: true }, body: {} }],
     })
     const scopeId = s.chunks[0]!.id
 
-    expect(() =>
-      apply(db, {
-        chunks: [
-          {
-            body: { text: 'a prompt' },
-            placements: [{ scope_id: scopeId, type: 'instance' }],
-          },
-        ],
-      }),
-    ).toThrow(SpecViolation)
+    const result = apply(db, {
+      chunks: [
+        {
+          body: { text: 'a prompt' },
+          placements: [{ scope_id: scopeId, type: 'instance' }],
+        },
+      ],
+    })
+
+    expect(result.chunks[0]!.created).toBe(true)
   })
 
   test('ordered: accepts placement with seq', () => {
@@ -53,7 +53,7 @@ describe('spec enforcement', () => {
         {
           name: 'prompt',
           body: { text: 'A prompt type' },
-          placements: [{ scope_id: sessionId, type: 'instance' }],
+          placements: [{ scope_id: sessionId, type: 'relates' }],
         },
       ],
     })
@@ -83,7 +83,7 @@ describe('spec enforcement', () => {
         {
           name: 'prompt',
           body: { text: 'A prompt type' },
-          placements: [{ scope_id: sessionId, type: 'instance' }],
+          placements: [{ scope_id: sessionId, type: 'relates' }],
         },
       ],
     })
@@ -234,7 +234,7 @@ describe('spec enforcement', () => {
     const db = open()
 
     // dispatch archetype: requires read-boundary and write-boundary
-    const dispatchResult = apply(db, {
+    apply(db, {
       chunks: [
         {
           id: 'dispatch',
@@ -503,24 +503,24 @@ describe('spec enforcement', () => {
       ],
     })
 
-    // Placing without seq should fail (ordered propagated from archetype)
-    expect(() =>
-      apply(db, {
-        chunks: [
-          {
-            body: { text: 'no seq' },
-            placements: [{ scope_id: 'my-instance', type: 'instance' }],
-          },
-        ],
-      }),
-    ).toThrow(SpecViolation)
+    // Placing without seq auto-assigns (ordered propagated from archetype)
+    const autoResult = apply(db, {
+      chunks: [
+        {
+          body: { text: 'no seq' },
+          placements: [{ scope_id: 'my-instance', type: 'instance' }],
+        },
+      ],
+    })
 
-    // Placing with seq should succeed
+    expect(autoResult.chunks[0]!.created).toBe(true)
+
+    // Placing with explicit seq should also succeed
     const result = apply(db, {
       chunks: [
         {
           body: { text: 'with seq' },
-          placements: [{ scope_id: 'my-instance', type: 'instance', seq: 1 }],
+          placements: [{ scope_id: 'my-instance', type: 'instance', seq: 10 }],
         },
       ],
     })
@@ -580,15 +580,6 @@ describe('spec enforcement', () => {
   test('single apply: later chunks see earlier chunks for spec enforcement', () => {
     const db = open()
 
-    // One apply() call creates three chunks sequentially:
-    //   1. archetype with accepts: ['allowed-type']
-    //   2. type-defining chunk named 'allowed-type' (relates to archetype)
-    //   3. chunk placed on both allowed-type (as instance, establishing its type)
-    //      and on archetype (as instance, which must pass the accepts check)
-    //
-    // Chunk #3's second placement triggers accepts enforcement on the archetype.
-    // This requires chunk #2 to be visible in current_chunks (for type name resolution)
-    // and chunk #3's first placement to be visible in current_placements (for isInstanceOf).
     const result = apply(db, {
       chunks: [
         {
@@ -624,7 +615,7 @@ describe('spec enforcement', () => {
   test('rollback on spec violation leaves no partial state', () => {
     const db = open()
     const s = apply(db, {
-      chunks: [{ name: 'ordered', spec: { ordered: true }, body: {} }],
+      chunks: [{ name: 'strict', spec: { required: ['mandatory'] }, body: {} }],
     })
     const scopeId = s.chunks[0]!.id
 
@@ -633,8 +624,62 @@ describe('spec enforcement', () => {
         chunks: [
           { name: 'valid', body: { text: 'this is fine' } },
           {
-            body: { text: 'this will fail' },
+            body: { text: 'this will fail — missing required key' },
             placements: [{ scope_id: scopeId, type: 'instance' }],
+          },
+        ],
+      }),
+    ).toThrow(SpecViolation)
+  })
+
+  test('accepts: rejects chunk matching multiple accepted types', () => {
+    const db = open()
+
+    // Create a scope that accepts both type-a and type-b
+    apply(db, {
+      chunks: [
+        {
+          id: 'multi-scope',
+          name: 'multi-scope',
+          spec: { accepts: ['type-a', 'type-b'] },
+          body: {},
+        },
+        {
+          id: 'type-a',
+          name: 'type-a',
+          body: {},
+          placements: [{ scope_id: 'multi-scope', type: 'relates' }],
+        },
+        {
+          id: 'type-b',
+          name: 'type-b',
+          body: {},
+          placements: [{ scope_id: 'multi-scope', type: 'relates' }],
+        },
+      ],
+    })
+
+    // Create a chunk that is instance of BOTH type-a and type-b
+    apply(db, {
+      chunks: [
+        {
+          id: 'ambiguous-chunk',
+          body: { text: 'I match two types' },
+          placements: [
+            { scope_id: 'type-a', type: 'instance' },
+            { scope_id: 'type-b', type: 'instance' },
+          ],
+        },
+      ],
+    })
+
+    // Placing on multi-scope should fail — ambiguous type match
+    expect(() =>
+      apply(db, {
+        chunks: [
+          {
+            id: 'ambiguous-chunk',
+            placements: [{ scope_id: 'multi-scope', type: 'instance' }],
           },
         ],
       }),

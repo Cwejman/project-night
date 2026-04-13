@@ -363,7 +363,7 @@ A substrate. Not a database for a specific application. Not a retrieval layer fo
 ## What's Open
 
 - **Scope limit and offset.** Ordered scopes can grow large. A `limit` parameter (from seq tail) and `offset` for pagination prevent overload. Default limit prevents accidental flooding. The scope result already includes counts — agents probe shape before pulling data. Deferred for the pilot but needed soon.
-- **Seq auto-assignment.** Spec says "auto-assigned on append if omitted" but not yet implemented. When `ordered: true` and seq is null on an instance placement, set `seq = max(existing seq on scope) + 1`.
+- ~~**Seq auto-assignment.**~~ Implemented. When `ordered: true` and seq is null on an instance placement, `apply()` sets `seq = max(existing seq on scope) + 1`.
 - **Spec language evolution.** The four fields (ordered, accepts, required, unique) cover the known cases. The vocabulary may grow through use.
 - **Merge semantics.** The structure supports merge commits. Conflict resolution strategy is above the primitives.
 - **Peer protocol.** Separate databases mounted read-only. The mounting mechanism is runtime, not structural.

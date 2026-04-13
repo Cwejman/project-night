@@ -1,7 +1,7 @@
 import type { Db } from './db.ts'
 import { getHead, getActiveBranch } from './db.ts'
 import { generateId } from './id.ts'
-import { enforce } from './spec.ts'
+import { enforce, isOrderedScope, SpecViolation } from './spec.ts'
 import type { ApplyResult, Declaration } from './types.ts'
 
 const extractFtsText = (body: Record<string, unknown>): string => {
@@ -15,7 +15,11 @@ const extractFtsText = (body: Record<string, unknown>): string => {
   return strings.join(' ')
 }
 
-export const apply = (db: Db, declaration: Declaration): ApplyResult => {
+export const apply = (
+  db: Db,
+  declaration: Declaration,
+  options?: { dispatch?: string },
+): ApplyResult => {
   const branch = getActiveBranch(db)
   const parentId = getHead(db, branch)
 
@@ -30,11 +34,10 @@ export const apply = (db: Db, declaration: Declaration): ApplyResult => {
   db.run('BEGIN IMMEDIATE')
 
   try {
-    db.run('INSERT INTO commits (id, parent_id, timestamp) VALUES (?, ?, ?)', [
-      commitId,
-      parentId,
-      timestamp,
-    ])
+    db.run(
+      'INSERT INTO commits (id, parent_id, timestamp, dispatch_id) VALUES (?, ?, ?, ?)',
+      [commitId, parentId, timestamp, options?.dispatch ?? null],
+    )
 
     for (const entry of declaration.chunks) {
       const chunkId = entry.id ?? generateId()
@@ -43,8 +46,7 @@ export const apply = (db: Db, declaration: Declaration): ApplyResult => {
           'SELECT chunk_id FROM current_chunks WHERE chunk_id = ? AND branch = ?',
         )
         .get(chunkId, branch)
-      const isCreate = !exists
-      const created = isCreate
+      const created = !exists
 
       if (entry.removed) {
         // Soft remove
@@ -79,7 +81,7 @@ export const apply = (db: Db, declaration: Declaration): ApplyResult => {
         continue
       }
 
-      if (isCreate) {
+      if (created) {
         // Create new chunk
         const spec = JSON.stringify(entry.spec ?? {})
         const body = JSON.stringify(entry.body ?? {})
@@ -141,9 +143,14 @@ export const apply = (db: Db, declaration: Declaration): ApplyResult => {
         ])
       }
 
-      // Process placements
-      const chunkWithId = { ...entry, id: chunkId }
-      for (const placement of entry.placements ?? []) {
+      // Two-pass placement processing per chunk:
+      // Pass 1: Write all placements (with seq auto-assignment). No enforcement.
+      // Pass 2: Run enforce() + name uniqueness on all non-removed placements.
+      const placements = entry.placements ?? []
+      const resolvedSeqs: (number | null)[] = []
+
+      // Pass 1: Write
+      for (const placement of placements) {
         if (placement.removed) {
           // Soft remove placement
           db.run(
@@ -156,20 +163,67 @@ export const apply = (db: Db, declaration: Declaration): ApplyResult => {
             'DELETE FROM current_placements WHERE chunk_id = ? AND scope_id = ? AND branch = ?',
             [chunkId, placement.scope_id, branch],
           )
-        } else {
-          enforce(db, chunkWithId, placement, branch)
 
-          db.run(
-            `INSERT INTO placement_versions (chunk_id, scope_id, type, seq, active, commit_id)
-             VALUES (?, ?, ?, ?, 1, ?)`,
-            [chunkId, placement.scope_id, placement.type, placement.seq ?? null, commitId],
-          )
+          resolvedSeqs.push(null)
+          continue
+        }
 
-          db.run(
-            `INSERT OR REPLACE INTO current_placements (chunk_id, scope_id, branch, type, seq)
-             VALUES (?, ?, ?, ?, ?)`,
-            [chunkId, placement.scope_id, branch, placement.type, placement.seq ?? null],
-          )
+        let seq = placement.seq ?? null
+
+        // Seq auto-assignment for ordered scopes
+        if (seq === null && placement.type === 'instance') {
+          if (isOrderedScope(db, placement.scope_id, branch)) {
+            const maxRow = db
+              .query<{ max_seq: number | null }, [string, string]>(
+                `SELECT MAX(seq) as max_seq FROM current_placements
+                 WHERE scope_id = ? AND branch = ?`,
+              )
+              .get(placement.scope_id, branch)
+            seq = (maxRow?.max_seq ?? 0) + 1
+          }
+        }
+
+        resolvedSeqs.push(seq)
+
+        db.run(
+          `INSERT INTO placement_versions (chunk_id, scope_id, type, seq, active, commit_id)
+           VALUES (?, ?, ?, ?, 1, ?)`,
+          [chunkId, placement.scope_id, placement.type, seq, commitId],
+        )
+
+        db.run(
+          `INSERT OR REPLACE INTO current_placements (chunk_id, scope_id, branch, type, seq)
+           VALUES (?, ?, ?, ?, ?)`,
+          [chunkId, placement.scope_id, branch, placement.type, seq],
+        )
+      }
+
+      // Pass 2: Enforce specs + name uniqueness (skip removed placements)
+      const chunkWithId = { ...entry, id: chunkId }
+      for (let i = 0; i < placements.length; i++) {
+        const placement = placements[i]!
+        if (placement.removed) continue
+
+        const seq = resolvedSeqs[i]!
+
+        // Enforce with the resolved seq so ordered check sees the auto-assigned value
+        enforce(db, chunkWithId, { ...placement, seq: seq ?? undefined }, branch)
+
+        // Name uniqueness per scope
+        if (chunkWithId.name != null) {
+          const duplicate = db
+            .query<{ chunk_id: string }, [string, string, string, string]>(
+              `SELECT cp.chunk_id FROM current_placements cp
+               JOIN current_chunks cc ON cc.chunk_id = cp.chunk_id AND cc.branch = cp.branch
+               WHERE cp.scope_id = ? AND cp.branch = ? AND cc.name = ? AND cp.chunk_id != ?`,
+            )
+            .get(placement.scope_id, branch, chunkWithId.name, chunkId)
+
+          if (duplicate) {
+            throw new SpecViolation(
+              `Duplicate name "${chunkWithId.name}" on scope ${placement.scope_id}`,
+            )
+          }
         }
       }
 

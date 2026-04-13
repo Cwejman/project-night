@@ -65,7 +65,7 @@ const collectSpecs = (
   required: string[]
   unique: string[]
   acceptedTypeIds: string[]
-  acceptedNames: Map<string, string> // archetype scope id → comma-joined names (for type-def bypass)
+  acceptedNames: Map<string, string>
 } => {
   const ownSpec = getSpec(db, scopeId, branch)
 
@@ -140,6 +140,14 @@ const collectSpecs = (
   return { ordered, required, unique, acceptedTypeIds, acceptedNames }
 }
 
+export const isOrderedScope = (
+  db: Db,
+  scopeId: string,
+  branch: string,
+): boolean => {
+  return collectSpecs(db, scopeId, branch).ordered
+}
+
 export const enforce = (
   db: Db,
   chunk: ChunkDeclaration & { readonly id: string },
@@ -168,19 +176,19 @@ export const enforce = (
   }
 
   if (composed.acceptedTypeIds.length > 0) {
-    // If the chunk IS one of the accepted type chunks, it's a type definition — skip
-    const isTypeDef = composed.acceptedTypeIds.includes(chunk.id)
+    const matchCount = composed.acceptedTypeIds.filter((typeId) =>
+      isInstanceOf(db, chunk.id, typeId, branch),
+    ).length
 
-    if (!isTypeDef) {
-      const isAccepted = composed.acceptedTypeIds.some((typeId) =>
-        isInstanceOf(db, chunk.id, typeId, branch),
+    if (matchCount === 0) {
+      throw new SpecViolation(
+        `Chunk ${chunk.id} is not an instance of an accepted type on scope ${placement.scope_id}`,
       )
-
-      if (!isAccepted) {
-        throw new SpecViolation(
-          `Chunk ${chunk.id} is not an instance of an accepted type on scope ${placement.scope_id}`,
-        )
-      }
+    }
+    if (matchCount > 1) {
+      throw new SpecViolation(
+        `Chunk ${chunk.id} matches multiple accepted types on scope ${placement.scope_id}`,
+      )
     }
   }
 

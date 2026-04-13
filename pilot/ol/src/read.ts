@@ -228,9 +228,141 @@ const queryConnectedScopes = (
   return results
 }
 
+export const COMMITS_SCOPE = '__commits'
+
+const handleCommitsScope = (
+  db: Db,
+  scopeIds: string[],
+  branch: string,
+  head: string,
+): ScopeResult => {
+  const totalRow = db
+    .query<{ cnt: number }, [string]>(
+      'SELECT COUNT(*) as cnt FROM current_chunks WHERE branch = ?',
+    )
+    .get(branch)
+  const total = totalRow?.cnt ?? 0
+
+  const filterIds = scopeIds.filter((id) => id !== COMMITS_SCOPE)
+
+  type CommitRow = {
+    id: string
+    parent_id: string | null
+    timestamp: string
+    dispatch_id: string | null
+  }
+
+  let commits: CommitRow[]
+
+  if (filterIds.length === 0) {
+    // All commits
+    commits = db
+      .query<CommitRow, []>('SELECT id, parent_id, timestamp, dispatch_id FROM commits')
+      .all()
+  } else {
+    // Intersection with another scope id
+    const filterId = filterIds[0]!
+
+    // Check if filterId is a dispatch: commits reference it as dispatch_id
+    const hasDispatchCommits = db
+      .query<{ cnt: number }, [string]>(
+        'SELECT COUNT(*) as cnt FROM commits WHERE dispatch_id = ?',
+      )
+      .get(filterId)
+
+    const chunkExists = db
+      .query<{ cnt: number }, [string, string]>(
+        'SELECT COUNT(*) as cnt FROM current_chunks WHERE chunk_id = ? AND branch = ?',
+      )
+      .get(filterId, branch)
+
+    if (chunkExists && chunkExists.cnt > 0 && hasDispatchCommits && hasDispatchCommits.cnt > 0) {
+      // Filter by dispatch_id
+      commits = db
+        .query<CommitRow, [string]>(
+          'SELECT id, parent_id, timestamp, dispatch_id FROM commits WHERE dispatch_id = ?',
+        )
+        .all(filterId)
+    } else {
+      // Filter by chunk_versions — commits that touched this chunk
+      commits = db
+        .query<CommitRow, [string]>(
+          `SELECT DISTINCT c.id, c.parent_id, c.timestamp, c.dispatch_id
+           FROM commits c
+           JOIN chunk_versions cv ON c.id = cv.commit_id
+           WHERE cv.chunk_id = ?`,
+        )
+        .all(filterId)
+    }
+  }
+
+  const items: ChunkItem[] = commits.map((c) => ({
+    id: c.id,
+    name: undefined,
+    spec: {},
+    body: {
+      parent_id: c.parent_id,
+      timestamp: c.timestamp,
+      dispatch_id: c.dispatch_id,
+    },
+    placements: [
+      { chunk_id: c.id, scope_id: COMMITS_SCOPE, type: 'instance' as const },
+    ],
+  }))
+
+  // Connected scopes: each unique dispatch_id
+  const connected: ConnectedScope[] = []
+  const dispatchIds = new Set<string>()
+  for (const c of commits) {
+    if (c.dispatch_id) dispatchIds.add(c.dispatch_id)
+  }
+  for (const did of dispatchIds) {
+    const nameRow = db
+      .query<{ name: string | null }, [string, string]>(
+        'SELECT name FROM current_chunks WHERE chunk_id = ? AND branch = ?',
+      )
+      .get(did, branch)
+    const count = commits.filter((c) => c.dispatch_id === did).length
+    connected.push({
+      id: did,
+      name: nameRow?.name ?? undefined,
+      shared: count,
+      instance: count,
+      relates: 0,
+      connections: [],
+    })
+  }
+  connected.sort((a, b) => b.shared - a.shared)
+
+  const virtualScope: ChunkItem = {
+    id: COMMITS_SCOPE,
+    name: 'commits',
+    spec: {},
+    body: { text: 'Commit history' },
+    placements: [],
+  }
+
+  return {
+    scope: [virtualScope],
+    head,
+    chunks: {
+      total,
+      in_scope: items.length,
+      instance: items.length,
+      relates: 0,
+      items,
+    },
+    connected,
+  }
+}
+
 export const scope = (db: Db, scopeIds: string[]): ScopeResult => {
   const branch = getActiveBranch(db)
   const head = getHead(db, branch) ?? 'root'
+
+  if (scopeIds.includes(COMMITS_SCOPE)) {
+    return handleCommitsScope(db, scopeIds, branch, head)
+  }
 
   const totalRow = db
     .query<
@@ -311,9 +443,9 @@ export const log = (db: Db, limit: number = 50): Commit[] => {
   while (currentId && commits.length < limit) {
     const row = db
       .query<
-        { id: string; parent_id: string | null; timestamp: string },
+        { id: string; parent_id: string | null; timestamp: string; dispatch_id: string | null },
         [string]
-      >('SELECT id, parent_id, timestamp FROM commits WHERE id = ?')
+      >('SELECT id, parent_id, timestamp, dispatch_id FROM commits WHERE id = ?')
       .get(currentId)
 
     if (!row) break
@@ -322,6 +454,7 @@ export const log = (db: Db, limit: number = 50): Commit[] => {
       id: row.id,
       parent_id: row.parent_id,
       timestamp: row.timestamp,
+      dispatch_id: row.dispatch_id,
     })
 
     currentId = row.parent_id

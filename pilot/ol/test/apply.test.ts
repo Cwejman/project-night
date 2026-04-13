@@ -1,5 +1,5 @@
 import { describe, test, expect } from 'bun:test'
-import { open, apply, scope } from '../src/index.ts'
+import { open, apply, scope, SpecViolation } from '../src/index.ts'
 
 describe('apply', () => {
   test('creates a chunk and returns its id', () => {
@@ -416,5 +416,168 @@ describe('apply', () => {
 
     expect(row).toBeDefined()
     expect(row!.active).toBe(0)
+  })
+
+  test('two-pass: dual placement order does not matter', () => {
+    const db = open()
+
+    // Create archetype with accepts
+    apply(db, {
+      chunks: [
+        {
+          id: 'archetype',
+          name: 'archetype',
+          spec: { accepts: ['some-type'] },
+          body: {},
+        },
+        {
+          id: 'some-type',
+          name: 'some-type',
+          body: {},
+          placements: [{ scope_id: 'archetype', type: 'relates' }],
+        },
+      ],
+    })
+
+    // Place a chunk with scope_placement BEFORE type_placement in the array.
+    // Old code would fail because enforce runs before the type placement is written.
+    // Two-pass writes all placements first, then enforces.
+    const result = apply(db, {
+      chunks: [
+        {
+          body: { text: 'dual placement chunk' },
+          placements: [
+            { scope_id: 'archetype', type: 'instance' },
+            { scope_id: 'some-type', type: 'instance' },
+          ],
+        },
+      ],
+    })
+
+    expect(result.chunks[0]!.created).toBe(true)
+  })
+
+  test('seq auto-assignment on ordered scope', () => {
+    const db = open()
+
+    apply(db, {
+      chunks: [
+        {
+          id: 'ordered-scope',
+          name: 'ordered-scope',
+          spec: { ordered: true },
+          body: {},
+        },
+      ],
+    })
+
+    // Place first chunk with no seq — should auto-assign 1
+    const r1 = apply(db, {
+      chunks: [
+        {
+          body: { text: 'first' },
+          placements: [{ scope_id: 'ordered-scope', type: 'instance' }],
+        },
+      ],
+    })
+    expect(r1.chunks[0]!.created).toBe(true)
+
+    // Place second chunk with no seq — should auto-assign 2
+    const r2 = apply(db, {
+      chunks: [
+        {
+          body: { text: 'second' },
+          placements: [{ scope_id: 'ordered-scope', type: 'instance' }],
+        },
+      ],
+    })
+    expect(r2.chunks[0]!.created).toBe(true)
+
+    // Verify seq values via scope query
+    const result = scope(db, ['ordered-scope'])
+    const items = result.chunks.items
+    const first = items.find((c) => c.body.text === 'first')
+    const second = items.find((c) => c.body.text === 'second')
+
+    expect(first!.placements[0]!.seq).toBe(1)
+    expect(second!.placements[0]!.seq).toBe(2)
+
+    // Explicit seq still works
+    const r3 = apply(db, {
+      chunks: [
+        {
+          body: { text: 'explicit' },
+          placements: [{ scope_id: 'ordered-scope', type: 'instance', seq: 10 }],
+        },
+      ],
+    })
+    expect(r3.chunks[0]!.created).toBe(true)
+
+    const afterExplicit = scope(db, ['ordered-scope'])
+    const explicit = afterExplicit.chunks.items.find((c) => c.body.text === 'explicit')
+    expect(explicit!.placements[0]!.seq).toBe(10)
+  })
+
+  test('name uniqueness: rejects duplicate name on same scope', () => {
+    const db = open()
+
+    apply(db, {
+      chunks: [{ id: 'container', name: 'container', body: {} }],
+    })
+
+    apply(db, {
+      chunks: [
+        {
+          name: 'duplicate-name',
+          body: { text: 'first' },
+          placements: [{ scope_id: 'container', type: 'instance' }],
+        },
+      ],
+    })
+
+    expect(() =>
+      apply(db, {
+        chunks: [
+          {
+            name: 'duplicate-name',
+            body: { text: 'second' },
+            placements: [{ scope_id: 'container', type: 'instance' }],
+          },
+        ],
+      }),
+    ).toThrow(SpecViolation)
+  })
+
+  test('name uniqueness: allows same name on different scopes', () => {
+    const db = open()
+
+    apply(db, {
+      chunks: [
+        { id: 'scope-a', name: 'scope-a', body: {} },
+        { id: 'scope-b', name: 'scope-b', body: {} },
+      ],
+    })
+
+    apply(db, {
+      chunks: [
+        {
+          name: 'shared-name',
+          body: { text: 'in scope a' },
+          placements: [{ scope_id: 'scope-a', type: 'instance' }],
+        },
+      ],
+    })
+
+    const result = apply(db, {
+      chunks: [
+        {
+          name: 'shared-name',
+          body: { text: 'in scope b' },
+          placements: [{ scope_id: 'scope-b', type: 'instance' }],
+        },
+      ],
+    })
+
+    expect(result.chunks[0]!.created).toBe(true)
   })
 })

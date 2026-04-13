@@ -2,9 +2,10 @@ import { Database } from 'bun:sqlite'
 
 const SCHEMA = `
 CREATE TABLE IF NOT EXISTS commits (
-    id        TEXT PRIMARY KEY,
-    parent_id TEXT,
-    timestamp TEXT NOT NULL
+    id          TEXT PRIMARY KEY,
+    parent_id   TEXT,
+    timestamp   TEXT NOT NULL,
+    dispatch_id TEXT
 );
 
 CREATE TABLE IF NOT EXISTS branches (
@@ -63,7 +64,7 @@ CREATE VIRTUAL TABLE IF NOT EXISTS chunk_fts USING fts5(
 `
 
 const SEED = `
-INSERT INTO commits (id, parent_id, timestamp) VALUES ('root', NULL, datetime('now'));
+INSERT INTO commits (id, parent_id, timestamp, dispatch_id) VALUES ('root', NULL, datetime('now'), NULL);
 INSERT INTO branches (name, head) VALUES ('main', 'root');
 `
 

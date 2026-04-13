@@ -24,6 +24,7 @@ export type Commit = {
   readonly id: string
   readonly parent_id: string | null
   readonly timestamp: string
+  readonly dispatch_id?: string | null
 }
 
 export type Branch = {

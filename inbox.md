@@ -1,5 +1,5 @@
 
-> Raw notes from the author, like post-its
+> Raw notes from the author, like post-its. Excpect mess.
 
 ---
 
